@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './pagination.css';
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ cardsPerPage, totalCards, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i += 1) {
+  for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i += 1) {
     pageNumbers.push(i);
   }
 
@@ -30,8 +30,8 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   );
 };
 Pagination.propTypes = {
-  postsPerPage: PropTypes.number.isRequired,
-  totalPosts: PropTypes.number.isRequired,
+  cardsPerPage: PropTypes.number.isRequired,
+  totalCards: PropTypes.number.isRequired,
   paginate: PropTypes.func.isRequired,
 };
 

@@ -24,16 +24,16 @@ const Informations = () => {
           setIsLoading(false);
         });
     }
-  }, [hero, playOnce, rangeValue]);
+  }, [hero, playOnce]);
 
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
-  // Number of élements by page
-  const [postsPerPage] = useState(20);
+  // Number of Cards by page
+  const [cardsPerPage] = useState(20);
   // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentHero = hero.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -47,10 +47,10 @@ const Informations = () => {
         isLoading={isLoading}
         hero={currentHero}
       />
-      <div className="container mt-5">
+      <div className="container-pagination">
         <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={hero.length}
+          cardsPerPage={cardsPerPage}
+          totalCards={hero.length}
           paginate={paginate}
         />
       </div>
