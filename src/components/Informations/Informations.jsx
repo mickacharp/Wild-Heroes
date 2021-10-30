@@ -12,7 +12,6 @@ const Informations = () => {
   const handleClick = (value) => {
     setRangeValue(value + 20);
   };
-
   useEffect(() => {
     if (playOnce) {
       axios
@@ -44,6 +43,7 @@ const Informations = () => {
     <div>
       <CardsList
         setCardsPerPage={setCardsPerPage}
+        totalCards={hero.length}
         rangeValue={rangeValue}
         handleClick={handleClick}
         isLoading={isLoading}

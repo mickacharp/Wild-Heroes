@@ -13,7 +13,7 @@ const CardsList = ({ hero, isLoading }) => {
   };
   /* A débloqué quand on ajoutera les filtres
   if (search !== '') {
-    setCardsPerPage(800);
+    setCardsPerPage(totalCards);
   } else {
     setCardsPerPage(30);
   } */

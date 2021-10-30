@@ -4,11 +4,9 @@ import './pagination.css';
 
 const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
   const pageNumbers = [];
-
   for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i += 1) {
     pageNumbers.push(i);
   }
-
   return (
     <nav className="nav-page">
       <p> {cardsPerPage < 31 ? `Page: ${currentPage}` : ''}</p>
@@ -17,9 +15,13 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
           <li key={number} className="page-item">
             {cardsPerPage < 31 ? (
               <input
+                to="/Informations"
                 value={number}
                 type="button"
-                onClick={() => paginate(number)}
+                onClick={() => {
+                  paginate(number);
+                  document.documentElement.scrollTop = 0;
+                }}
                 className="page-link"
               />
             ) : (
@@ -31,6 +33,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
     </nav>
   );
 };
+
 Pagination.propTypes = {
   cardsPerPage: PropTypes.number.isRequired,
   totalCards: PropTypes.number.isRequired,
