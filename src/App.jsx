@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/NavBar';
 import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
 import Informations from './components/Informations/Informations';
+import './app.css';
 
 function App() {
   return (

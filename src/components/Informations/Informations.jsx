@@ -29,26 +29,30 @@ const Informations = () => {
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
-  const [cardsPerPage] = useState(20);
+  const [cardsPerPage, setCardsPerPage] = useState(30);
   // Get current posts
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <div>
       <CardsList
-        id
+        setCardsPerPage={setCardsPerPage}
         rangeValue={rangeValue}
         handleClick={handleClick}
         isLoading={isLoading}
         hero={currentHero}
       />
+
       <div className="container-pagination">
         <Pagination
+          currentPage={currentPage}
           cardsPerPage={cardsPerPage}
           totalCards={hero.length}
           paginate={paginate}

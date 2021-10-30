@@ -11,12 +11,16 @@ const Navbar = () => {
         </a>
         <h1>WILD HEROES</h1>
         <div className="header-content-link">
-          <NavLink activeClassName="active" className="text-nav" to="/Quiz">
+          <NavLink
+            activeClassName="text-nav-active"
+            className="text-nav"
+            to="/Quiz"
+          >
             Quiz
           </NavLink>
 
           <NavLink
-            activeClassName="active"
+            activeClassName="text-nav-active"
             className="text-nav"
             to="/Informations"
           >

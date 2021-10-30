@@ -11,7 +11,12 @@ const CardsList = ({ hero, isLoading }) => {
   const renderModal = (velo) => {
     return toggleModal && <ModalInfo name={velo} setToggleModal={hideModal} />;
   };
-
+  /* A débloqué quand on ajoutera les filtres
+  if (search !== '') {
+    setCardsPerPage(800);
+  } else {
+    setCardsPerPage(30);
+  } */
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -41,7 +46,7 @@ const CardsList = ({ hero, isLoading }) => {
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
-
+  // setCardsPerPage: PropTypes.number.isRequired,
   isLoading: PropTypes.bool.isRequired,
 };
 
