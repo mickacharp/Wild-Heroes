@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.Modal {
+  position: fixed;
+  top: 1%;
+  bottom: 1%;
+  left: 0.5%;
+  right: 0.5%;
+  display: flex;
+  align-items: center;
+  background-color: #27457e;
+  background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.close-modal-button {
+  position: absolute;
+  border: none;
+  padding: 0 6px;
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  top: 5px;
+  right: 5px;
+  color: aliceblue;
+}
+
+.modal-card {
+  height: 80%;
+  margin: auto;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.hero-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  margin-left: 2%;
+  text-align: justify;
+}
+
+.hero-stats,
+.hero-bio {
+  padding: 1rem;
+  margin-bottom: 1%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 30%;
+}
