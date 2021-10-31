@@ -24,7 +24,6 @@ const Informations = () => {
         });
     }
   }, [hero, playOnce]);
-
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
@@ -40,6 +39,9 @@ const Informations = () => {
     document.documentElement.scrollTop = 0;
   };
 
+  /*  const renderModal = () => {
+    return toggleModal && <ModalInfo setToggleModal={hideModal} />;
+  }; */
   return (
     <div>
       <CardsList
