@@ -15,12 +15,11 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
           <li key={number} className="page-item">
             {cardsPerPage < 31 ? (
               <input
-                to="/Informations"
+                to="/"
                 value={number}
                 type="button"
                 onClick={() => {
                   paginate(number);
-                  document.documentElement.scrollTop = 0;
                 }}
                 className="page-link"
               />
