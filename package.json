@@ -1,5 +1,5 @@
-{
-  "name": "template-frontend",
+{"homepage": "http://jarod79.github.io//wild-heroes",
+  "name": "wild-heroes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx --fix src/ && stylelint **.css --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

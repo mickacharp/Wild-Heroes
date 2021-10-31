@@ -6,7 +6,7 @@ import './modalinfo.css';
 
 const ModalInfo = ({ hideModal, image, name }) => {
   return (
-    <div className="Modal">
+    <div className="modal">
       <input
         type="button"
         className="close-modal-button"

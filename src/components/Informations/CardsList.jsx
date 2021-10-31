@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
-import './cards.css';
+import './card.css';
 
 const CardsList = ({ hero, isLoading }) => {
   /* A débloqué quand on ajoutera les filtres
