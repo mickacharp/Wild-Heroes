@@ -7,7 +7,7 @@ const Navbar = () => {
     <header className="header">
       <div className="header-content">
         <a href="/" className="logo-content">
-          <img src="../Logo.png" className="logo" alt="Logo" />
+          <img src="../assets/logo.png" className="logo" alt="Logo" />
         </a>
         <h1>WILD HEROES</h1>
         <div className="header-content-link">

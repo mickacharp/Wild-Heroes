@@ -1,8 +1,8 @@
 {
-  "homepage": "http://jarod79.github.io//wild-heroes",
+  "homepage": "https:/jarod79.github.io/wild-heroes",
   "name": "wild-heroes",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -53,6 +53,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.2",
     "lint-staged": "^11.2.3",
     "prettier": "2.4.1",
