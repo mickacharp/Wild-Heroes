@@ -37,6 +37,7 @@ const Informations = () => {
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    document.documentElement.scrollTop = 0;
   };
 
   return (
