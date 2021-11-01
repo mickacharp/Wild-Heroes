@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <a href="/" className="logo-content">
+        <a href="/wild-heroes" className="logo-content">
           <img
             src="https://i.ibb.co/RpbqyY6/Logo.png"
             className="logo"
@@ -16,17 +16,15 @@ const Navbar = () => {
         <h1>WILD HEROES</h1>
         <div className="header-content-link">
           <NavLink
-            activeClassName="text-nav-active"
+            activeClassName="active"
             className="text-nav"
-            to="/Quiz"
-          >
+            to="/wild-heroes/Quiz">
             Quiz
           </NavLink>
-
           <NavLink
             activeClassName="text-nav-active"
             className="text-nav"
-            to="/Informations"
+            to="/wild-heroes/Informations"
           >
             Informations
           </NavLink>
