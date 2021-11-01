@@ -6,21 +6,27 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <a href="/" className="logo-content">
-
-          <img src="../Logo.png" className="logo" alt="Logo" />
-
+        <a href="/wild-heroes" className="logo-content">
+          <img
+            src="https://i.ibb.co/RpbqyY6/Logo.png"
+            className="logo"
+            alt="Logo"
+          />
         </a>
         <h1>WILD HEROES</h1>
         <div className="header-content-link">
-          <NavLink activeClassName="active" className="text-nav" to="/Quiz">
+          <NavLink
+            activeClassName="active"
+            className="text-nav"
+            to="/wild-heroes/Quiz"
+          >
             Quiz
           </NavLink>
 
           <NavLink
             activeClassName="active"
             className="text-nav"
-            to="/Informations"
+            to="/wild-heroes/Informations"
           >
             Informations
           </NavLink>
