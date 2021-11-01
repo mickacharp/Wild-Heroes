@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import img from '../../img/Logo.png';
 import './navbar.css';
 
 const Navbar = () => {
@@ -7,18 +8,15 @@ const Navbar = () => {
     <header className="header">
       <div className="header-content">
         <a href="/wild-heroes" className="logo-content">
-          <img
-            src="https://i.ibb.co/RpbqyY6/Logo.png"
-            className="logo"
-            alt="Logo"
-          />
+          <img src={img} className="logo" alt="Logo" />
         </a>
         <h1>WILD HEROES</h1>
         <div className="header-content-link">
           <NavLink
             activeClassName="active"
             className="text-nav"
-            to="/wild-heroes/Quiz">
+            to="/wild-heroes/Quiz"
+          >
             Quiz
           </NavLink>
           <NavLink
