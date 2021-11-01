@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jarod79.github.io/wild-heroes/static/css/main.c3183ada.chunk.css",
+    "main.js": "/jarod79.github.io/wild-heroes/static/js/main.1ee9f5f7.chunk.js",
+    "main.js.map": "/jarod79.github.io/wild-heroes/static/js/main.1ee9f5f7.chunk.js.map",
+    "runtime-main.js": "/jarod79.github.io/wild-heroes/static/js/runtime-main.addb69bd.js",
+    "runtime-main.js.map": "/jarod79.github.io/wild-heroes/static/js/runtime-main.addb69bd.js.map",
+    "static/js/2.abb08019.chunk.js": "/jarod79.github.io/wild-heroes/static/js/2.abb08019.chunk.js",
+    "static/js/2.abb08019.chunk.js.map": "/jarod79.github.io/wild-heroes/static/js/2.abb08019.chunk.js.map",
+    "index.html": "/jarod79.github.io/wild-heroes/index.html",
+    "static/css/main.c3183ada.chunk.css.map": "/jarod79.github.io/wild-heroes/static/css/main.c3183ada.chunk.css.map",
+    "static/js/2.abb08019.chunk.js.LICENSE.txt": "/jarod79.github.io/wild-heroes/static/js/2.abb08019.chunk.js.LICENSE.txt",
+    "static/media/navbar.css": "/jarod79.github.io/wild-heroes/static/media/Heroes Legend.71e501cb.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.addb69bd.js",
+    "static/js/2.abb08019.chunk.js",
+    "static/css/main.c3183ada.chunk.css",
+    "static/js/main.1ee9f5f7.chunk.js"
+  ]
+}
