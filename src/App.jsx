@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/wild-heroes" component={Home} />
+        <Route exact path="/wild-heroes/Home" component={Home} />
         <Route path="/wild-heroes/Quiz" component={Quiz} />
         <Route path="/wild-heroes/Informations" component={Informations} />
       </Switch>
