@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './cards.css';
+import ModalInfo from './ModalInfo';
+import './card.css';
 
-const Card = ({ name, image, alignment, setToggleModal, renderModal }) => {
+const Card = ({ name, image, alignment }) => {
+  const [toggleModal, setToggleModal] = useState(false);
+  const hideModal = () => {
+    setToggleModal(!toggleModal);
+  };
   const colorClass = (ali) => {
     let heroClass = '';
     if (ali === 'good') {
@@ -14,19 +19,30 @@ const Card = ({ name, image, alignment, setToggleModal, renderModal }) => {
     }
     return heroClass;
   };
-
   return (
-    <div
-      className={`card ${colorClass(alignment)}`}
-      onClick={() => setToggleModal()}
-      onKeyPress={() => setToggleModal()}
-      role="button"
-      tabIndex={0}
-    >
-      <img src={image} alt={name} />
-      <h2>{name}</h2>
-      {renderModal(name)}
-    </div>
+    <>
+      <div
+        className={`card ${colorClass(alignment)}`}
+        onClick={() => hideModal()}
+        onKeyPress={() => hideModal()}
+        role="button"
+        tabIndex={0}
+      >
+        <img src={image} alt={name} />
+        <h2>{name}</h2>
+      </div>
+      <div>
+        {toggleModal ? (
+          <ModalInfo
+            name={name}
+            image={image}
+            toggleModal={toggleModal}
+            setToggleModal={setToggleModal}
+            hideModal={hideModal}
+          />
+        ) : null}
+      </div>
+    </>
   );
 };
 
@@ -34,8 +50,6 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   alignment: PropTypes.string.isRequired,
-  setToggleModal: PropTypes.func.isRequired,
-  renderModal: PropTypes.func.isRequired,
 };
 
 export default Card;

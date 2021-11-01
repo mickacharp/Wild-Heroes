@@ -2,17 +2,30 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CardsList from './CardsList';
 import Pagination from './Pagination';
-import './cards.css';
+import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
   const [playOnce, setPlayOnce] = useState(true);
   const [rangeValue, setRangeValue] = useState(20);
   const [isLoading, setIsLoading] = useState(true);
+  // UseState for range page
+  const [currentPage, setCurrentPage] = useState(1);
+  // Number of Cards by page
+  const [cardsPerPage, setCardsPerPage] = useState(30);
+  // Get current posts
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
+
+  // Change page
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    document.documentElement.scrollTop = 0;
+  };
   const handleClick = (value) => {
     setRangeValue(value + 20);
   };
-
   useEffect(() => {
     if (playOnce) {
       axios
@@ -24,33 +37,24 @@ const Informations = () => {
           setIsLoading(false);
         });
     }
-  }, [hero, playOnce, rangeValue]);
-
-  // UseState for range page
-  const [currentPage, setCurrentPage] = useState(1);
-  // Number of élements by page
-  const [postsPerPage] = useState(20);
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentHero = hero.slice(indexOfFirstPost, indexOfLastPost);
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  }, [hero, playOnce]);
 
   return (
     <div>
       <CardsList
-        id
+        setCardsPerPage={setCardsPerPage}
+        totalCards={hero.length}
         rangeValue={rangeValue}
         handleClick={handleClick}
         isLoading={isLoading}
         hero={currentHero}
       />
-      <div className="container mt-5">
+
+      <div className="container-pagination">
         <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={hero.length}
+          currentPage={currentPage}
+          cardsPerPage={cardsPerPage}
+          totalCards={hero.length}
           paginate={paginate}
         />
       </div>

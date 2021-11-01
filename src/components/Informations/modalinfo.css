@@ -4,7 +4,7 @@
   font-size: 1rem;
 }
 
-.Modal {
+.modal {
   position: fixed;
   top: 1%;
   bottom: 1%;
@@ -19,14 +19,14 @@
 }
 
 .close-modal-button {
-  position: absolute;
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
   border: none;
   padding: 0 6px;
   font-size: 1.4rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
   top: 5px;
   right: 5px;
   color: aliceblue;

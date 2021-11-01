@@ -1,3 +1,10 @@
+.nav-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ul style */
 .pagination {
   width: 50%;
   margin: 2% 23% 2% 23%;
@@ -7,11 +14,13 @@
   text-align: center;
 }
 
+/* li style */
 .page-item {
   list-style-type: none;
   margin: 2px 2px 0 0;
 }
 
+/* input Style */
 .page-link {
   width: 40px;
   padding: 5px 5px;

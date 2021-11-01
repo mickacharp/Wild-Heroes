@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
-import ModalInfo from './ModalInfo';
-import './cards.css';
+import './card.css';
 
 const CardsList = ({ hero, isLoading }) => {
-  const [toggleModal, setToggleModal] = useState(false);
-
-  const hideModal = () => setToggleModal(!toggleModal);
-  const renderModal = (velo) => {
-    return toggleModal && <ModalInfo name={velo} setToggleModal={hideModal} />;
-  };
-
+  /* A débloqué quand on ajoutera les filtres
+  if (search !== '') {
+    setCardsPerPage(totalCards);
+  } else {
+    setCardsPerPage(30);
+  } */
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -29,8 +27,6 @@ const CardsList = ({ hero, isLoading }) => {
                 name={el.name}
                 image={el.image.url}
                 alignment={el.biography.alignment}
-                setToggleModal={hideModal}
-                renderModal={renderModal}
               />
             ))}
           </div>
@@ -41,7 +37,7 @@ const CardsList = ({ hero, isLoading }) => {
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
-
+  // setCardsPerPage: PropTypes.number.isRequired,
   isLoading: PropTypes.bool.isRequired,
 };
 

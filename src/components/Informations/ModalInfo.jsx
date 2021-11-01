@@ -4,22 +4,17 @@ import HeroStats from './HeroStats';
 import HeroBio from './HeroBio';
 import './modalinfo.css';
 
-const ModalInfo = ({ setToggleModal }) => {
+const ModalInfo = ({ hideModal, image, name }) => {
   return (
-    <div className="Modal">
-      <button
+    <div className="modal">
+      <input
         type="button"
         className="close-modal-button"
-        onClick={() => setToggleModal()}
-      >
-        &times;
-      </button>
+        onClick={() => hideModal()}
+      />
+      &times;
       <div className="modal-card">
-        <img
-          src="https://www.superherodb.com/pictures2/portraits/10/100/768.jpg"
-          alt="illustration du modal"
-          className="modal-img"
-        />
+        <img src={image} alt={name} className="modal-img" />
       </div>
       <div className="hero-infos">
         <div className="hero-stats">
@@ -33,6 +28,8 @@ const ModalInfo = ({ setToggleModal }) => {
   );
 };
 ModalInfo.propTypes = {
-  setToggleModal: PropTypes.func.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 export default ModalInfo;

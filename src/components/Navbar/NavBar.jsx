@@ -18,13 +18,11 @@ const Navbar = () => {
           <NavLink
             activeClassName="active"
             className="text-nav"
-            to="/wild-heroes/Quiz"
-          >
+            to="/wild-heroes/Quiz">
             Quiz
           </NavLink>
-
           <NavLink
-            activeClassName="active"
+            activeClassName="text-nav-active"
             className="text-nav"
             to="/wild-heroes/Informations"
           >
