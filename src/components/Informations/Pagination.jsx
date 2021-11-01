@@ -9,7 +9,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
   }
   return (
     <nav className="nav-page">
-      <p> {cardsPerPage < 31 ? `Page: ${currentPage}` : ''}</p>
+      <p> {cardsPerPage < 31 ? `Page: ${currentPage}` : null}</p>
       <ul className="pagination">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
@@ -23,9 +23,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
                 }}
                 className="page-link"
               />
-            ) : (
-              ''
-            )}
+            ) : null}
           </li>
         ))}
       </ul>

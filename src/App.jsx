@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/wild-heroes" component={Home} />
-        <Route path="/wild-heroes/Quiz" component={Quiz} />
-        <Route path="/wild-heroes/Informations" component={Informations} />
+        <Route exact path="/wild-heroes/" component={Home} />
+        <Route path="/wild-heroes/quiz" component={Quiz} />
+        <Route path="/wild-heroes/informations" component={Informations} />
       </Switch>
     </BrowserRouter>
   );
