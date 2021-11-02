@@ -8,13 +8,12 @@ import './card.css';
 const Informations = () => {
   const [hero, setHero] = useState([]);
   const [playOnce, setPlayOnce] = useState(true);
-  const [rangeValue, setRangeValue] = useState(20);
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
   const [cardsPerPage, setCardsPerPage] = useState(30);
-  // Get current posts
+  // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
@@ -29,9 +28,7 @@ const Informations = () => {
     setCurrentPage(pageNumber);
     document.documentElement.scrollTop = 0;
   };
-  const handleClick = (value) => {
-    setRangeValue(value + 20);
-  };
+
   useEffect(() => {
     if (playOnce) {
       axios
@@ -59,8 +56,6 @@ const Informations = () => {
         setSearchName={setSearchName}
         setCardsPerPage={setCardsPerPage}
         totalCards={hero.length}
-        rangeValue={rangeValue}
-        handleClick={handleClick}
         isLoading={isLoading}
         hero={currentHero}
       />

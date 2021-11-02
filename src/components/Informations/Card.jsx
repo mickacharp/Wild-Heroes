@@ -32,7 +32,7 @@ const Card = ({ name, image, alignment }) => {
         <h2>{name}</h2>
       </div>
       <div>
-        {toggleModal ? (
+        {toggleModal && (
           <ModalInfo
             name={name}
             image={image}
@@ -40,7 +40,7 @@ const Card = ({ name, image, alignment }) => {
             setToggleModal={setToggleModal}
             hideModal={hideModal}
           />
-        ) : null}
+        )}
       </div>
     </>
   );
