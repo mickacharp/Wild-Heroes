@@ -13,7 +13,7 @@ const Navbar = () => {
         <h1>WILD HEROES</h1>
         <div className="header-content-link">
           <NavLink
-            activeClassName="active"
+            activeClassName="text-nav-active"
             className="text-nav"
             to="/wild-heroes/quiz"
           >
