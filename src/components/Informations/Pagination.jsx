@@ -13,7 +13,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
       <ul className="pagination">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
-            {cardsPerPage < 31 ? (
+            {cardsPerPage < 31 && (
               <input
                 to="/"
                 value={number}
@@ -23,7 +23,7 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
                 }}
                 className="page-link"
               />
-            ) : null}
+            )}
           </li>
         ))}
       </ul>
