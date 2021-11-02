@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './searchbarname.css';
 
 const SearchbarName = ({ handleChange, searchName }) => {
   return (
@@ -8,7 +9,7 @@ const SearchbarName = ({ handleChange, searchName }) => {
         <input
           className="inputName"
           type="text"
-          value={searchName}
+          value={searchName.charAt(0).toUpperCase() + searchName.slice(1)}
           placeholder="Enter the name of a character"
           onChange={handleChange}
         />

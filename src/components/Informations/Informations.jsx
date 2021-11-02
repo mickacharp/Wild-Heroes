@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CardsList from './CardsList';
 import Pagination from './Pagination';
+import SearchbarName from './SearchBarName';
 import './card.css';
 
 const Informations = () => {
@@ -17,6 +18,11 @@ const Informations = () => {
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
+  // SearchBar
+  const [searchName, setSearchName] = useState('');
+  const handleChange = (e) => {
+    setSearchName(e.target.value);
+  };
 
   // Change page
   const paginate = (pageNumber) => {
@@ -41,7 +47,16 @@ const Informations = () => {
 
   return (
     <div>
+      <div>
+        <SearchbarName
+          searchName={searchName}
+          setSearchName={setSearchName}
+          handleChange={handleChange}
+        />
+      </div>
       <CardsList
+        searchName={searchName}
+        setSearchName={setSearchName}
         setCardsPerPage={setCardsPerPage}
         totalCards={hero.length}
         rangeValue={rangeValue}
