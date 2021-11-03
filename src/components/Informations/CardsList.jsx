@@ -27,6 +27,16 @@ const CardsList = ({ hero, isLoading }) => {
                 name={el.name}
                 image={el.image.url}
                 alignment={el.biography.alignment}
+                stats={el.powerstats}
+                // fullName={el.biography.full - name}
+                // placeOfBirth={el.biography.place - of - birth}
+                // firstAppearance={el.biography.first - appearance}
+                publisher={el.biography.publisher}
+                gender={el.appearance.gender}
+                race={el.appearance.race}
+                weight={el.appearance.weight[1]}
+                height={el.appearance.height[1]}
+                // groupAffiliation={el.connections.group - affiliation}
               />
             ))}
           </div>
