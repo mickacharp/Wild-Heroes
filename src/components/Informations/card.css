@@ -6,12 +6,12 @@ body {
 .container-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .card {
   width: 250px;
-  margin: 30px;
+  margin: 50px;
   background-color: white;
   padding-bottom: 15px;
   border: 0 black solid;
