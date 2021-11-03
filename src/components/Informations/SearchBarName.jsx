@@ -9,7 +9,7 @@ const SearchbarName = ({ handleChange, searchName }) => {
         <input
           className="inputName"
           type="text"
-          value={searchName.charAt(0).toUpperCase() + searchName.slice(1)}
+          value={searchName}
           placeholder="Enter the name of a character"
           onChange={handleChange}
         />

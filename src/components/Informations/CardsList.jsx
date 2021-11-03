@@ -9,8 +9,10 @@ const CardsList = ({
   setCardsPerPage,
   totalCards,
   searchName,
+  setCurrentPage,
 }) => {
   if (searchName !== '') {
+    setCurrentPage(1);
     setCardsPerPage(totalCards);
   } else {
     setCardsPerPage(30);
@@ -27,7 +29,9 @@ const CardsList = ({
         <div className="container-cards-button">
           <div className="container-cards">
             {hero
-              .filter((el) => el.name.includes(searchName))
+              .filter((el) =>
+                el.name.toLowerCase().includes(searchName.toLowerCase())
+              )
               .map((el) => (
                 <Card
                   key={el.id}
@@ -48,6 +52,7 @@ CardsList.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
   totalCards: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.number.isRequired,
 };
 
 export default CardsList;
