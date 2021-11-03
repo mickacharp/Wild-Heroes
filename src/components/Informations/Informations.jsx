@@ -52,6 +52,7 @@ const Informations = () => {
         />
       </div>
       <CardsList
+        setCurrentPage={setCurrentPage}
         searchName={searchName}
         setSearchName={setSearchName}
         setCardsPerPage={setCardsPerPage}
