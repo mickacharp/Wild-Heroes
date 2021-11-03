@@ -48,11 +48,11 @@ const CardsList = ({
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setCardsPerPage: PropTypes.number.isRequired,
+  setCardsPerPage: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
   totalCards: PropTypes.number.isRequired,
-  setCurrentPage: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
 };
 
 export default CardsList;
