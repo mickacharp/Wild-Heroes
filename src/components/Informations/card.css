@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0%;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 250px;
+  margin: 30px;
+  background-color: white;
+  padding-bottom: 15px;
+  border: 0 black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05);
+}
+
+.card img {
+  min-width: 250px;
+  height: 300px;
+}
+
+.card h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+.container-cards-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.cards-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: rgb(16, 25, 113);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 25, 113, 1) 0%,
+      rgba(15, 21, 79, 1) 83%,
+      rgba(14, 14, 14, 1) 100%
+    );
+  color: goldenrod;
+  transition: 0.3s;
+}
+
+.cards-btn:hover {
+  transform: scale(1.1);
+}
+
+.good-card:hover {
+  background-color: rgba(16, 25, 113, 1);
+  color: white;
+}
+
+.bad-card:hover {
+  background-color: #c80000;
+  color: white;
+}
+
+.normal-card:hover {
+  background-color: #7e7d88;
+  color: white;
+}
+
+.loader-cardsList {
+  width: 100%;
+  height: 100%;
+}
