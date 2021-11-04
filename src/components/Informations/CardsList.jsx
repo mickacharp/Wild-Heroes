@@ -19,7 +19,6 @@ const CardsList = ({
   race,
   alignment,
 }) => {
-
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -102,6 +101,24 @@ const CardsList = ({
             />
           </div>
           <div className="container-cards">
+            {hero.map((el) => (
+              <Card
+                key={el.id}
+                name={el.name}
+                image={el.image.url}
+                alignment={el.biography.alignment}
+                stats={el.powerstats}
+                publisher={el.biography.publisher}
+                gender={el.appearance.gender}
+                race={el.appearance.race}
+                weight={el.appearance.weight[1]}
+                height={el.appearance.height[1]}
+                fullName={el.biography['full-name']}
+                placeOfBirth={el.biography['place-of-birth']}
+                firstAppearance={el.biography['first-appearance']}
+                groupAffiliation={el.connections['group-affiliation']}
+              />
+            ))}
             {hero
               .filter((el) => el.name.includes(searchName))
               .filter((el) => el.biography.publisher.includes(byPublisher))

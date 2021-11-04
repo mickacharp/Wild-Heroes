@@ -3,7 +3,21 @@ import PropTypes from 'prop-types';
 import ModalInfo from './ModalInfo';
 import './card.css';
 
-const Card = ({ name, image, alignment }) => {
+const Card = ({
+  name,
+  image,
+  alignment,
+  stats,
+  publisher,
+  gender,
+  race,
+  weight,
+  height,
+  fullName,
+  placeOfBirth,
+  firstAppearance,
+  groupAffiliation,
+}) => {
   const [toggleModal, setToggleModal] = useState(false);
   const hideModal = () => {
     setToggleModal(!toggleModal);
@@ -39,6 +53,17 @@ const Card = ({ name, image, alignment }) => {
             toggleModal={toggleModal}
             setToggleModal={setToggleModal}
             hideModal={hideModal}
+            alignment={alignment}
+            stats={stats}
+            publisher={publisher}
+            gender={gender}
+            race={race}
+            weight={weight}
+            height={height}
+            fullName={fullName}
+            placeOfBirth={placeOfBirth}
+            firstAppearance={firstAppearance}
+            groupAffiliation={groupAffiliation}
           />
         )}
       </div>
@@ -47,9 +72,18 @@ const Card = ({ name, image, alignment }) => {
 };
 
 Card.propTypes = {
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   alignment: PropTypes.string.isRequired,
+  publisher: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  race: PropTypes.string.isRequired,
+  weight: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  placeOfBirth: PropTypes.string.isRequired,
+  firstAppearance: PropTypes.string.isRequired,
+  groupAffiliation: PropTypes.string.isRequired,
 };
-
 export default Card;
