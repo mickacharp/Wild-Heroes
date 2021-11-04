@@ -9,3 +9,7 @@
       rgba(14, 14, 14, 1) 50%
     );
 }
+
+.comics-filter {
+  border-radius: 5px;
+}
