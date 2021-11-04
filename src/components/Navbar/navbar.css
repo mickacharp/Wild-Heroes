@@ -81,7 +81,11 @@ a {
 
 @media screen and (max-height: 415px) {
   .header-content {
-    height: 20%;
+    width: 100%;
+  }
+
+  .header-content-link {
+    width: 20%;
   }
 
   .title {
