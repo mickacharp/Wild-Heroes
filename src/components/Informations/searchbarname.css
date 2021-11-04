@@ -1,5 +1,10 @@
 .search {
-  padding: 1vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
   background:
     linear-gradient(
       90deg,
@@ -9,5 +14,29 @@
 }
 
 .inputName {
-  width: 30vh;
+  width: 32vh;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .search {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+
+  .inputName {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 415px) {
+  .search {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+
+  .inputName {
+    width: 100%;
+  }
+
 }

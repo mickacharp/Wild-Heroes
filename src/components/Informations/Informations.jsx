@@ -7,12 +7,17 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-  const [playOnce, setPlayOnce] = useState(true);
+  // const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
   const [cardsPerPage, setCardsPerPage] = useState(30);
+  // Filters
+  const [byPublisher, setByPublisher] = useState('');
+  const [gender, setGender] = useState('');
+  const [alignment, setAlignment] = useState('');
+  const [race, setRace] = useState('');
   // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
@@ -29,18 +34,64 @@ const Informations = () => {
     document.documentElement.scrollTop = 0;
   };
 
+  // Call the api and load image to waiting call
   useEffect(() => {
-    if (playOnce) {
+    if (isLoading) {
       axios
         .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
         .then((response) => response.data.results)
         .then((data) => {
           setHero(data);
-          setPlayOnce(false);
           setIsLoading(false);
         });
     }
-  }, [hero, playOnce]);
+   }, [hero]);
+  // change the component according to searchname state
+  useEffect(() => {
+    if (searchName !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [searchName]);
+
+  useEffect(() => {
+    if (byPublisher !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [byPublisher]);
+
+  useEffect(() => {
+    if (gender !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [gender]);
+
+  useEffect(() => {
+    if (alignment !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [alignment]);
+
+  useEffect(() => {
+    if (race !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [race]);
+
 
   return (
     <div>
@@ -53,11 +104,16 @@ const Informations = () => {
       </div>
       <CardsList
         searchName={searchName}
-        setSearchName={setSearchName}
-        setCardsPerPage={setCardsPerPage}
-        totalCards={hero.length}
         isLoading={isLoading}
         hero={currentHero}
+        byPublisher={byPublisher}
+        setByPublisher={setByPublisher}
+        gender={gender}
+        setGender={setGender}
+        alignment={alignment}
+        setAlignment={setAlignment}
+        race={race}
+        setRace={setRace}
       />
 
       <div className="container-pagination">
