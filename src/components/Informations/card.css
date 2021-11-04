@@ -7,11 +7,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 2%;
 }
 
 .card {
   width: 250px;
-  margin: 50px;
+  margin: 2vw;
   background-color: white;
   padding-bottom: 15px;
   border: 0 black solid;

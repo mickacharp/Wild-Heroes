@@ -3,20 +3,7 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 import './card.css';
 
-const CardsList = ({
-  hero,
-  isLoading,
-  setCardsPerPage,
-  totalCards,
-  searchName,
-  setCurrentPage,
-}) => {
-  if (searchName !== '') {
-    setCurrentPage(1);
-    setCardsPerPage(totalCards);
-  } else {
-    setCardsPerPage(30);
-  }
+const CardsList = ({ hero, isLoading, searchName }) => {
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -48,11 +35,8 @@ const CardsList = ({
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setCardsPerPage: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
-  totalCards: PropTypes.number.isRequired,
-  setCurrentPage: PropTypes.func.isRequired,
 };
 
 export default CardsList;
