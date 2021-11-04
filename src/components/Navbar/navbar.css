@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Heroes';
-  src: local('Heroes'), url('../../fonts/heroesfont/Heroes-Legend.ttf');
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
 }
 
 body {

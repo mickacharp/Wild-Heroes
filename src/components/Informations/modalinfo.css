@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Heroes';
-  src: local('Heroes'), url('../../fonts/heroesfont/Heroes\ Legend.ttf');
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
 }
 
 .modal-container,
@@ -28,7 +28,7 @@
   bottom: 15%;
   left: 15%;
   right: 15%;
-  background-image: url(../../assets/Background.jpg);
+  background-image: url(../../img/Background.jpg);
   background-position: center;
   background-size: cover;
   display: flex;

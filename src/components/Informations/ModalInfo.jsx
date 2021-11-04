@@ -184,7 +184,7 @@ const ModalInfo = ({
   );
 };
 ModalInfo.propTypes = {
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  stats: PropTypes.objectOf(PropTypes.tring).isRequired,
   hideModal: PropTypes.func.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

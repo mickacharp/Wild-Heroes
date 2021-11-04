@@ -45,7 +45,7 @@ const Informations = () => {
           setIsLoading(false);
         });
     }
-   }, [hero]);
+  }, [hero]);
   // change the component according to searchname state
   useEffect(() => {
     if (searchName !== '') {
@@ -91,7 +91,6 @@ const Informations = () => {
       setCardsPerPage(30);
     }
   }, [race]);
-
 
   return (
     <div>

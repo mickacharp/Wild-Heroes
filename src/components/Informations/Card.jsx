@@ -72,7 +72,7 @@ const Card = ({
 };
 
 Card.propTypes = {
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
+  stats: PropTypes.objectOf(PropTypes.string).isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   alignment: PropTypes.string.isRequired,

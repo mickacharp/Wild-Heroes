@@ -5,7 +5,6 @@ import './card.css';
 import Filter from './Filter';
 import './filter.css';
 
-
 const CardsList = ({
   hero,
   isLoading,
@@ -155,6 +154,5 @@ CardsList.propTypes = {
   gender: PropTypes.string.isRequired,
   race: PropTypes.string.isRequired,
   alignment: PropTypes.string.isRequired,
-
 };
 export default CardsList;
