@@ -60,8 +60,6 @@ const Informations = () => {
     if (byPublisher !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
   }, [byPublisher]);
 
@@ -69,8 +67,6 @@ const Informations = () => {
     if (gender !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
   }, [gender]);
 
@@ -78,8 +74,6 @@ const Informations = () => {
     if (alignment !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
   }, [alignment]);
 
@@ -87,8 +81,6 @@ const Informations = () => {
     if (race !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
   }, [race]);
 

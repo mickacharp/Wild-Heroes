@@ -101,14 +101,13 @@ const CardsList = ({
           </div>
           <div className="container-cards">
             {hero
-              .filter((el) =>
-                el.name.toLowerCase().includes(searchName.toLowerCase())
-              )
-              .filter((el) => el.name.includes(searchName))
               .filter((el) => el.biography.publisher.includes(byPublisher))
               .filter((el) => el.appearance.gender.includes(gender))
               .filter((el) => el.appearance.race.includes(race))
               .filter((el) => el.biography.alignment.includes(alignment))
+              .filter((el) =>
+                el.name.toLowerCase().includes(searchName.toLowerCase())
+              )
               .map((el) => (
                 <Card
                   key={el.id}
