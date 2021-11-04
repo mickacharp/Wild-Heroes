@@ -13,6 +13,11 @@ const Informations = () => {
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
   const [cardsPerPage, setCardsPerPage] = useState(30);
+  // Filters
+  const [byPublisher, setByPublisher] = useState('');
+  const [gender, setGender] = useState('');
+  const [alignment, setAlignment] = useState('');
+  const [race, setRace] = useState('');
   // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
@@ -40,8 +45,7 @@ const Informations = () => {
           setIsLoading(false);
         });
     }
-  }, [hero]);
-
+   }, [hero]);
   // change the component according to searchname state
   useEffect(() => {
     if (searchName !== '') {
@@ -51,6 +55,43 @@ const Informations = () => {
       setCardsPerPage(30);
     }
   }, [searchName]);
+
+  useEffect(() => {
+    if (byPublisher !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [byPublisher]);
+
+  useEffect(() => {
+    if (gender !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [gender]);
+
+  useEffect(() => {
+    if (alignment !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [alignment]);
+
+  useEffect(() => {
+    if (race !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [race]);
+
 
   return (
     <div>
@@ -65,6 +106,14 @@ const Informations = () => {
         searchName={searchName}
         isLoading={isLoading}
         hero={currentHero}
+        byPublisher={byPublisher}
+        setByPublisher={setByPublisher}
+        gender={gender}
+        setGender={setGender}
+        alignment={alignment}
+        setAlignment={setAlignment}
+        race={race}
+        setRace={setRace}
       />
 
       <div className="container-pagination">
