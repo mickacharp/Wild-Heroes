@@ -4,6 +4,11 @@
   font-size: 1rem;
 }
 
+@font-face {
+  font-family: 'Heroes';
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes\ Legend.ttf');
+}
+
 .modal-container,
 .modal-background {
   position: fixed;
@@ -23,9 +28,6 @@
   bottom: 15%;
   left: 15%;
   right: 15%;
-
-  /* background-color: #657178;
-  background-image: url('https://www.transparenttextures.com/patterns/beige-paper.png'); */
   background-image: url(../../assets/Background.jpg);
   background-position: center;
   background-size: cover;
@@ -33,11 +35,36 @@
   flex-direction: column;
 }
 
+.modal-content.good-hero {
+  box-shadow: rgba(16, 25, 113, 1) 0 10px 15px;
+}
+
+.modal-content.bad-hero {
+  box-shadow: #c80000 0 15px 20px;
+}
+
+.modal-content.neutral-hero {
+  box-shadow: #7e7d88 0 15px 20px;
+}
+
 .modal-header {
   background-color: rgba(21, 30, 118);
-  color: goldenrod;
-  font-style: italic;
+  color: gold;
+  font-style: oblique;
+  font-weight: lighter;
   padding: 0.5rem 0;
+}
+
+.modal-header.good-hero {
+  background-color: #101971;
+}
+
+.modal-header.bad-hero {
+  background-color: #c80000;
+}
+
+.modal-header.neutral-hero {
+  background-color: #7e7d88;
 }
 
 .modal-body {
@@ -45,6 +72,7 @@
   justify-content: space-around;
   align-items: center;
   color: aliceblue;
+  height: 100%;
 }
 
 .close-modal-button {
@@ -66,12 +94,20 @@
 .modal-card {
   border-radius: 10px;
   height: 80%;
+  margin-bottom: 5%;
 }
 
 .modal-stats,
 .modal-bio {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 30%;
+}
+
+.modal-stats {
+  width: 20%;
+}
+
+.modal-bio {
+  width: 40%;
 }
 
 .modal-img {
@@ -89,15 +125,36 @@
   width: 100%;
   height: 87%;
   align-items: center;
+  text-align: center;
 }
 
 .modal-header h1,
 .modal-stats h1,
 .modal-bio h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
 }
 
-li {
-  font-size: 1.5rem;
+.modal-stats h1,
+.modal-bio h1 {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 3mm ridge goldenrod;
+}
+
+.stats-list li,
+strong {
+  font-size: 1.3rem;
+}
+
+.bio-list li {
+  font-size: 1.05rem;
+}
+
+strong,
+.stats-list li:nth-child(odd) {
+  color: goldenrod;
+  font-weight: bold;
 }

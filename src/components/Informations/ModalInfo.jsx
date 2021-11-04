@@ -13,16 +13,32 @@ const ModalInfo = ({
   race,
   weight,
   height,
+  fullName,
+  placeOfBirth,
+  firstAppearance,
+  groupAffiliation,
 }) => {
   // gathering keys and values of the 'stats' object and putting it in a 'statsArray' array
   const statsNamesArray = Object.keys(stats);
   const statsValuesArray = Object.values(stats);
+
   const statsArray = [];
   for (let i = 0; i < statsNamesArray.length; i += 1) {
-    statsArray.push(
-      `${statsNamesArray[i].toUpperCase()}: ${statsValuesArray[i]}`
-    );
+    statsArray.push(statsNamesArray[i].toUpperCase());
+    statsArray.push(statsValuesArray[i]);
   }
+  const headerClass = (ali) => {
+    let headerAliClass = '';
+    if (ali === 'good') {
+      headerAliClass = 'good-hero';
+    } else if (ali === 'bad') {
+      headerAliClass = 'bad-hero';
+    } else {
+      headerAliClass = 'neutral-hero';
+    }
+    return headerAliClass;
+  };
+
   return (
     <div className="modal-container">
       <div
@@ -35,7 +51,7 @@ const ModalInfo = ({
         {' '}
       </div>
 
-      <div className="modal-content">
+      <div className={`modal-content ${headerClass(alignment)}`}>
         <button
           type="button"
           className="close-modal-button"
@@ -43,10 +59,8 @@ const ModalInfo = ({
         >
           &times;
         </button>
-        <div className="modal-header">
-          <h1>
-            {name} ({alignment})
-          </h1>
+        <div className={`modal-header ${headerClass(alignment)}`}>
+          <h1>{name}</h1>
         </div>
         <div className="modal-body">
           <div className="modal-card">
@@ -65,17 +79,104 @@ const ModalInfo = ({
             </ul>
           </div>
           <div className="modal-bio">
-            <h1>Identity</h1>
+            <h1>Information</h1>
             <ul className="bio-list">
-              <li>Original publisher: {publisher}</li>
-              <li>Gender: {gender}</li>
-              <li>
-                Race: {race === 'null' ? race.replace('null', 'Unknown') : race}
-              </li>
-              <li>
-                Weight and height: {weight === '0 kg' ? 'Unknown' : weight}
-                {height === '0 cm' ? '' : `, ${height}`}
-              </li>
+              {fullName !== '' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Full name
+                    <br />
+                  </strong>{' '}
+                  {fullName}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {gender !== '-' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Gender
+                    <br />
+                  </strong>{' '}
+                  {gender}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {race !== 'null' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Race
+                    <br />
+                  </strong>{' '}
+                  {race}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {weight !== '0 kg' && height !== '0 cm' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Weight and height
+                    <br />
+                  </strong>{' '}
+                  {weight}, {height}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {placeOfBirth !== '-' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Place of birth
+                    <br />
+                  </strong>{' '}
+                  {placeOfBirth}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {publisher !== 'null' && publisher !== '' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Original publisher
+                    <br />
+                  </strong>{' '}
+                  {publisher}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {firstAppearance !== '-' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    First appearance
+                    <br />
+                  </strong>{' '}
+                  {firstAppearance}{' '}
+                </li>
+              ) : (
+                ''
+              )}
+              {groupAffiliation !== '-' ? (
+                <li>
+                  {' '}
+                  <strong>
+                    Affiliation
+                    <br />
+                  </strong>{' '}
+                  {groupAffiliation}{' '}
+                </li>
+              ) : (
+                ''
+              )}
             </ul>
           </div>
         </div>
@@ -94,5 +195,9 @@ ModalInfo.propTypes = {
   race: PropTypes.string.isRequired,
   weight: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  placeOfBirth: PropTypes.string.isRequired,
+  firstAppearance: PropTypes.string.isRequired,
+  groupAffiliation: PropTypes.string.isRequired,
 };
 export default ModalInfo;

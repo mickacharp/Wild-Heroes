@@ -13,6 +13,10 @@ const Card = ({
   race,
   weight,
   height,
+  fullName,
+  placeOfBirth,
+  firstAppearance,
+  groupAffiliation,
 }) => {
   const [toggleModal, setToggleModal] = useState(false);
   const hideModal = () => {
@@ -57,6 +61,10 @@ const Card = ({
             race={race}
             weight={weight}
             height={height}
+            fullName={fullName}
+            placeOfBirth={placeOfBirth}
+            firstAppearance={firstAppearance}
+            groupAffiliation={groupAffiliation}
           />
         )}
       </div>
@@ -74,5 +82,9 @@ Card.propTypes = {
   race: PropTypes.string.isRequired,
   weight: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
+  placeOfBirth: PropTypes.string.isRequired,
+  firstAppearance: PropTypes.string.isRequired,
+  groupAffiliation: PropTypes.string.isRequired,
 };
 export default Card;
