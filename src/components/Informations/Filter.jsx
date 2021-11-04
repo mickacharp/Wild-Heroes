@@ -18,7 +18,7 @@ const Filter = ({ setFilter, filter, response }) => {
 };
 
 Filter.propTypes = {
-  setFilter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
   response: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

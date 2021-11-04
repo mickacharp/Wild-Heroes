@@ -82,7 +82,6 @@ const ModalInfo = ({
             <ul className="bio-list">
               {fullName !== '' ? (
                 <li>
-                  {' '}
                   <strong>
                     Full name
                     <br />
@@ -184,7 +183,7 @@ const ModalInfo = ({
   );
 };
 ModalInfo.propTypes = {
-  stats: PropTypes.objectOf(PropTypes.tring).isRequired,
+  stats: PropTypes.objectOf(PropTypes.string).isRequired,
   hideModal: PropTypes.func.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

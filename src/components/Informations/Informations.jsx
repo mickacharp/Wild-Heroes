@@ -7,7 +7,7 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-  // const [playOnce, setPlayOnce] = useState(true);
+
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
