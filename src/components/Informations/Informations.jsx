@@ -7,7 +7,7 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-  const [playOnce, setPlayOnce] = useState(true);
+  // const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,18 +34,19 @@ const Informations = () => {
     document.documentElement.scrollTop = 0;
   };
 
+  // Call the api and load image to waiting call
   useEffect(() => {
-    if (playOnce) {
+    if (isLoading) {
       axios
         .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
         .then((response) => response.data.results)
         .then((data) => {
           setHero(data);
-          setPlayOnce(false);
           setIsLoading(false);
         });
     }
-  }, [hero, playOnce]);
+   }, [hero]);
+  // change the component according to searchname state
   useEffect(() => {
     if (searchName !== '') {
       setCurrentPage(1);
@@ -91,6 +92,7 @@ const Informations = () => {
     }
   }, [race]);
 
+
   return (
     <div>
       <div>
@@ -102,9 +104,6 @@ const Informations = () => {
       </div>
       <CardsList
         searchName={searchName}
-        setSearchName={setSearchName}
-        setCardsPerPage={setCardsPerPage}
-        totalCards={hero.length}
         isLoading={isLoading}
         hero={currentHero}
         byPublisher={byPublisher}

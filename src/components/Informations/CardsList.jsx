@@ -5,6 +5,7 @@ import './card.css';
 import Filter from './Filter';
 import './filter.css';
 
+
 const CardsList = ({
   hero,
   isLoading,
@@ -18,6 +19,7 @@ const CardsList = ({
   race,
   alignment,
 }) => {
+
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -106,6 +108,9 @@ const CardsList = ({
               .filter((el) => el.appearance.gender.includes(gender))
               .filter((el) => el.appearance.race.includes(race))
               .filter((el) => el.biography.alignment.includes(alignment))
+              .filter((el) =>
+                el.name.toLowerCase().includes(searchName.toLowerCase())
+              )
               .map((el) => (
                 <Card
                   key={el.id}
@@ -124,6 +129,7 @@ CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
+
   setByPublisher: PropTypes.string.isRequired,
   setGender: PropTypes.string.isRequired,
   setRace: PropTypes.string.isRequired,
@@ -132,5 +138,6 @@ CardsList.propTypes = {
   gender: PropTypes.string.isRequired,
   race: PropTypes.string.isRequired,
   alignment: PropTypes.string.isRequired,
+
 };
 export default CardsList;
