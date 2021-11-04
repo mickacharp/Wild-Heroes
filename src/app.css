@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(190, 190, 190);
-  background-position: center;
+  background-size: cover;
+  background-image: url('./img/Background.jpg');
   background-attachment: fixed;
 }

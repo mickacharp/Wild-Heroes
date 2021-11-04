@@ -50,7 +50,6 @@ const ModalInfo = ({
       >
         {' '}
       </div>
-
       <div className={`modal-content ${headerClass(alignment)}`}>
         <button
           type="button"

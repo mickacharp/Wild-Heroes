@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './cards.css';
 import ModalInfo from './ModalInfo';
+import './card.css';
 
 const Card = ({
   name,
@@ -46,7 +46,6 @@ const Card = ({
         <h2>{name}</h2>
       </div>
       <div>
-        {' '}
         {toggleModal && (
           <ModalInfo
             name={name}

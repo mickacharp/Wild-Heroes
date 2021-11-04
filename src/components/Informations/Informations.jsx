@@ -2,36 +2,31 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CardsList from './CardsList';
 import Pagination from './Pagination';
-import './cards.css';
+import SearchbarName from './SearchBarName';
+import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-  const [playOnce, setPlayOnce] = useState(true);
-  const [rangeValue, setRangeValue] = useState(20);
+  // const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
-  const handleClick = (value) => {
-    setRangeValue(value + 20);
-  };
-  useEffect(() => {
-    if (playOnce) {
-      axios
-        .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
-        .then((response) => response.data.results)
-        .then((data) => {
-          setHero(data);
-          setPlayOnce(false);
-          setIsLoading(false);
-        });
-    }
-  }, [hero, playOnce]);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
   const [cardsPerPage, setCardsPerPage] = useState(30);
-  // Get current posts
+  // Filters
+  const [byPublisher, setByPublisher] = useState('');
+  const [gender, setGender] = useState('');
+  const [alignment, setAlignment] = useState('');
+  const [race, setRace] = useState('');
+  // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
+  // SearchBar
+  const [searchName, setSearchName] = useState('');
+  const handleChange = (e) => {
+    setSearchName(e.target.value);
+  };
 
   // Change page
   const paginate = (pageNumber) => {
@@ -39,18 +34,86 @@ const Informations = () => {
     document.documentElement.scrollTop = 0;
   };
 
-  /*  const renderModal = () => {
-    return toggleModal && <ModalInfo setToggleModal={hideModal} />;
-  }; */
+  // Call the api and load image to waiting call
+  useEffect(() => {
+    if (isLoading) {
+      axios
+        .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
+        .then((response) => response.data.results)
+        .then((data) => {
+          setHero(data);
+          setIsLoading(false);
+        });
+    }
+   }, [hero]);
+  // change the component according to searchname state
+  useEffect(() => {
+    if (searchName !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [searchName]);
+
+  useEffect(() => {
+    if (byPublisher !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [byPublisher]);
+
+  useEffect(() => {
+    if (gender !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [gender]);
+
+  useEffect(() => {
+    if (alignment !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [alignment]);
+
+  useEffect(() => {
+    if (race !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [race]);
+
+
   return (
     <div>
+      <div>
+        <SearchbarName
+          searchName={searchName}
+          setSearchName={setSearchName}
+          handleChange={handleChange}
+        />
+      </div>
       <CardsList
-        setCardsPerPage={setCardsPerPage}
-        totalCards={hero.length}
-        rangeValue={rangeValue}
-        handleClick={handleClick}
+        searchName={searchName}
         isLoading={isLoading}
         hero={currentHero}
+        byPublisher={byPublisher}
+        setByPublisher={setByPublisher}
+        gender={gender}
+        setGender={setGender}
+        alignment={alignment}
+        setAlignment={setAlignment}
+        race={race}
+        setRace={setRace}
       />
 
       <div className="container-pagination">

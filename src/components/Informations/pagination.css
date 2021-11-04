@@ -1,13 +1,14 @@
 .nav-page p {
   text-align: center;
-  font-size: 1.2rem;
+  margin-top: 2%;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 /* ul style */
 .pagination {
   width: 50%;
-  margin: 2% 23% 2% 23%;
+  margin: 2% auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
