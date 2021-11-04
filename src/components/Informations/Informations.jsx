@@ -46,6 +46,50 @@ const Informations = () => {
         });
     }
   }, [hero, playOnce]);
+  useEffect(() => {
+    if (searchName !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [searchName]);
+
+  useEffect(() => {
+    if (byPublisher !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [byPublisher]);
+
+  useEffect(() => {
+    if (gender !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [gender]);
+
+  useEffect(() => {
+    if (alignment !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [alignment]);
+
+  useEffect(() => {
+    if (race !== '') {
+      setCurrentPage(1);
+      setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
+    }
+  }, [race]);
 
   return (
     <div>

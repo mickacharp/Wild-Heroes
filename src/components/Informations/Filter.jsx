@@ -8,7 +8,7 @@ const Filter = ({ setFilter, filter, response }) => {
         className="comics-filter"
         onChange={(e) => setFilter(e.target.value)}
       >
-        <option value="">- {filter} -</option>
+        <option value=""> {filter} </option>
         {response.map((element) => (
           <option value={element}>{element}</option>
         ))}

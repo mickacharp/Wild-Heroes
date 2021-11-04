@@ -8,8 +8,6 @@ import './filter.css';
 const CardsList = ({
   hero,
   isLoading,
-  setCardsPerPage,
-  totalCards,
   searchName,
   setByPublisher,
   setGender,
@@ -20,11 +18,6 @@ const CardsList = ({
   race,
   alignment,
 }) => {
-  if (searchName !== '') {
-    setCardsPerPage(totalCards);
-  } else {
-    setCardsPerPage(30);
-  }
   return (
     <div className="cards-list">
       {isLoading ? (
@@ -129,10 +122,8 @@ const CardsList = ({
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setCardsPerPage: PropTypes.number.isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
-  totalCards: PropTypes.number.isRequired,
   setByPublisher: PropTypes.string.isRequired,
   setGender: PropTypes.string.isRequired,
   setRace: PropTypes.string.isRequired,
