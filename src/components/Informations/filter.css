@@ -1,15 +1,11 @@
-.search {
-  height: 5vh;
-  width: 100%;
-  text-align: center;
+.container-filter {
+  display: flex;
+  justify-content: space-around;
+  padding: 1vh;
   background:
     linear-gradient(
       90deg,
       rgba(16, 25, 113, 1) 0%,
       rgba(14, 14, 14, 1) 50%
     );
-}
-
-.inputName {
-  width: 32vh;
 }

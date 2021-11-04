@@ -13,6 +13,11 @@ const Informations = () => {
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
   const [cardsPerPage, setCardsPerPage] = useState(30);
+  // Filters
+  const [byPublisher, setByPublisher] = useState('');
+  const [gender, setGender] = useState('');
+  const [alignment, setAlignment] = useState('');
+  const [race, setRace] = useState('');
   // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
@@ -58,6 +63,14 @@ const Informations = () => {
         totalCards={hero.length}
         isLoading={isLoading}
         hero={currentHero}
+        byPublisher={byPublisher}
+        setByPublisher={setByPublisher}
+        gender={gender}
+        setGender={setGender}
+        alignment={alignment}
+        setAlignment={setAlignment}
+        race={race}
+        setRace={setRace}
       />
 
       <div className="container-pagination">

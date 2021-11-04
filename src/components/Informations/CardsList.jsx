@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import './card.css';
+import Filter from './Filter';
+import './filter.css';
 
 const CardsList = ({
   hero,
@@ -9,6 +11,14 @@ const CardsList = ({
   setCardsPerPage,
   totalCards,
   searchName,
+  setByPublisher,
+  setGender,
+  setRace,
+  setAlignment,
+  byPublisher,
+  gender,
+  race,
+  alignment,
 }) => {
   if (searchName !== '') {
     setCardsPerPage(totalCards);
@@ -25,9 +35,84 @@ const CardsList = ({
         />
       ) : (
         <div className="container-cards-button">
+          <div className="container-filter">
+            <Filter
+              setFilter={setByPublisher}
+              filter="by publisher"
+              response={[
+                'Marvel Comics',
+                'DC Comics',
+                'Image Comics',
+                'Dark Horse',
+                'NBC - Heroes',
+                'Sharon Carter',
+                'Wildstorm',
+                'Archangel',
+                'Tempest',
+                'Image Comics',
+                'Giant-Man',
+                'Toxin',
+                'Angel',
+                'Speedy',
+                'Goliath',
+                'Spectre',
+                'Oracle',
+                'Hawkfire',
+                'Huntress',
+                'Misfit',
+                'Spoiler',
+                'Nightwing',
+                'Icon Comics',
+              ]}
+            />
+            <Filter
+              setFilter={setGender}
+              filter="by gender"
+              response={['Male', 'Female']}
+            />
+            <Filter
+              setFilter={setRace}
+              filter="by race"
+              response={[
+                'Human',
+                'Icthyo Sapien',
+                'Ungaran',
+                'Cosmic Entity',
+                'Cyborg',
+                'Xenomorph',
+                'Android',
+                'Vampire',
+                'Mutant',
+                'God',
+                'Symbiote',
+                'Atlantean',
+                'Alien',
+                'Neyaphen',
+                'Alpha',
+                'Bizarro',
+                'Inhuman',
+                'Metahuman',
+                'Demon',
+                'Dathomirian Zabrak',
+                'Amazon',
+                'Kryptonian',
+                'Kakarantharaian',
+                'Black Racer',
+              ]}
+            />
+            <Filter
+              setFilter={setAlignment}
+              filter="by alignment"
+              response={['good', 'bad', 'neutral']}
+            />
+          </div>
           <div className="container-cards">
             {hero
               .filter((el) => el.name.includes(searchName))
+              .filter((el) => el.biography.publisher.includes(byPublisher))
+              .filter((el) => el.appearance.gender.includes(gender))
+              .filter((el) => el.appearance.race.includes(race))
+              .filter((el) => el.biography.alignment.includes(alignment))
               .map((el) => (
                 <Card
                   key={el.id}
@@ -48,6 +133,13 @@ CardsList.propTypes = {
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
   totalCards: PropTypes.number.isRequired,
+  setByPublisher: PropTypes.string.isRequired,
+  setGender: PropTypes.string.isRequired,
+  setRace: PropTypes.string.isRequired,
+  setAlignment: PropTypes.string.isRequired,
+  byPublisher: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  race: PropTypes.string.isRequired,
+  alignment: PropTypes.string.isRequired,
 };
-
 export default CardsList;
