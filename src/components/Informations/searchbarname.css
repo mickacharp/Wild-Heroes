@@ -13,8 +13,9 @@
 }
 
 .inputName {
-  width: 32vh;
+  width: 35vh;
   border-radius: 5px;
+  height: 25px;
 }
 
 @media screen and (max-width: 720px) {

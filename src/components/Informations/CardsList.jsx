@@ -17,6 +17,10 @@ const CardsList = ({
   gender,
   race,
   alignment,
+  allRaces,
+  allPublishers,
+  allGenders,
+  allAlignments,
 }) => {
   return (
     <div className="cards-list">
@@ -30,74 +34,21 @@ const CardsList = ({
         <div className="container-cards-button">
           <div className="container-filter">
             <Filter
-              setFilter={setByPublisher}
-              filter="by publisher"
-              response={[
-                'Marvel Comics',
-                'DC Comics',
-                'Image Comics',
-                'Dark Horse',
-                'NBC - Heroes',
-                'Sharon Carter',
-                'Wildstorm',
-                'Archangel',
-                'Tempest',
-                'Image Comics',
-                'Giant-Man',
-                'Toxin',
-                'Angel',
-                'Speedy',
-                'Goliath',
-                'Spectre',
-                'Oracle',
-                'Hawkfire',
-                'Huntress',
-                'Misfit',
-                'Spoiler',
-                'Nightwing',
-                'Icon Comics',
-              ]}
-            />
-            <Filter
               setFilter={setGender}
               filter="by gender"
-              response={['Male', 'Female']}
-            />
-            <Filter
-              setFilter={setRace}
-              filter="by race"
-              response={[
-                'Human',
-                'Icthyo Sapien',
-                'Ungaran',
-                'Cosmic Entity',
-                'Cyborg',
-                'Xenomorph',
-                'Android',
-                'Vampire',
-                'Mutant',
-                'God',
-                'Symbiote',
-                'Atlantean',
-                'Alien',
-                'Neyaphen',
-                'Alpha',
-                'Bizarro',
-                'Inhuman',
-                'Metahuman',
-                'Demon',
-                'Dathomirian Zabrak',
-                'Amazon',
-                'Kryptonian',
-                'Kakarantharaian',
-                'Black Racer',
-              ]}
+              response={allGenders}
             />
             <Filter
               setFilter={setAlignment}
               filter="by alignment"
-              response={['good', 'bad', 'neutral']}
+              response={allAlignments}
             />
+            <Filter
+              setFilter={setByPublisher}
+              filter="by publisher"
+              response={allPublishers}
+            />
+            <Filter setFilter={setRace} filter="by race" response={allRaces} />
           </div>
           <div className="container-cards">
             {hero
@@ -126,7 +77,6 @@ const CardsList = ({
                   groupAffiliation={el.connections['group-affiliation']}
                 />
               ))}
-            ))
           </div>
         </div>
       )}
@@ -135,6 +85,10 @@ const CardsList = ({
 };
 CardsList.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allRaces: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allPublishers: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allGenders: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allAlignments: PropTypes.arrayOf(PropTypes.object).isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchName: PropTypes.string.isRequired,
   setByPublisher: PropTypes.func.isRequired,

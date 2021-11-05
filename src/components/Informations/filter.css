@@ -1,7 +1,8 @@
 .container-filter {
   display: flex;
   justify-content: space-around;
-  padding: 1vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   background:
     linear-gradient(
       90deg,
@@ -12,4 +13,5 @@
 
 .comics-filter {
   border-radius: 5px;
+  width: 25vh;
 }

@@ -28,6 +28,70 @@ const Informations = () => {
     setSearchName(e.target.value);
   };
 
+  const allRaces = [
+    { id: 0, name: 'Alien' },
+    { id: 1, name: 'Alpha' },
+    { id: 2, name: 'Amazon' },
+    { id: 3, name: 'Android' },
+    { id: 4, name: 'Atlantean' },
+    { id: 5, name: 'Bizarro' },
+    { id: 6, name: 'Black Racer' },
+    { id: 7, name: 'Cosmic Entity' },
+    { id: 8, name: 'Cyborg' },
+    { id: 9, name: 'Dathomirian Zabrak' },
+    { id: 10, name: 'Demon' },
+    { id: 11, name: 'God' },
+    { id: 12, name: 'Human' },
+    { id: 13, name: 'Icthyo Sapien' },
+    { id: 14, name: 'Inhuman' },
+    { id: 15, name: 'Kakarantharaian' },
+    { id: 16, name: 'Kryptonian' },
+    { id: 17, name: 'Metahuman' },
+    { id: 18, name: 'Mutant' },
+    { id: 19, name: 'Neyaphen' },
+    { id: 20, name: 'Symbiote' },
+    { id: 21, name: 'Ungaran' },
+    { id: 22, name: 'Vampire' },
+    { id: 23, name: 'Xenomorph' },
+  ];
+
+  const allPublishers = [
+    { id: 24, name: 'Marvel Comics' },
+    { id: 25, name: 'DC Comics' },
+    { id: 26, name: 'Image Comics' },
+    { id: 27, name: 'Dark Horse' },
+    { id: 28, name: 'NBC - Heroes' },
+    { id: 29, name: 'Sharon Carter' },
+    { id: 30, name: 'Wildstorm' },
+    { id: 31, name: 'Archangel' },
+    { id: 32, name: 'Tempest' },
+    { id: 33, name: 'Image Comics' },
+    { id: 34, name: 'Giant-Man' },
+    { id: 35, name: 'Toxin' },
+    { id: 36, name: 'Angel' },
+    { id: 37, name: 'Speedy' },
+    { id: 38, name: 'Goliath' },
+    { id: 39, name: 'Spectre' },
+    { id: 40, name: 'Oracle' },
+    { id: 41, name: 'Hawkfire' },
+    { id: 42, name: 'Huntress' },
+    { id: 43, name: 'Misfit' },
+    { id: 44, name: 'Spoiler' },
+    { id: 45, name: 'Nightwing' },
+    { id: 46, name: 'Icon Comics' },
+  ];
+
+  const allGenders = [
+    { id: 47, name: 'Male' },
+    { id: 48, name: 'Female' },
+  ];
+
+  const allAlignments = [
+    { id: 49, name: 'good' },
+    { id: 50, name: 'bad' },
+    { id: 51, name: 'neutral' },
+  ];
+
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -105,6 +169,10 @@ const Informations = () => {
         setAlignment={setAlignment}
         race={race}
         setRace={setRace}
+        allRaces={allRaces}
+        allPublishers={allPublishers}
+        allGenders={allGenders}
+        allAlignments={allAlignments}
       />
 
       <div className="container-pagination">
