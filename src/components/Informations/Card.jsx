@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ModalInfo from './ModalInfo';
+import imgReplace from '../../img/interrogation.png';
 import './card.css';
 
 const Card = ({
@@ -42,7 +43,14 @@ const Card = ({
         role="button"
         tabIndex={0}
       >
-        <img src={image} alt={name} />
+        <img
+          src={image}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = imgReplace;
+          }}
+          alt={name}
+        />
         <h2>{name}</h2>
       </div>
       <div>

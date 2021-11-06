@@ -7,7 +7,6 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -100,7 +99,7 @@ const Informations = () => {
 
   // Call the api and load image to waiting call
   useEffect(() => {
-    if (isLoading) {
+    const fetchData = async () => {
       axios
         .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
         .then((response) => response.data.results)
@@ -108,8 +107,9 @@ const Informations = () => {
           setHero(data);
           setIsLoading(false);
         });
-    }
-  }, [hero]);
+    };
+    fetchData();
+  }, []);
   // change the component according to searchname state
   useEffect(() => {
     if (searchName !== '') {
@@ -119,32 +119,40 @@ const Informations = () => {
       setCardsPerPage(30);
     }
   }, [searchName]);
-
+  // change the component according to Filter state
   useEffect(() => {
     if (byPublisher !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
     }
   }, [byPublisher]);
-
+  // change the component according to Filter state
   useEffect(() => {
     if (gender !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
     }
   }, [gender]);
-
+  // change the component according to Filter state
   useEffect(() => {
     if (alignment !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
     }
   }, [alignment]);
-
+  // change the component according to Filter state
   useEffect(() => {
     if (race !== '') {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
+    } else {
+      setCardsPerPage(30);
     }
   }, [race]);
 
@@ -158,8 +166,8 @@ const Informations = () => {
         />
       </div>
       <CardsList
-        searchName={searchName}
         isLoading={isLoading}
+        searchName={searchName}
         hero={currentHero}
         byPublisher={byPublisher}
         setByPublisher={setByPublisher}
