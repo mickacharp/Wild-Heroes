@@ -110,51 +110,23 @@ const Informations = () => {
     };
     fetchData();
   }, []);
-  // change the component according to searchname state
+
+  // change the component according to search state
   useEffect(() => {
-    if (searchName !== '') {
+    if (
+      searchName !== '' ||
+      byPublisher !== '' ||
+      gender !== '' ||
+      race !== '' ||
+      alignment !== ''
+    ) {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
-  }, [searchName]);
-  // change the component according to Filter state
-  useEffect(() => {
-    if (byPublisher !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
+    return () => {
       setCardsPerPage(30);
-    }
-  }, [byPublisher]);
-  // change the component according to Filter state
-  useEffect(() => {
-    if (gender !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [gender]);
-  // change the component according to Filter state
-  useEffect(() => {
-    if (alignment !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [alignment]);
-  // change the component according to Filter state
-  useEffect(() => {
-    if (race !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [race]);
+    };
+  }, [searchName, byPublisher, gender, race, alignment]);
 
   return (
     <div>
