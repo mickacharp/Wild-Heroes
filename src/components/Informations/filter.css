@@ -1,6 +1,5 @@
 .container-filter {
   display: flex;
-  justify-content: space-around;
   padding-top: 2vh;
   padding-bottom: 2vh;
   background:
@@ -11,7 +10,24 @@
     );
 }
 
+.boxes {
+  margin-left: 2%;
+  position: relative;
+}
+
+.logo-filter {
+  width: 40px;
+  height: 40px;
+}
+
 .comics-filter {
+  position: absolute;
+  top: 35px;
+  left: -35px;
   border-radius: 5px;
-  width: 25vh;
+  width: 14vh;
+}
+
+.hide-comics-filter {
+  display: none;
 }
