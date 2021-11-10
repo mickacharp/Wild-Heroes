@@ -18,20 +18,16 @@ const Button = ({ setFilter, allGenders }) => {
   /* eslint-enable */
   return (
     <div className="slider-container">
-      <div>
-        <label htmlFor="slider">
-          Gender
-          <input
-            type="range"
-            id="slider"
-            name="slider"
-            min="0"
-            max="2"
-            step="1"
-            onChange={(e) => handleGender(e)}
-          />
-        </label>
-      </div>
+      <input
+        className="slider"
+        type="range"
+        id="slider"
+        name="slider"
+        min="0"
+        max="2"
+        step="1"
+        onChange={(e) => handleGender(e)}
+      />
     </div>
   );
 };
