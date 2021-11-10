@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import imgReplace from '../../img/interrogation.png';
 import './modalinfo.css';
 
 const ModalInfo = ({
@@ -63,13 +64,21 @@ const ModalInfo = ({
         </div>
         <div className="modal-body">
           <div className="modal-card">
-            <img src={image} alt={name} className="modal-img" />
+            <img
+              src={image}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = imgReplace;
+              }}
+              alt={name}
+              className="modal-img"
+            />
           </div>
           <div className="modal-stats">
             <h1>Statistics</h1>
             <ul className="stats-list">
-              {statsArray.map((stat) => (
-                <li>
+              {statsArray.map((stat, index) => (
+                <li key={[index]}>
                   {stat.includes('null')
                     ? stat.replace('null', 'Unknown')
                     : stat}

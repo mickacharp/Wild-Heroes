@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './pagination.css';
+import { NavLink } from 'react-router-dom';
 
 const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
   const pageNumbers = [];
@@ -11,21 +12,22 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
     <nav className="nav-page">
       <p> {cardsPerPage < 31 && `Page: ${currentPage}`}</p>
       <ul className="pagination">
-        {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
-            {cardsPerPage < 31 && (
-              <input
-                to="/"
+        {pageNumbers.map(
+          (number) =>
+            cardsPerPage < 31 && (
+              <NavLink
+                key={number}
                 value={number}
-                type="button"
+                to="/informations"
+                className="page-link"
                 onClick={() => {
                   paginate(number);
                 }}
-                className="page-link"
-              />
-            )}
-          </li>
-        ))}
+              >
+                {number}
+              </NavLink>
+            )
+        )}
       </ul>
     </nav>
   );
