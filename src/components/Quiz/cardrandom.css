@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0%;
+}
+
+.card-list {
+  width: 100%;
+}
+
+.card-quiz {
+  position: fixed;
+  width: 250px;
+  margin: 2vw;
+  background-color: white;
+  padding-bottom: 15px;
+  border: 0 black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-quiz img {
+  min-width: 250px;
+  height: 300px;
+}
+
+.card-quiz h2 {
+  text-align: center;
+  margin-top: 20px;
+}
