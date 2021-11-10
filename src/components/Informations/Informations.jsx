@@ -7,7 +7,6 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-  // const [playOnce, setPlayOnce] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,6 +27,70 @@ const Informations = () => {
     setSearchName(e.target.value);
   };
 
+  const allRaces = [
+    { id: 0, name: 'Alien' },
+    { id: 1, name: 'Alpha' },
+    { id: 2, name: 'Amazon' },
+    { id: 3, name: 'Android' },
+    { id: 4, name: 'Atlantean' },
+    { id: 5, name: 'Bizarro' },
+    { id: 6, name: 'Black Racer' },
+    { id: 7, name: 'Cosmic Entity' },
+    { id: 8, name: 'Cyborg' },
+    { id: 9, name: 'Dathomirian Zabrak' },
+    { id: 10, name: 'Demon' },
+    { id: 11, name: 'God' },
+    { id: 12, name: 'Human' },
+    { id: 13, name: 'Icthyo Sapien' },
+    { id: 14, name: 'Inhuman' },
+    { id: 15, name: 'Kakarantharaian' },
+    { id: 16, name: 'Kryptonian' },
+    { id: 17, name: 'Metahuman' },
+    { id: 18, name: 'Mutant' },
+    { id: 19, name: 'Neyaphen' },
+    { id: 20, name: 'Symbiote' },
+    { id: 21, name: 'Ungaran' },
+    { id: 22, name: 'Vampire' },
+    { id: 23, name: 'Xenomorph' },
+  ];
+
+  const allPublishers = [
+    { id: 24, name: 'Marvel Comics' },
+    { id: 25, name: 'DC Comics' },
+    { id: 26, name: 'Image Comics' },
+    { id: 27, name: 'Dark Horse' },
+    { id: 28, name: 'NBC - Heroes' },
+    { id: 29, name: 'Sharon Carter' },
+    { id: 30, name: 'Wildstorm' },
+    { id: 31, name: 'Archangel' },
+    { id: 32, name: 'Tempest' },
+    { id: 33, name: 'Image Comics' },
+    { id: 34, name: 'Giant-Man' },
+    { id: 35, name: 'Toxin' },
+    { id: 36, name: 'Angel' },
+    { id: 37, name: 'Speedy' },
+    { id: 38, name: 'Goliath' },
+    { id: 39, name: 'Spectre' },
+    { id: 40, name: 'Oracle' },
+    { id: 41, name: 'Hawkfire' },
+    { id: 42, name: 'Huntress' },
+    { id: 43, name: 'Misfit' },
+    { id: 44, name: 'Spoiler' },
+    { id: 45, name: 'Nightwing' },
+    { id: 46, name: 'Icon Comics' },
+  ];
+
+  const allGenders = [
+    { id: 47, name: 'Male' },
+    { id: 48, name: 'Female' },
+  ];
+
+  const allAlignments = [
+    { id: 49, name: 'good' },
+    { id: 50, name: 'bad' },
+    { id: 51, name: 'neutral' },
+  ];
+
   // Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -36,7 +99,7 @@ const Informations = () => {
 
   // Call the api and load image to waiting call
   useEffect(() => {
-    if (isLoading) {
+    const fetchData = async () => {
       axios
         .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
         .then((response) => response.data.results)
@@ -44,54 +107,26 @@ const Informations = () => {
           setHero(data);
           setIsLoading(false);
         });
-    }
-   }, [hero]);
-  // change the component according to searchname state
+    };
+    fetchData();
+  }, []);
+
+  // change the component according to search state
   useEffect(() => {
-    if (searchName !== '') {
+    if (
+      searchName !== '' ||
+      byPublisher !== '' ||
+      gender !== '' ||
+      race !== '' ||
+      alignment !== ''
+    ) {
       setCurrentPage(1);
       setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
     }
-  }, [searchName]);
-
-  useEffect(() => {
-    if (byPublisher !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
+    return () => {
       setCardsPerPage(30);
-    }
-  }, [byPublisher]);
-
-  useEffect(() => {
-    if (gender !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [gender]);
-
-  useEffect(() => {
-    if (alignment !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [alignment]);
-
-  useEffect(() => {
-    if (race !== '') {
-      setCurrentPage(1);
-      setCardsPerPage(hero.length);
-    } else {
-      setCardsPerPage(30);
-    }
-  }, [race]);
-
+    };
+  }, [searchName, byPublisher, gender, race, alignment]);
 
   return (
     <div>
@@ -103,8 +138,8 @@ const Informations = () => {
         />
       </div>
       <CardsList
-        searchName={searchName}
         isLoading={isLoading}
+        searchName={searchName}
         hero={currentHero}
         byPublisher={byPublisher}
         setByPublisher={setByPublisher}
@@ -114,6 +149,10 @@ const Informations = () => {
         setAlignment={setAlignment}
         race={race}
         setRace={setRace}
+        allRaces={allRaces}
+        allPublishers={allPublishers}
+        allGenders={allGenders}
+        allAlignments={allAlignments}
       />
 
       <div className="container-pagination">

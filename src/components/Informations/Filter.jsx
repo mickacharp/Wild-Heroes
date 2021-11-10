@@ -10,7 +10,9 @@ const Filter = ({ setFilter, filter, response }) => {
       >
         <option value=""> {filter} </option>
         {response.map((element) => (
-          <option value={element}>{element}</option>
+          <option key={element.id} value={element.name}>
+            {element.name}
+          </option>
         ))}
       </select>
     </div>
@@ -18,9 +20,9 @@ const Filter = ({ setFilter, filter, response }) => {
 };
 
 Filter.propTypes = {
-  setFilter: PropTypes.string.isRequired,
+  setFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-  response: PropTypes.arrayOf(PropTypes.string).isRequired,
+  response: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Filter;

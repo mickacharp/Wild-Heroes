@@ -4,16 +4,18 @@ import './searchbarname.css';
 
 const SearchbarName = ({ handleChange, searchName }) => {
   return (
-    <div className="search">
-      <label htmlFor="inputName">
-        <input
-          className="inputName"
-          type="text"
-          value={searchName}
-          placeholder="Enter the name of a character"
-          onChange={handleChange}
-        />
-      </label>
+    <div className="container">
+      <div className="search">
+        <div>
+          <input
+            type="text"
+            placeholder="Enter your research"
+            value={searchName}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
     </div>
   );
 };

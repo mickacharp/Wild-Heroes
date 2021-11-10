@@ -1,11 +1,48 @@
 .container-filter {
   display: flex;
-  justify-content: space-around;
-  padding: 1vh;
+  justify-content: space-evenly;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   background:
     linear-gradient(
       90deg,
       rgba(16, 25, 113, 1) 0%,
       rgba(14, 14, 14, 1) 50%
     );
+}
+
+.comics-filter {
+  border-radius: 15px 15px 2px 2px;
+  padding: 0 5px;
+  width: 25vh;
+  background-color: rgba(14, 14, 14, 0.1);
+  border: solid 3px white;
+  color: goldenrod;
+  font-style: italic;
+  height: 40px;
+}
+
+.comics-filter:focus {
+  border: solid 3px white;
+}
+
+.comics-filter:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.comics-filter > option {
+  background-color: rgba(14, 14, 14, 1);
+  color: rgba(218, 165, 32, 0.8);
+  font-style: normal;
+}
+
+/* Remove default arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('../../img/arrowolverine.png');
+  background-position: right;
+  background-size: 30px;
+  background-repeat: no-repeat;
 }

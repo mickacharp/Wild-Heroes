@@ -4,37 +4,110 @@
   font-size: 1rem;
 }
 
-.modal {
+@font-face {
+  font-family: 'Heroes';
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
+}
+
+.modal-container,
+.modal-background {
   position: fixed;
-  top: 1%;
-  bottom: 1%;
-  left: 0.5%;
-  right: 0.5%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: fixed;
+  top: 15%;
+  bottom: 15%;
+  left: 15%;
+  right: 15%;
+  background-image: url(../../img/Background.jpg);
+  background-position: center;
+  background-size: cover;
   display: flex;
+  flex-direction: column;
+}
+
+.modal-content.good-hero {
+  box-shadow: rgba(16, 25, 113, 1) 0 10px 15px;
+}
+
+.modal-content.bad-hero {
+  box-shadow: #c80000 0 15px 20px;
+}
+
+.modal-content.neutral-hero {
+  box-shadow: #7e7d88 0 15px 20px;
+}
+
+.modal-header {
+  background-color: rgba(21, 30, 118);
+  color: gold;
+  font-style: oblique;
+  font-weight: lighter;
+  padding: 0.5rem 0;
+}
+
+.modal-header.good-hero {
+  background-color: #101971;
+}
+
+.modal-header.bad-hero {
+  background-color: #c80000;
+}
+
+.modal-header.neutral-hero {
+  background-color: #7e7d88;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  background-color: #27457e;
-  background-image: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
-  border-radius: 10px;
-  padding: 10px;
+  color: aliceblue;
+  height: 100%;
 }
 
 .close-modal-button {
-  position: fixed;
-  width: 100vw;
-  height: 100vw;
+  position: absolute;
   border: none;
-  padding: 0 6px;
-  font-size: 1.4rem;
+  padding: 0 9px;
+  font-size: 2rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
   top: 5px;
   right: 5px;
   color: aliceblue;
 }
 
+.modal-stats,
+.modal-bio,
 .modal-card {
+  border-radius: 10px;
   height: 80%;
-  margin: auto;
+  margin-bottom: 5%;
+}
+
+.modal-stats,
+.modal-bio {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-stats {
+  width: 20%;
+}
+
+.modal-bio {
+  width: 40%;
 }
 
 .modal-img {
@@ -43,22 +116,45 @@
   border-radius: 10px;
 }
 
-.hero-infos {
+.stats-list,
+.bio-list {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
-  width: 60%;
-  margin: auto;
-  margin-left: 2%;
-  text-align: justify;
+  list-style-type: none;
+  width: 100%;
+  height: 87%;
+  align-items: center;
+  text-align: center;
 }
 
-.hero-stats,
-.hero-bio {
-  padding: 1rem;
-  margin-bottom: 1%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  height: 30%;
+.modal-header h1,
+.modal-stats h1,
+.modal-bio h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+}
+
+.modal-stats h1,
+.modal-bio h1 {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 3mm ridge goldenrod;
+}
+
+.stats-list li,
+strong {
+  font-size: 1.3rem;
+}
+
+.bio-list li {
+  font-size: 1.05rem;
+}
+
+strong,
+.stats-list li:nth-child(odd) {
+  color: goldenrod;
+  font-weight: bold;
 }
