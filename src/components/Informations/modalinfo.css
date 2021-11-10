@@ -158,3 +158,27 @@ strong,
   color: goldenrod;
   font-weight: bold;
 }
+
+/* ------------------------------------------------------------------Media for landscape --------------------------------------------- */
+
+@media screen and (max-height: 415px) {
+  body {
+    background-color: transparent;
+  }
+}
+
+/* -------------------------------------------------------------------Mini resolution-------------------------------------------------- */
+
+@media screen and (max-width: 1080px) {
+  body {
+    background-color: transparent;
+  }
+}
+
+/* ---------------------------------------------------------------------- Media for phone------------------------------------------------ */
+
+@media screen and (max-width: 720px) {
+  body {
+    background-color: transparent;
+  }
+}
