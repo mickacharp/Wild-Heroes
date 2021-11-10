@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import QuizQuestion from './QuizQuestion';
@@ -9,6 +7,16 @@ function QuizGame() {
   const [nextQuestion, setNextQuestion] = useState(false);
 
   useEffect(() => {
+    const shuffleArray = (array) => {
+      const array2 = array;
+      for (let i = array.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array2[i];
+        array2[i] = array2[j];
+        array2[j] = temp;
+      }
+    };
+
     const getQuestions = async () => {
       const results = await axios.get(
         'https://opentdb.com/api.php?amount=1&category=29'
@@ -16,7 +24,7 @@ function QuizGame() {
       const questionsList = [];
       questionsList.push(
         results.data.results.map((el) => {
-          let answers;
+          let answers = [];
           const parser = new DOMParser();
           const question = {
             question: parser.parseFromString(el.question, 'text/html')
@@ -31,7 +39,7 @@ function QuizGame() {
             },
           ];
 
-          for (let i = 0; i < el.incorrect_answers.length; i++) {
+          for (let i = 0; i < el.incorrect_answers.length; i += 1) {
             answers.push({
               text: parser.parseFromString(el.incorrect_answers[i], 'text/html')
                 .documentElement.textContent,
@@ -46,14 +54,6 @@ function QuizGame() {
       setQuestions(questionsList[0]);
     };
 
-    const shuffleArray = (array) => {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-      }
-    };
     getQuestions();
   }, [nextQuestion]);
 

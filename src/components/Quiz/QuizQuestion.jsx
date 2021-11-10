@@ -9,12 +9,12 @@ const QuizQuestion = ({ question, answers, handleNextQuestion }) => {
     let colorAnswer = {};
     if (answerGiven) {
       if (correctAnswer) {
-        colorAnswer = { backgroundColor: 'lightgreen' };
+        colorAnswer = { backgroundColor: '#1E7112' };
       } else {
-        colorAnswer = { backgroundColor: 'grey' };
+        colorAnswer = { backgroundColor: 'rgba(0, 0, 0, 0.7)' };
       }
     } else {
-      colorAnswer = { backgroundColor: 'lightgrey' };
+      colorAnswer = { backgroundColor: 'rgba(16, 25, 113, 1)' };
     }
     return colorAnswer;
   }
