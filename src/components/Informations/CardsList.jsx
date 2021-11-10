@@ -35,20 +35,20 @@ const CardsList = ({
           <div className="container-filter">
             <Filter
               setFilter={setGender}
-              filter="by gender"
+              filter="Gender"
               response={allGenders}
             />
             <Filter
               setFilter={setAlignment}
-              filter="by alignment"
+              filter="Alignment"
               response={allAlignments}
             />
             <Filter
               setFilter={setByPublisher}
-              filter="by publisher"
+              filter="Publisher"
               response={allPublishers}
             />
-            <Filter setFilter={setRace} filter="by race" response={allRaces} />
+            <Filter setFilter={setRace} filter="Race" response={allRaces} />
           </div>
           <div className="container-cards">
             {hero

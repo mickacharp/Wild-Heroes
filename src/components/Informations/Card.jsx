@@ -25,9 +25,9 @@ const Card = ({
   };
   const colorClass = (ali) => {
     let heroClass = '';
-    if (ali === 'good') {
+    if (ali === 'Good') {
       heroClass = 'good-card';
-    } else if (ali === 'bad') {
+    } else if (ali === 'Bad') {
       heroClass = 'bad-card';
     } else {
       heroClass = 'normal-card';
