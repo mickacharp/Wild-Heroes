@@ -4,6 +4,7 @@ import Card from './Card';
 import './card.css';
 import Filter from './Filter';
 import './filter.css';
+import Button from './Button';
 
 const CardsList = ({
   hero,
@@ -33,6 +34,7 @@ const CardsList = ({
       ) : (
         <div className="container-cards-button">
           <div className="container-filter">
+            <Button setFilter={setGender} allGenders={allGenders} />
             <Filter
               setFilter={setGender}
               filter="by gender"
