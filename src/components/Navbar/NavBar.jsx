@@ -19,14 +19,14 @@ const Navbar = () => {
             className="text-nav"
             to="/quiz"
           >
-            Quiz
+            <h3> Quiz</h3>
           </NavLink>
           <NavLink
             activeClassName="text-nav-active"
             className="text-nav"
             to="/informations"
           >
-            Informations
+            <h3> Informations</h3>
           </NavLink>
         </div>
       </div>
