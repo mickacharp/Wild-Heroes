@@ -13,7 +13,7 @@
 }
 
 .search {
-  margin: 20px;
+  margin: 10px;
 }
 
 .search > div {
@@ -28,7 +28,7 @@
   height: 20px;
   position: absolute;
   top: 40px;
-  right: 2px;
+  right: 1px;
   transform: rotate(135deg);
 }
 
@@ -60,14 +60,17 @@
   width: 300px;
 }
 
-/* @media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {
   .container {
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
 
   .search {
+    margin: 5px;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -78,6 +81,9 @@
   }
 
   .search {
+    margin: 5px;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-} */
+}

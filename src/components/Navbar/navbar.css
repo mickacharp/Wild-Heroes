@@ -28,15 +28,15 @@ body {
 /* Logo navigation bar */
 
 .logo-content {
+  cursor: pointer;
   margin-top: 0.5%;
   width: 25%;
   text-align: center;
 }
 
 .logo {
-  cursor: pointer;
-  width: 7vw;
-  height: 7vw;
+  width: 10vw;
+  height: 10vw;
 }
 
 /* title navigation bar */
@@ -82,32 +82,35 @@ a {
 @media screen and (max-height: 415px) {
   .header-content {
     width: 100%;
+    align-items: center;
+    height: 300px;
   }
 
   .header-content-link {
     width: 20%;
+    padding: 2vh;
   }
 
-  .title {
-    font-size: 2.5vw;
+  .title h1 {
+    font-size: 3vw;
+    height: 5vw;
   }
 
   /* Form to text of link to navigation */
   .text-nav {
-    font-size: 1vw;
+    font-size: 2em;
   }
 
   /* Logo navigation bar */
   .logo {
     align-items: center;
-    width: 9vw;
-    height: 9vw;
+    width: 3vw;
+    height: 3vw;
   }
 
   .logo-content {
-    width: 20%;
     margin-top: 1%;
-    text-align: center;
+    width: 20%;
   }
 }
 
@@ -130,12 +133,11 @@ a {
   /* Logo navigation bar */
   .logo {
     align-items: center;
-    width: 9vw;
-    height: 9vw;
+    width: 15vw;
+    height: 15vw;
   }
 
   .logo-content {
-    width: 20%;
     margin-top: 1%;
     text-align: center;
   }
@@ -149,11 +151,11 @@ a {
   }
 
   .title {
-    width: 40%;
+    width: 10%;
   }
 
   .title h1 {
-    font-size: 4vw;
+    display: none;
   }
 
   .active {
@@ -166,24 +168,24 @@ a {
 
   /* Form to text of link to navigation */
   .header-content-link {
-    width: 30%;
+    width: 60%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
 
   .text-nav {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 
   .text-nav-active {
-    font-size: 1.5vw;
+    font-size: 4vw;
   }
 
   /* Logo navigation bar */
 
   .logo {
-    width: 15vw;
-    height: 15vw;
+    width: 30vw;
+    height: 30vw;
   }
 }
