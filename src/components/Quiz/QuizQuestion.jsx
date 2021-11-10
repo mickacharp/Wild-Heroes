@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { useState } from 'react';
 import './quizQuestion.css';
 import PropTypes from 'prop-types';
@@ -8,19 +6,26 @@ const QuizQuestion = ({ question, answers, handleNextQuestion }) => {
   const [answerGiven, setAnswerGiven] = useState(false);
 
   function styleAnswer(correctAnswer) {
-    return answerGiven
-      ? correctAnswer
-        ? { backgroundColor: 'lightgreen' }
-        : { backgroundColor: 'grey' }
-      : { backgroundColor: 'lightgrey' };
+    let colorAnswer = {};
+    if (answerGiven) {
+      if (correctAnswer) {
+        colorAnswer = { backgroundColor: 'lightgreen' };
+      } else {
+        colorAnswer = { backgroundColor: 'grey' };
+      }
+    } else {
+      colorAnswer = { backgroundColor: 'lightgrey' };
+    }
+    return colorAnswer;
   }
   return (
     <div className="quiz">
       <div className="quiz_question">{question}</div>
       <ul className="quiz_answers">
-        {answers.map((el, index) => (
+        {answers.map((el) => (
           <li
-            key={index}
+            key={el.text}
+            role="presentation"
             className="quiz_answer"
             onClick={() => {
               setAnswerGiven(true);
