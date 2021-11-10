@@ -182,11 +182,11 @@ a {
     flex-wrap: wrap;
   }
 
-  .text-nav {
-    font-size: 1em;
+  .text-nav h3 {
+    font-size: 4vw;
   }
 
-  .text-nav-active {
+  .text-nav-active h3 {
     font-size: 4vw;
   }
 
