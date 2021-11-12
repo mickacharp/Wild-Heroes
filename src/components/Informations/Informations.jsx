@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Navbar from '../Navbar/NavBar';
 import CardsList from './CardsList';
 import Pagination from './Pagination';
 import SearchbarName from './SearchBarName';
@@ -130,6 +131,7 @@ const Informations = () => {
 
   return (
     <div>
+      <Navbar />
       <div>
         <SearchbarName
           searchName={searchName}
