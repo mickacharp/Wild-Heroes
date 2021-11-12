@@ -1,28 +1,43 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import imgReplace from '../../img/interrogation.png';
-import './cardrandom.css';
+import './cardQuiz.css';
 
-const CardRandom = ({ name, image }) => {
+const CardRandom = ({ hero, setChooseCard }) => {
+  const image = [];
+  const name = [];
+  const heroRandom = [];
+  heroRandom.push(hero[Math.floor(Math.random() * 732)]);
+  hero.map((el) => image.push(el.image.url));
+  hero.map((el) => name.push(el.name));
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter(Math.floor(Math.random() * 732));
+    }, 200);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [counter]);
   return (
     <>
-      <div className="card-quiz">
-        <img
-          src={image}
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = imgReplace;
-          }}
-          alt={name}
-        />
-        <h2>{name}</h2>
+      <div
+        className="card-random"
+        role="button"
+        onClick={() => setChooseCard(false)}
+        onKeyPress={() => setChooseCard(false)}
+        tabIndex={0}
+      >
+        <h2>Choose your challenger</h2>
+        <img src={image[counter]} alt={name[counter]} />
       </div>
     </>
   );
 };
 
 CardRandom.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  hero: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setChooseCard: PropTypes.func.isRequired,
 };
 export default CardRandom;

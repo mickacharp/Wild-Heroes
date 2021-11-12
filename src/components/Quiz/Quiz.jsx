@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardsShuffle from './CardsShuffle';
+import CardsQuiz from './CardsQuiz';
 
 const Quiz = () => {
   const [hero, setHero] = useState([]);
+
   // Call the api and load image to waiting call
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +19,7 @@ const Quiz = () => {
   }, []);
   return (
     <div>
-      <CardsShuffle hero={hero} />
+      <CardsQuiz hero={hero} />
     </div>
   );
 };
