@@ -1,31 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
 const Button = ({ setFilter, allGenders }) => {
-  /* eslint-disable */
+  const [genderValue, setGenderValue] = useState();
+
   const handleGender = (e) => {
-    if (e.target.value === '0') {
-      return setFilter(allGenders[0].name);
+    let filterState = '';
+    if (e === '0') {
+      filterState = setFilter(allGenders[0].name);
     }
-    if (e.target.value === '50') {
-      return setFilter('');
+    if (e === '100') {
+      filterState = setFilter(allGenders[1].name);
     }
-    if (e.target.value === '100') {
-      return setFilter(allGenders[1].name);
+    if (e === '50') {
+      filterState = setFilter('');
     }
+    return filterState;
   };
-  /* eslint-enable */
+  const genderClass = (e) => {
+    let inputFilterGender = '';
+    if (e === '0') {
+      inputFilterGender = 'filter-male';
+    } else if (e === '100') {
+      inputFilterGender = 'filter-female';
+    } else {
+      inputFilterGender = 'filter-all';
+    }
+    return inputFilterGender;
+  };
   return (
     <div className="slider-container">
       <input
-        className="slider"
+        className={`slider ${genderClass(genderValue)}`}
         type="range"
         id="slider"
-        onChecked="checked"
         name="slider"
         step="50"
-        onChange={(e) => handleGender(e)}
+        onChange={(e) => {
+          handleGender(e.target.value);
+          setGenderValue(e.target.value);
+        }}
       />
     </div>
   );

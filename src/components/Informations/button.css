@@ -31,8 +31,16 @@
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: gold; /* Green background */
+  background: #04aa6d; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+.slider.filter-male::-webkit-slider-thumb {
+  background: blue;
+}
+
+.slider.filter-female::-webkit-slider-thumb {
+  background: pink;
 }
 
 .slider::-moz-range-thumb {
