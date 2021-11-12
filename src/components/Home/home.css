@@ -1,0 +1,72 @@
+.img {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+
+.title-home {
+  color: white;
+  filter: brightness(100%);
+  font-size: 3rem;
+}
+
+.img-text-left {
+  position: relative;
+}
+
+.img-left {
+  grid-column: 1 / 2;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../img/riddler.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  filter: brightness(40%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.img-left:hover {
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+.text-left {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  left: 45%;
+}
+
+.img-text-right {
+  position: relative;
+}
+
+.img-right {
+  grid-column: 2 / 3;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../img/comics.jpeg');
+  filter: brightness(40%);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.img-right:hover {
+  filter: brightness(100%);
+  cursor: pointer;
+}
+
+.text-right {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  left: 35%;
+}

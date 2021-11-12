@@ -9,7 +9,6 @@ import './app.css';
 function App() {
   return (
     <>
-      <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/quiz" component={Quiz} />
