@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: aliceblue;
+  color: rgb(240, 248, 255);
   height: 100%;
 }
 
@@ -159,26 +159,154 @@ strong,
   font-weight: bold;
 }
 
-/* ------------------------------------------------------------------Media for landscape --------------------------------------------- */
+/* ------------------------------------------------------------------- Responsive -------------------------------------------------- */
 
-@media screen and (max-height: 415px) {
-  body {
-    background-color: transparent;
+@media screen and (max-width: 768px) {
+  .modal-container,
+  .modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
-}
 
-/* -------------------------------------------------------------------Mini resolution-------------------------------------------------- */
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    width: 100%;
+  }
 
-@media screen and (max-width: 1080px) {
-  body {
+  .modal-stats,
+  .modal-bio {
+    border-radius: 10px;
+    width: 95%;
+    height: 100%;
+    margin-bottom: 15%;
+  }
+
+  .modal-stats {
+    position: relative;
+    top: 0%;
+    height: 40%;
+  }
+
+  .modal-card {
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .stats-list {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    padding: 2% 2%;
+    display: list-item;
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-image: url(../../img/Background.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .close-modal-button {
+    position: absolute;
+    border: 0;
+    font-size: 3rem;
+    text-align: center;
     background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    color: gold;
   }
 }
 
 /* ---------------------------------------------------------------------- Media for phone------------------------------------------------ */
 
-@media screen and (max-width: 720px) {
-  body {
-    background-color: transparent;
+/* @media screen and (max-width: 720px) {
+  .modal-container,
+  .modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
-}
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    width: 100%;
+  }
+  .modal-stats,
+  .modal-bio {
+    border-radius: 10px;
+    width: 95%;
+    height: 100%;
+    margin-bottom: 15%;
+  }
+
+  .modal-stats {
+    position: relative;
+    top: 0%;
+    height: 40%;
+  }
+
+  .modal-card {
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .stats-list {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    padding: 2% 2%;
+    display: list-item;
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .modal-content {
+    position: fixed;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-image: url(../../img/Background.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .close-modal-button {
+    position: absolute;
+    border: 0;
+    font-size: 3rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 0;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    color: gold;
+  }
+} */
