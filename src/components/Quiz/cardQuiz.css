@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0%;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(0, 200px);
+  }
+
+  50% {
+    transform: translate(680px, 200px);
+  }
+
+  100% {
+    transform: translate(680px, 200px);
+  }
+}
+
+.card-list {
+  position: absolute;
+  height: 0;
+}
+
+.card-random {
+  position: relative;
+  left: 39vw;
+  top: 180px;
+  width: 350px;
+  height: 450px;
+  margin: 2vw;
+  background-color: white;
+  padding-bottom: 15px;
+  border: 0 black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-random img {
+  width: 350px;
+  height: 465px;
+}
+
+.card-random h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  overflow-wrap: break-word;
+}
+
+.card-quiz {
+  position: relative;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  left: 41vw;
+  width: 300px;
+  height: 400px;
+  margin: 2vw;
+  background-color: white;
+  padding-bottom: 15px;
+  border: 0 black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.card-quiz img {
+  width: 300px;
+  height: 350px;
+}
+
+.card-quiz h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
