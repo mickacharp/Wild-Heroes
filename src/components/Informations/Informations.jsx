@@ -87,9 +87,9 @@ const Informations = () => {
   ];
 
   const allAlignments = [
-    { id: 49, name: 'Good' },
-    { id: 50, name: 'Bad' },
-    { id: 51, name: 'Neutral' },
+    { id: 49, name: 'good' },
+    { id: 50, name: 'bad' },
+    { id: 51, name: 'neutral' },
   ];
 
   // Change page
