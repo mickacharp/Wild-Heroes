@@ -3,6 +3,12 @@
   src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
 }
 
+body {
+  background-size: cover;
+  background-image: url('../../img/Background.jpg');
+  background-attachment: fixed;
+}
+
 .quiz {
   display: flex;
   flex-direction: column;
