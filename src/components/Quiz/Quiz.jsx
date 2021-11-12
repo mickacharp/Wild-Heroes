@@ -1,26 +1,15 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
+import QuizGame from './QuizGame';
 import CardsQuiz from './CardsQuiz';
 
 const Quiz = () => {
-  const [hero, setHero] = useState([]);
-
-  // Call the api and load image to waiting call
-  useEffect(() => {
-    const fetchData = async () => {
-      axios
-        .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
-        .then((response) => response.data.results)
-        .then((data) => {
-          setHero(data);
-        });
-    };
-    fetchData();
-  }, []);
+  const [chooseCard, setChooseCard] = useState(true);
   return (
     <div>
-      <CardsQuiz hero={hero} />
+      <CardsQuiz setChooseCard={setChooseCard} chooseCard={chooseCard} />
+      <QuizGame />
     </div>
   );
 };
+
 export default Quiz;
