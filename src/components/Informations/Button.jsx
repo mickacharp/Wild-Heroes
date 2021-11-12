@@ -8,11 +8,11 @@ const Button = ({ setFilter, allGenders }) => {
     if (e.target.value === '0') {
       return setFilter(allGenders[0].name);
     }
-    if (e.target.value === '2') {
-      return setFilter(allGenders[1].name);
-    }
-    if (e.target.value === '1') {
+    if (e.target.value === '50') {
       return setFilter('');
+    }
+    if (e.target.value === '100') {
+      return setFilter(allGenders[1].name);
     }
   };
   /* eslint-enable */
@@ -22,10 +22,9 @@ const Button = ({ setFilter, allGenders }) => {
         className="slider"
         type="range"
         id="slider"
+        onChecked="checked"
         name="slider"
-        min="0"
-        max="2"
-        step="1"
+        step="50"
         onChange={(e) => handleGender(e)}
       />
     </div>
