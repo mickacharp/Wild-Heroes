@@ -1,6 +1,5 @@
-import React from 'react';
-import Navbar from '../Navbar/NavBar';
 import { useState } from 'react';
+import Navbar from '../Navbar/NavBar';
 import QuizGame from './QuizGame';
 import CardsQuiz from './CardsQuiz';
 

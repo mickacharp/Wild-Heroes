@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Quiz from './components/Quiz/Quiz';
 import Home from './components/Home/Home';
 import Informations from './components/Informations/Informations';
-import Navbar from './components/Navbar/NavBar';
 import './app.css';
 
 function App() {
