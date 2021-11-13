@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <a exact href="/wild-heroes/" className="logo-content">
+        <a href="/wild-heroes/" className="logo-content">
           <img src={logo} className="logo" alt="Logo" />
         </a>
         <div className="title">
