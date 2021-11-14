@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <NavLink to="/" className="logo-content">
+        <a exact href="/wild-heroes/" className="logo-content">
           <img src={logo} className="logo" alt="Logo" />
-        </NavLink>
+        </a>
         <div className="title">
           <h1>WILD HEROES</h1>
         </div>
@@ -17,16 +17,18 @@ const Navbar = () => {
           <NavLink
             activeClassName="text-nav-active"
             className="text-nav"
+            exact
             to="/quiz"
           >
-            Quiz
+            <h3> Quiz</h3>
           </NavLink>
           <NavLink
             activeClassName="text-nav-active"
             className="text-nav"
+            exact
             to="/informations"
           >
-            Informations
+            <h3> Informations</h3>
           </NavLink>
         </div>
       </div>

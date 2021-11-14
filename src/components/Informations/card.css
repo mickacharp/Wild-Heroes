@@ -1,6 +1,20 @@
 body {
   margin: 0;
   padding: 0%;
+  background-size: cover;
+  background-image: url('../../img/Background.jpg');
+  background-attachment: fixed;
+}
+
+/* Show nbr of characters in search */
+.nbrCards-search {
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
+}
+
+.nbrCards-search h1 {
+  font-size: 1.3rem;
 }
 
 .container-cards {

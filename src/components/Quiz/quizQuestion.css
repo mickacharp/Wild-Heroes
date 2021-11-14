@@ -3,6 +3,12 @@
   src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
 }
 
+body {
+  background-size: cover;
+  background-image: url('../../img/Background.jpg');
+  background-attachment: fixed;
+}
+
 .quiz {
   display: flex;
   flex-direction: column;
@@ -11,8 +17,9 @@
 
 .quiz_question {
   margin: 40px;
+  padding: 15px;
   background-color: rgba(14, 14, 14, 1);
-  height: 80px;
+  height: 90px;
   width: 80%;
   display: flex;
   align-items: center;
@@ -22,6 +29,7 @@
   color: goldenrod;
   text-align: center;
   line-height: 35px;
+  font-size: 1rem;
 }
 
 .quiz_answers {
@@ -66,4 +74,15 @@
 
 .quiz_answers li:nth-child(4) {
   grid-area: 2 / 3 / 2 / 5;
+}
+
+@media screen and (max-width: 695px) {
+  .quiz_question {
+    font-size: 0.5rem;
+  }
+
+  .quiz_answers {
+    display: flex;
+    flex-direction: column;
+  }
 }

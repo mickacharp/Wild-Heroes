@@ -5,6 +5,7 @@ import QuizQuestion from './QuizQuestion';
 function QuizGame() {
   const [questions, setQuestions] = useState([]);
   const [nextQuestion, setNextQuestion] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const shuffleArray = (array) => {
@@ -22,6 +23,7 @@ function QuizGame() {
         'https://opentdb.com/api.php?amount=1&category=29'
       );
       const questionsList = [];
+      setIsLoading(false);
       questionsList.push(
         results.data.results.map((el) => {
           let answers = [];
@@ -60,17 +62,26 @@ function QuizGame() {
   const handleNextQuestion = () => {
     setNextQuestion(!nextQuestion);
   };
-
   return (
-    <div className="App">
-      {questions.map((question) => (
-        <QuizQuestion
-          question={question.question}
-          answers={question.answers}
-          key={question.question}
-          handleNextQuestion={handleNextQuestion}
+    <div className="quiz-game-containe">
+      {isLoading ? (
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/da734b28921021.55d95297d71f4.gif"
+          alt="loader"
+          className="loader-cardsList"
         />
-      ))}
+      ) : (
+        <div className="App">
+          {questions.map((question) => (
+            <QuizQuestion
+              question={question.question}
+              answers={question.answers}
+              key={question.question}
+              handleNextQuestion={handleNextQuestion}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
