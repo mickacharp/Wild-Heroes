@@ -8,22 +8,31 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
+
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
   // Number of Cards by page
-  const [cardsPerPage, setCardsPerPage] = useState(30);
+  const [cardsPerPage, setCardsPerPage] = useState(20);
   // Filters
   const [byPublisher, setByPublisher] = useState('');
   const [gender, setGender] = useState('');
   const [alignment, setAlignment] = useState('');
   const [race, setRace] = useState('');
+  // SearchBar
+  const [searchName, setSearchName] = useState('');
+  // filter array table for adaptative pagination
+  const heroFilter = hero
+    .filter((el) => el.biography.publisher.includes(byPublisher))
+    .filter((el) => el.appearance.gender.includes(gender))
+    .filter((el) => el.appearance.race.includes(race))
+    .filter((el) => el.biography.alignment.includes(alignment))
+    .filter((el) => el.name.toLowerCase().includes(searchName.toLowerCase()));
   // Get current page
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentHero = hero.slice(indexOfFirstCard, indexOfLastCard);
-  // SearchBar
-  const [searchName, setSearchName] = useState('');
+  const currentHero = heroFilter.slice(indexOfFirstCard, indexOfLastCard);
+
   const handleChange = (e) => {
     setSearchName(e.target.value);
   };
@@ -104,6 +113,7 @@ const Informations = () => {
       axios
         .get("https://superheroapi.com/api.php/10216027606921557/search/'%20'")
         .then((response) => response.data.results)
+        .catch((error) => error.status(404))
         .then((data) => {
           setHero(data);
           setIsLoading(false);
@@ -122,11 +132,7 @@ const Informations = () => {
       alignment !== ''
     ) {
       setCurrentPage(1);
-      setCardsPerPage(hero.length);
     }
-    return () => {
-      setCardsPerPage(30);
-    };
   }, [searchName, byPublisher, gender, race, alignment]);
 
   return (
@@ -160,8 +166,9 @@ const Informations = () => {
       <div className="container-pagination">
         <Pagination
           currentPage={currentPage}
+          setCardsPerPage={setCardsPerPage}
           cardsPerPage={cardsPerPage}
-          totalCards={hero.length}
+          totalCards={heroFilter.length}
           paginate={paginate}
         />
       </div>
