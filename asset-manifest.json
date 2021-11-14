@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wild-heroes/static/css/main.7373ce0c.chunk.css",
-    "main.js": "/wild-heroes/static/js/main.21b8a7b7.chunk.js",
-    "main.js.map": "/wild-heroes/static/js/main.21b8a7b7.chunk.js.map",
+    "main.css": "/wild-heroes/static/css/main.08fa504d.chunk.css",
+    "main.js": "/wild-heroes/static/js/main.0e8640bc.chunk.js",
+    "main.js.map": "/wild-heroes/static/js/main.0e8640bc.chunk.js.map",
     "runtime-main.js": "/wild-heroes/static/js/runtime-main.afb67914.js",
     "runtime-main.js.map": "/wild-heroes/static/js/runtime-main.afb67914.js.map",
     "static/js/2.9ca309ab.chunk.js": "/wild-heroes/static/js/2.9ca309ab.chunk.js",
     "static/js/2.9ca309ab.chunk.js.map": "/wild-heroes/static/js/2.9ca309ab.chunk.js.map",
     "index.html": "/wild-heroes/index.html",
-    "static/css/main.7373ce0c.chunk.css.map": "/wild-heroes/static/css/main.7373ce0c.chunk.css.map",
+    "static/css/main.08fa504d.chunk.css.map": "/wild-heroes/static/css/main.08fa504d.chunk.css.map",
     "static/js/2.9ca309ab.chunk.js.LICENSE.txt": "/wild-heroes/static/js/2.9ca309ab.chunk.js.LICENSE.txt",
     "static/media/modalinfo.css": "/wild-heroes/static/media/Heroes.71e501cb.ttf",
     "static/media/Logo.b43d2c16.png": "/wild-heroes/static/media/Logo.b43d2c16.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.afb67914.js",
     "static/js/2.9ca309ab.chunk.js",
-    "static/css/main.7373ce0c.chunk.css",
-    "static/js/main.21b8a7b7.chunk.js"
+    "static/css/main.08fa504d.chunk.css",
+    "static/js/main.0e8640bc.chunk.js"
   ]
 }
