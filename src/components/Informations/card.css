@@ -6,6 +6,17 @@ body {
   background-attachment: fixed;
 }
 
+/* Show nbr of characters in search */
+.nbrCards-search {
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
+}
+
+.nbrCards-search h1 {
+  font-size: 1.3rem;
+}
+
 .container-cards {
   display: flex;
   flex-wrap: wrap;

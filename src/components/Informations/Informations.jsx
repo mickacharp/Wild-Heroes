@@ -8,7 +8,6 @@ import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);
-
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +20,9 @@ const Informations = () => {
   const [race, setRace] = useState('');
   // SearchBar
   const [searchName, setSearchName] = useState('');
+  const handleChange = (e) => {
+    setSearchName(e.target.value);
+  };
   // filter array table for adaptative pagination
   const heroFilter = hero
     .filter((el) => el.biography.publisher.includes(byPublisher))
@@ -32,10 +34,6 @@ const Informations = () => {
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentHero = heroFilter.slice(indexOfFirstCard, indexOfLastCard);
-
-  const handleChange = (e) => {
-    setSearchName(e.target.value);
-  };
 
   const allRaces = [
     { id: 0, name: 'Alien' },
@@ -145,9 +143,11 @@ const Informations = () => {
           handleChange={handleChange}
         />
       </div>
+
       <CardsList
         isLoading={isLoading}
         searchName={searchName}
+        heroFilter={heroFilter}
         hero={currentHero}
         byPublisher={byPublisher}
         setByPublisher={setByPublisher}
@@ -162,7 +162,6 @@ const Informations = () => {
         allGenders={allGenders}
         allAlignments={allAlignments}
       />
-
       <div className="container-pagination">
         <Pagination
           currentPage={currentPage}
