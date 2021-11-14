@@ -31,6 +31,11 @@ const Button = ({ setFilter, allGenders }) => {
   };
   return (
     <div className="slider-container">
+      <div className="text-button">
+        {' '}
+        <p>Male</p> <p>Female</p>
+      </div>
+
       <input
         className={`slider ${genderClass(genderValue)}`}
         type="range"

@@ -35,11 +35,7 @@ const CardsList = ({
         <div className="container-cards-button">
           <div className="container-filter">
             <Button setFilter={setGender} allGenders={allGenders} />
-            <Filter
-              setFilter={setGender}
-              filter="by gender"
-              response={allGenders}
-            />
+
             <Filter
               setFilter={setAlignment}
               filter="by alignment"
