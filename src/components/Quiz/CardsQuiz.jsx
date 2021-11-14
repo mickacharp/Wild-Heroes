@@ -5,7 +5,7 @@ import CardRandom from './CardRandom';
 import ChallengerCard from './ChallengerCard';
 import './cardQuiz.css';
 
-const CardsQuiz = ({ setChooseCard, chooseCard }) => {
+const CardsQuiz = ({ setChooseCard, chooseCard, index }) => {
   const [hero, setHero] = useState([]);
 
   // Call the api and load image to waiting call
@@ -25,7 +25,7 @@ const CardsQuiz = ({ setChooseCard, chooseCard }) => {
       {chooseCard ? (
         <CardRandom hero={hero} setChooseCard={setChooseCard} />
       ) : (
-        <ChallengerCard hero={hero} />
+        <ChallengerCard hero={hero} index={index} />
       )}
     </div>
   );
@@ -34,6 +34,7 @@ const CardsQuiz = ({ setChooseCard, chooseCard }) => {
 CardsQuiz.propTypes = {
   chooseCard: PropTypes.bool.isRequired,
   setChooseCard: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default CardsQuiz;
