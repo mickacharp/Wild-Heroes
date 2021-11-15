@@ -1,9 +1,38 @@
+@font-face {
+  font-family: 'Heroes';
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
+}
+
+.paragraph-home {
+  position: relative;
+  left: -20%;
+  width: 150%;
+  font-size: 2rem;
+}
+
 .img {
   display: grid;
   height: 100vh;
   width: 100%;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
+  position: relative;
+}
+
+.main-title-home {
+  position: absolute;
+  color: white;
+  z-index: 1000;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.main-title-home h1 {
+  color: goldenrod;
+  font-size: 2vw;
+  text-shadow: #a50c0c 5px 2px 1px;
+  font-family: Heroes, Roboto, sans-serif;
 }
 
 .title-home {
@@ -38,6 +67,7 @@
 
 .text-left {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -67,6 +97,7 @@
 
 .text-right {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

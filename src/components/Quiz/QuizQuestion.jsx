@@ -2,8 +2,20 @@ import React, { useState } from 'react';
 import './quizQuestion.css';
 import PropTypes from 'prop-types';
 
-const QuizQuestion = ({ question, answers, handleNextQuestion }) => {
+const QuizQuestion = ({
+  question,
+  answers,
+  handleNextQuestion,
+  index,
+  setIndex,
+}) => {
   const [answerGiven, setAnswerGiven] = useState(false);
+
+  const changeCard = (correctAnswer) => {
+    if (correctAnswer) {
+      setIndex(index + 1);
+    }
+  };
 
   function styleAnswer(correctAnswer) {
     let colorAnswer = {};
@@ -18,6 +30,7 @@ const QuizQuestion = ({ question, answers, handleNextQuestion }) => {
     }
     return colorAnswer;
   }
+
   return (
     <div className="quiz">
       <div className="quiz_question">{question}</div>
@@ -31,6 +44,7 @@ const QuizQuestion = ({ question, answers, handleNextQuestion }) => {
               setAnswerGiven(true);
               setTimeout(() => {
                 handleNextQuestion();
+                changeCard(el.correct);
               }, 3000);
             }}
             style={styleAnswer(el.correct)}
@@ -47,6 +61,8 @@ QuizQuestion.propTypes = {
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleNextQuestion: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  setIndex: PropTypes.func.isRequired,
 };
 
 export default QuizQuestion;

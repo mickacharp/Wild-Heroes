@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import QuizQuestion from './QuizQuestion';
 
-function QuizGame() {
+const QuizGame = ({ index, setIndex }) => {
   const [questions, setQuestions] = useState([]);
   const [nextQuestion, setNextQuestion] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,6 +63,7 @@ function QuizGame() {
   const handleNextQuestion = () => {
     setNextQuestion(!nextQuestion);
   };
+
   return (
     <div className="quiz-game-containe">
       {isLoading ? (
@@ -78,12 +80,19 @@ function QuizGame() {
               answers={question.answers}
               key={question.question}
               handleNextQuestion={handleNextQuestion}
+              index={index}
+              setIndex={setIndex}
             />
           ))}
         </div>
       )}
     </div>
   );
-}
+};
+
+QuizGame.propTypes = {
+  index: PropTypes.number.isRequired,
+  setIndex: PropTypes.func.isRequired,
+};
 
 export default QuizGame;
