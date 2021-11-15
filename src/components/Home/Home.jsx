@@ -34,7 +34,7 @@ const Home = () => {
           <div className="text-right">
             <h2 className="title-home">Information</h2>
             {paragraphInfo && (
-              <p className="paragraph-home">
+              <p className="paragraph-home" id="textRight">
                 Consult characters stats (BD, comics, ...)
               </p>
             )}
