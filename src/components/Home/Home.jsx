@@ -18,7 +18,7 @@ const Home = () => {
         <NavLink className="img-text-right" exact to="/informations">
           <div className="img-right" />
           <div className="text-right">
-            <h2 className="title-home">Informations</h2>
+            <h2 className="title-home">Information</h2>
           </div>
         </NavLink>
       </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
             exact
             to="/quiz"
           >
-            <h3> Quiz</h3>
+            <h3>Quiz</h3>
           </NavLink>
           <NavLink
             activeClassName="text-nav-active"
@@ -28,7 +28,7 @@ const Navbar = () => {
             exact
             to="/informations"
           >
-            <h3> Informations</h3>
+            <h3>Information</h3>
           </NavLink>
         </div>
       </div>
