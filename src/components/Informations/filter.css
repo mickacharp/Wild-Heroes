@@ -1,6 +1,7 @@
 .container-filter {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
   background:
@@ -45,4 +46,37 @@ select {
   background-position: right;
   background-size: 30px;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-height: 415px) {
+  .container-filter {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .comics-filter {
+    width: 45vh;
+  }
+}
+
+/* -------------------------------------------------------------------Mini resolution------------------------------------------------------------------------- */
+
+/* @media screen and (max-width: 1080px) {
+
+} */
+
+/* ---------------------------------------------------------------------- Media for phone------------------------------------------------ */
+
+@media screen and (max-width: 720px) {
+  .container-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .comics-filter {
+    border-radius: 15px;
+  }
 }
