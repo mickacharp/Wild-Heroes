@@ -1,15 +1,14 @@
 .container-filter {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(16, 25, 113, 1) 0%,
-      rgba(14, 14, 14, 1) 50%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(16, 25, 113, 1) 0%,
+    rgba(14, 14, 14, 1) 50%
+  );
 }
 
 .comics-filter {
@@ -55,7 +54,7 @@ select {
   }
 
   .comics-filter {
-    width: 45vh;
+    width: 35vh;
   }
 }
 
