@@ -11,10 +11,12 @@
 
 .text-button p {
   display: flex;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 .slider-container {
-  width: 12%;
+  width: 10%;
   height: 100%;
 }
 
@@ -49,18 +51,62 @@
 }
 
 .slider.filter-male::-webkit-slider-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px;
   background-image: url('../../img/spiderman.png');
   background-size: contain;
 }
 
 .slider.filter-female::-webkit-slider-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px;
   background-image: url('../../img/WW.png');
   background-size: contain;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04aa6d; /* Green background */
+  border-radius: 50%;
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background-image: url('../../img/neutral.png');
+  background-size: contain; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+@media screen and (max-height: 415px) {
+  .text-button p {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  .slider-container {
+    margin-left: 0;
+  }
+
+  .slider {
+    margin-bottom: 10px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .text-button p {
+    font-size: 6vw;
+    font-weight: bold;
+  }
+
+  .slider-container {
+    width: 30vw;
+    align-items: center;
+  }
+
+  .slider {
+    margin-bottom: 15px;
+  }
 }
