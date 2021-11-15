@@ -6,6 +6,9 @@ const Home = () => {
   return (
     <div className="App">
       <div className="img">
+        <div className="main-title-home">
+          <h1>Wild Heroes</h1>
+        </div>
         <NavLink className="img-text-left" exact to="/quiz">
           <div className="img-left" />
           <div className="text-left">
@@ -15,7 +18,7 @@ const Home = () => {
         <NavLink className="img-text-right" exact to="/informations">
           <div className="img-right" />
           <div className="text-right">
-            <h2 className="title-home">Informations</h2>
+            <h2 className="title-home">Information</h2>
           </div>
         </NavLink>
       </div>
