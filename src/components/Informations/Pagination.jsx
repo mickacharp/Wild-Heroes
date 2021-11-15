@@ -10,11 +10,11 @@ const Pagination = ({ cardsPerPage, totalCards, paginate, currentPage }) => {
   }
   return (
     <nav className="nav-page">
-      <p> {cardsPerPage < 31 && `Page: ${currentPage}`}</p>
+      <p> {totalCards > 21 && `Page: ${currentPage}`}</p>
       <ul className="pagination">
         {pageNumbers.map(
           (number) =>
-            cardsPerPage < 31 && (
+            totalCards > 21 && (
               <NavLink
                 key={number}
                 value={number}

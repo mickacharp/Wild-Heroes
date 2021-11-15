@@ -4,11 +4,16 @@ import QuizGame from './QuizGame';
 import CardsQuiz from './CardsQuiz';
 
 const Quiz = () => {
+  const index = 0;
   const [chooseCard, setChooseCard] = useState(true);
   return (
     <div>
       <Navbar />
-      <CardsQuiz setChooseCard={setChooseCard} chooseCard={chooseCard} />
+      <CardsQuiz
+        setChooseCard={setChooseCard}
+        chooseCard={chooseCard}
+        index={index}
+      />
       <QuizGame />
     </div>
   );

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+}
+
+.text-button {
+  width: 100%;
+  display: flex;
+  color: goldenrod;
+  justify-content: space-between;
+}
+
+.text-button p {
+  display: flex;
+}
+
+.slider-container {
+  width: 12%;
+  height: 100%;
+}
+
+/* The slider itself */
+.slider {
+  border-radius: 15px;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: white; /* Grey background */
+  outline: none; /* Remove outline */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  border-radius: 50%;
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background-image: url('../../img/neutral.png');
+  background-size: contain; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider.filter-male::-webkit-slider-thumb {
+  background-image: url('../../img/arrowolverine.png');
+  background-size: contain;
+}
+
+.slider.filter-female::-webkit-slider-thumb {
+  background-image: url('../../img/WW.png');
+  background-size: contain;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
