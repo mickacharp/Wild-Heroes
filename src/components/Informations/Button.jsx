@@ -33,7 +33,7 @@ const Button = ({ setFilter, allGenders }) => {
     <div className="slider-container">
       <div className="text-button">
         {' '}
-        <p>Male</p> <p>Female</p>
+        <p>♂</p> <p>♀</p>
       </div>
 
       <input
