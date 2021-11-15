@@ -6,6 +6,9 @@ const Home = () => {
   return (
     <div className="App">
       <div className="img">
+        <div className="main-title-home">
+          <h1>Wild Heroes</h1>
+        </div>
         <NavLink className="img-text-left" exact to="/quiz">
           <div className="img-left" />
           <div className="text-left">
