@@ -165,6 +165,17 @@ strong,
 /* ------------------------------------------------------------------- Responsive -------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
+  .modal-header h1,
+  .modal-container li,
+  strong {
+    font-size: 0.8rem;
+  }
+
+  .modal-body h1 {
+    border-bottom: 1mm ridge goldenrod;
+    font-size: 0.6rem;
+  }
+
   .modal-body {
     flex-direction: column;
   }
@@ -189,7 +200,7 @@ strong,
   }
 
   .modal-card {
-    width: 50%;
+    width: 40%;
     margin-top: 2%;
   }
 
@@ -204,14 +215,14 @@ strong,
   }
 
   .modal-content {
-    top: 5%;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    right: 3%;
   }
 
   .close-modal-button {
-    font-size: 3rem;
+    font-size: 2rem;
     background-color: transparent;
     border-radius: 0;
     color: gold;
