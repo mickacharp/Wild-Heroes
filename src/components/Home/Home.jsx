@@ -3,6 +3,9 @@ import './home.css';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
+  const mouseMove = () => {
+    <p>Consultez les stats de vos héros et héroïnes favoris</p>;
+  };
   return (
     <div className="App">
       <div className="img">
@@ -18,7 +21,9 @@ const Home = () => {
         <NavLink className="img-text-right" exact to="/informations">
           <div className="img-right" />
           <div className="text-right">
-            <h2 className="title-home">Information</h2>
+            <h2 className="title-home" onMouseMove={mouseMove}>
+              Information
+            </h2>
           </div>
         </NavLink>
       </div>
