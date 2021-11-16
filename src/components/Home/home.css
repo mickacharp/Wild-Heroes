@@ -10,6 +10,7 @@
   color: goldenrod;
   font-size: 25px;
   font-family: Heroes, Roboto, sans-serif;
+  margin-top: 30%;
 }
 
 .img {
@@ -62,11 +63,6 @@
   transition: 0.5s;
 }
 
-.img-left:hover {
-  filter: brightness(100%);
-  cursor: pointer;
-}
-
 .text-left {
   position: absolute;
   text-align: center;
@@ -92,11 +88,6 @@
   transition: 0.5s;
 }
 
-.img-right:hover {
-  filter: brightness(100%);
-  cursor: pointer;
-}
-
 .text-right {
   position: absolute;
   text-align: center;
@@ -111,4 +102,9 @@ p {
 
 #textRight {
   background-color: rgba(0, 0, 0, 0.116);
+}
+
+.brightness {
+  filter: brightness(100%);
+  cursor: pointer;
 }
