@@ -20,7 +20,7 @@ const Quiz = () => {
           index={index}
         />
       )}
-      {numberQuestion < 11 && (
+      {!chooseCard && numberQuestion < 11 && (
         <QuizGame
           index={index}
           setIndex={setIndex}
