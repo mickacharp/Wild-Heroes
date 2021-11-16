@@ -162,7 +162,7 @@ strong,
   font-weight: bold;
 }
 
-/* ------------------------------------------------------------------- Responsive -------------------------------------------------- */
+/* ------------------------------------------------------------------- Responsive iPhone X -------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
   .modal-header h1,
@@ -211,7 +211,7 @@ strong,
     -webkit-columns: 3;
     -moz-columns: 3;
     height: auto;
-    padding: 2% 2%;
+    margin: 2% 0;
   }
 
   .modal-content {
@@ -228,3 +228,87 @@ strong,
     color: gold;
   }
 }
+
+/* Version Responsive iPad/small desktop !!not on point yet!! */
+
+/* @media screen and (max-width: 1420px) {
+  .modal-header h1,
+  .modal-container li,
+  strong {
+    font-size: 1rem;
+  }
+
+  .modal-body h1 {
+    border-bottom: 1mm ridge goldenrod;
+    font-size: 0.8rem;
+  }
+
+  .modal-body {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modal-stats,
+  .modal-bio,
+  .modal-card {
+    height: auto;
+  }
+  .modal-stats {
+    width: 50%;
+  }
+
+  .modal-bio {
+    border-radius: 10px;
+    width: 95%;
+  }
+
+  .modal-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 0.5rem;
+  }
+
+  .modal-card {
+    max-width: 20%;
+    margin: 2% 2%;
+  }
+  
+  .modal-img {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .stats-list {
+    display: list-item;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    height: auto;
+    margin: 2% 0;
+  }
+
+  .modal-content {
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    right: 3%;
+  }
+
+  .close-modal-button {
+    font-size: 2.5rem;
+    background-color: transparent;
+    border-radius: 0;
+    color: gold;
+  }
+
+  .stats-list li,
+  strong {
+    font-size: 1.6rem;
+  }
+
+  .bio-list li {
+    font-size: 1.35rem;
+  }
+} */
