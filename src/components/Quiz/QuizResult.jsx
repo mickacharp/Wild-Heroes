@@ -8,7 +8,7 @@ const QuizResult = ({ score }) => {
       {score < 5 ? (
         <div className="result">
           <h2>Score: {score}/10</h2>
-          <p>You&apos;re a loser !</p>
+          <p>You&apos;re a LOSER !</p>
         </div>
       ) : (
         ''
@@ -21,10 +21,18 @@ const QuizResult = ({ score }) => {
       ) : (
         ''
       )}
-      {score > 5 ? (
+      {score > 5 && score < 10 ? (
         <div className="result">
           <h2>Score: {score}/10</h2>
-          <p>Congrats you WIN !</p>
+          <p>Congrats you&apos;re a BOSS !</p>
+        </div>
+      ) : (
+        ''
+      )}
+      {score === 10 ? (
+        <div className="result">
+          <h2>Score: {score}/10</h2>
+          <p>Waouh !! You&apos;re my HERO !</p>
         </div>
       ) : (
         ''
