@@ -7,6 +7,7 @@ body {
   background-size: cover;
   background-image: url('../../img/Background.jpg');
   background-attachment: fixed;
+  background-position: center;
   height: 100vh;
 }
 
@@ -70,15 +71,15 @@ body {
   margin: 30px;
 }
 
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 740px) {
   .quiz_question {
-    font-size: 0.5rem;
-    margin-bottom: 20px;
+    font-size: 0.7rem;
   }
 
   .quiz_answers {
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: space-around;
   }
 
   .quiz_answer {
@@ -90,14 +91,32 @@ body {
   }
 }
 
+@media screen and (max-width: 525px) {
+  .quiz_question {
+    font-size: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 1266px) {
   .quiz_answers {
     width: 80%;
   }
 }
 
-@media screen and (max-width: 933px) {
+@media screen and (max-width: 960px) {
   .quiz_answers {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .quiz_answers {
+    width: 80%;
+  }
+
+  .quiz_answer {
+    width: 500px;
+    height: 80px;
+    border-radius: 90px;
   }
 }

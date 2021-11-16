@@ -29,13 +29,13 @@ class QuizQuestion extends React.Component {
     const {
       question,
       answers,
-      handleNextQuestion,
       index,
       setIndex,
       numberQuestion,
       setNumberQuestion,
       score,
       setScore,
+      newQuestion,
     } = this.props;
 
     const changeCard = (correctAnswer) => {
@@ -63,7 +63,7 @@ class QuizQuestion extends React.Component {
                   answerGiven: (this.answerGiven = !this.answerGiven),
                 });
                 setTimeout(() => {
-                  handleNextQuestion();
+                  newQuestion();
                   changeCard(el.correct);
                   setNumberQuestion(numberQuestion + 1);
                 }, 2000);
@@ -85,13 +85,13 @@ class QuizQuestion extends React.Component {
 QuizQuestion.propTypes = {
   question: PropTypes.string.isRequired,
   answers: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleNextQuestion: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,
   setIndex: PropTypes.func.isRequired,
   numberQuestion: PropTypes.number.isRequired,
   setNumberQuestion: PropTypes.func.isRequired,
   score: PropTypes.number.isRequired,
   setScore: PropTypes.func.isRequired,
+  newQuestion: PropTypes.func.isRequired,
 };
 
 export default QuizQuestion;

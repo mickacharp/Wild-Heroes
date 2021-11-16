@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
@@ -12,8 +14,8 @@ const QuizGame = ({
   setScore,
 }) => {
   const [questions, setQuestions] = useState([]);
-  const [nextQuestion, setNextQuestion] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [indexQuestion, setIndexQuestion] = useState(0);
 
   useEffect(() => {
     const shuffleArray = (array) => {
@@ -28,10 +30,9 @@ const QuizGame = ({
 
     const getQuestions = async () => {
       const results = await axios.get(
-        'https://opentdb.com/api.php?amount=1&category=29'
+        'https://opentdb.com/api.php?amount=11&category=29'
       );
       const questionsList = [];
-      setIsLoading(false);
       questionsList.push(
         results.data.results.map((el) => {
           let answers = [];
@@ -62,13 +63,14 @@ const QuizGame = ({
         })
       );
       setQuestions(questionsList[0]);
+      setIsLoading(false);
     };
 
     getQuestions();
-  }, [nextQuestion]);
+  }, []);
 
-  const handleNextQuestion = () => {
-    setNextQuestion(!nextQuestion);
+  const newQuestion = () => {
+    setIndexQuestion(indexQuestion + 1);
   };
 
   return (
@@ -81,20 +83,18 @@ const QuizGame = ({
         />
       ) : (
         <div className="App">
-          {questions.map((question) => (
-            <QuizQuestion
-              question={question.question}
-              answers={question.answers}
-              key={question.question}
-              handleNextQuestion={handleNextQuestion}
-              index={index}
-              setIndex={setIndex}
-              numberQuestion={numberQuestion}
-              setNumberQuestion={setNumberQuestion}
-              score={score}
-              setScore={setScore}
-            />
-          ))}
+          <QuizQuestion
+            question={questions[indexQuestion].question}
+            answers={questions[indexQuestion].answers}
+            key={questions[indexQuestion].question}
+            index={index}
+            setIndex={setIndex}
+            numberQuestion={numberQuestion}
+            setNumberQuestion={setNumberQuestion}
+            score={score}
+            setScore={setScore}
+            newQuestion={newQuestion}
+          />
         </div>
       )}
     </div>
