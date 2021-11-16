@@ -3,7 +3,14 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import QuizQuestion from './QuizQuestion';
 
-const QuizGame = ({ index, setIndex }) => {
+const QuizGame = ({
+  index,
+  setIndex,
+  numberQuestion,
+  setNumberQuestion,
+  score,
+  setScore,
+}) => {
   const [questions, setQuestions] = useState([]);
   const [nextQuestion, setNextQuestion] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -63,9 +70,8 @@ const QuizGame = ({ index, setIndex }) => {
   const handleNextQuestion = () => {
     setNextQuestion(!nextQuestion);
   };
-
   return (
-    <div className="quiz-game-containe">
+    <div className="quiz-game-container">
       {isLoading ? (
         <img
           src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/da734b28921021.55d95297d71f4.gif"
@@ -82,6 +88,10 @@ const QuizGame = ({ index, setIndex }) => {
               handleNextQuestion={handleNextQuestion}
               index={index}
               setIndex={setIndex}
+              numberQuestion={numberQuestion}
+              setNumberQuestion={setNumberQuestion}
+              score={score}
+              setScore={setScore}
             />
           ))}
         </div>
@@ -93,6 +103,10 @@ const QuizGame = ({ index, setIndex }) => {
 QuizGame.propTypes = {
   index: PropTypes.number.isRequired,
   setIndex: PropTypes.func.isRequired,
+  numberQuestion: PropTypes.number.isRequired,
+  setNumberQuestion: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired,
+  setScore: PropTypes.func.isRequired,
 };
 
 export default QuizGame;

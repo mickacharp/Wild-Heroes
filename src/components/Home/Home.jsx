@@ -21,9 +21,7 @@ const Home = () => {
           <div className="text-left">
             <h2 className="title-home">Quiz</h2>
             {paragraphQuiz && (
-              <p className="paragraph-home">
-                ( Play with your favorite Heroes !!! )
-              </p>
+              <p className="paragraph-home">Play with your favorite heroes!</p>
             )}
           </div>
         </NavLink>
@@ -36,8 +34,8 @@ const Home = () => {
           <div className="text-right">
             <h2 className="title-home">Information</h2>
             {paragraphInfo && (
-              <p className="paragraph-home">
-                ( Consult characters stats (BD,comics,...) )
+              <p className="paragraph-home" id="textRight">
+                Consult characters stats (BD, comics, ...)
               </p>
             )}
           </div>

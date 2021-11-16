@@ -2,19 +2,33 @@
   margin: 0;
 }
 
-.text-button {
-  width: 100%;
+.text-button-left {
   display: flex;
+  margin-right: 1%;
   color: goldenrod;
-  justify-content: space-between;
+  padding-bottom: 5%;
+  font-size: 2vw;
+}
+.text-button-left p {
+  font-size: 2vw;
+}
+.text-button-rigth {
+  display: flex;
+  margin-left: 1%;
+  padding-bottom: 5%;
+  color: goldenrod;
+  font-size: 2vw;
 }
 
-.text-button p {
-  display: flex;
+.text-button-rigth p {
+  font-size: 2vw;
 }
 
 .slider-container {
-  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 25vh;
   height: 100%;
 }
 
@@ -49,18 +63,62 @@
 }
 
 .slider.filter-male::-webkit-slider-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px;
   background-image: url('../../img/spiderman.png');
   background-size: contain;
 }
 
 .slider.filter-female::-webkit-slider-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px;
   background-image: url('../../img/WW.png');
   background-size: contain;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04aa6d; /* Green background */
+  border-radius: 50%;
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background-image: url('../../img/neutral.png');
+  background-size: contain; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+@media screen and (max-height: 415px) {
+  .text-button-left p {
+    font-size: 3vw;
+  }
+  .text-button-rigth p {
+    font-size: 3vw;
+  }
+  .slider-container {
+    display: flex;
+    align-items: center;
+    width: 35vh;
+    height: 100%;
+  }
+  .slider::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .text-button-left p {
+    font-size: 3vh;
+  }
+  .text-button-rigth p {
+    font-size: 3vh;
+  }
+  .slider-container {
+    width: 28vh;
+    align-items: center;
+  }
+
+  .slider {
+    margin-bottom: 15px;
+  }
 }
