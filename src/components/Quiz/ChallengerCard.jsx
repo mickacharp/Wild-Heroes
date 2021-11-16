@@ -17,7 +17,7 @@ const ChallengerCard = ({ hero, index }) => {
         onClick={() => hideModal()}
         onKeyPress={() => hideModal()}
         role="button"
-        tabIndex={0}
+        tabIndex={index}
       >
         <img
           src={heroRandom[index].image.url}

@@ -13,11 +13,13 @@ body {
   }
 }
 
+/* style for principal div */
 .card-list {
   position: absolute;
   height: 0;
 }
 
+/* style from choose card challenger */
 .card-random {
   position: relative;
   left: 39vw;
@@ -35,11 +37,13 @@ body {
   cursor: pointer;
 }
 
+/* style from image card choose challenger */
 .card-random img {
   width: 19vw;
   height: 23vw;
 }
 
+/* style text choose tour challenger */
 .card-random h2 {
   text-align: center;
   margin-top: 20px;
@@ -47,6 +51,7 @@ body {
   overflow-wrap: break-word;
 }
 
+/* style from card challenger */
 .card-quiz {
   position: relative;
   animation-name: slideIn;
@@ -66,11 +71,13 @@ body {
   cursor: pointer;
 }
 
+/* style from image challenger */
 .card-quiz img {
   width: 16vw;
   height: 18vw;
 }
 
+/* style name challenger */
 .card-quiz h2 {
   text-align: center;
   text-transform: uppercase;
