@@ -3,6 +3,7 @@ import Navbar from '../Navbar/NavBar';
 import QuizGame from './QuizGame';
 import CardsQuiz from './CardsQuiz';
 import QuizResult from './QuizResult';
+import StepProgressBar from './LifeBar';
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
@@ -13,27 +14,30 @@ const Quiz = () => {
   return (
     <div>
       <Navbar />
-      {numberQuestion < 11 ? (
-        <CardsQuiz
-          setChooseCard={setChooseCard}
-          chooseCard={chooseCard}
-          index={index}
-        />
-      ) : (
-        ''
-      )}
-      {numberQuestion < 11 ? (
-        <QuizGame
-          index={index}
-          setIndex={setIndex}
-          numberQuestion={numberQuestion}
-          setNumberQuestion={setNumberQuestion}
-          score={score}
-          setScore={setScore}
-        />
-      ) : (
-        ''
-      )}
+      <div className="Quiz-game">
+        <StepProgressBar score={score} />
+        {numberQuestion < 11 ? (
+          <CardsQuiz
+            setChooseCard={setChooseCard}
+            chooseCard={chooseCard}
+            index={index}
+          />
+        ) : (
+          ''
+        )}
+        {numberQuestion < 11 ? (
+          <QuizGame
+            index={index}
+            setIndex={setIndex}
+            numberQuestion={numberQuestion}
+            setNumberQuestion={setNumberQuestion}
+            score={score}
+            setScore={setScore}
+          />
+        ) : (
+          ''
+        )}
+      </div>
       {numberQuestion > 10 ? (
         <QuizResult
           score={score}

@@ -8,7 +8,7 @@ class QuizQuestion extends React.Component {
     /* eslint-disable */
     this.state = { answerGiven: false };
   }
-
+  
   styleAnswer = (correctAnswer) => {
     let colorAnswer = {};
     if (this.answerGiven) {

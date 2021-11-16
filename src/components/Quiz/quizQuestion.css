@@ -73,6 +73,7 @@ body {
 @media screen and (max-width: 695px) {
   .quiz_question {
     font-size: 0.5rem;
+    margin-bottom: 20px;
   }
 
   .quiz_answers {
@@ -86,10 +87,6 @@ body {
 
   .quiz-score h2 {
     margin: 20px;
-  }
-
-  .quiz_question {
-    margin-bottom: 20px;
   }
 }
 

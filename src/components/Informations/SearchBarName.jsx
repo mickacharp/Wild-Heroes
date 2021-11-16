@@ -4,8 +4,8 @@ import './searchbarname.css';
 
 const SearchbarName = ({ handleChange, searchName }) => {
   return (
-    <div className="container">
-      <div className="search">
+    <div className="container-searchbar">
+      <div className="searchbar">
         <div>
           <input
             type="text"

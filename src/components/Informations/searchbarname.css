@@ -1,4 +1,4 @@
-.container {
+.container-searchbar {
   background:
     linear-gradient(
       90deg,
@@ -12,16 +12,16 @@
   align-items: center;
 }
 
-.search {
+.searchbar {
   margin: 10px;
 }
 
-.search > div {
+.searchbar > div {
   display: inline-block;
   position: relative;
 }
 
-.search > div::after {
+.searchbar > div::after {
   content: "";
   background: white;
   width: 4px;
@@ -32,7 +32,7 @@
   transform: rotate(135deg);
 }
 
-.search > div > input {
+.searchbar > div > input {
   color: white;
   font-size: 16px;
   background: transparent;
@@ -45,28 +45,28 @@
   transition: width 0.5s;
 }
 
-.search > div > input::placeholder {
+.searchbar > div > input::placeholder {
   color: #efefef;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
 
-.search > div > input:focus::placeholder {
+.searchbar > div > input:focus::placeholder {
   opacity: 0.3;
 }
 
-.search > div > input:focus,
-.search > div > input:not(:placeholder-shown) {
+.searchbar > div > input:focus,
+.searchbar > div > input:not(:placeholder-shown) {
   width: 300px;
 }
 
 @media screen and (max-width: 720px) {
-  .container {
+  .container-searchbar {
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
 
-  .search {
+  .searchbar {
     margin: 5px;
     width: 100%;
     display: flex;
@@ -75,12 +75,12 @@
 }
 
 @media screen and (max-height: 415px) {
-  .container {
+  .container-searchbar {
     padding-top: 4vh;
     padding-bottom: 4vh;
   }
 
-  .search {
+  .searchbar {
     margin: 5px;
     width: 100%;
     display: flex;

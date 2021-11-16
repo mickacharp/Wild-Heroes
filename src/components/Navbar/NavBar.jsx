@@ -28,7 +28,7 @@ const Navbar = () => {
             exact
             to="/informations"
           >
-            <h3>Information</h3>
+            <h3>Informations</h3>
           </NavLink>
         </div>
       </div>
