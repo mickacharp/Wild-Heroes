@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ModalInfo from './ModalInfo';
 import imgReplace from '../../img/interrogation.png';
-import './card.css';
 
 const Card = ({
   name,
@@ -51,7 +50,9 @@ const Card = ({
           }}
           alt={name}
         />
-        <h2>{name}</h2>
+        <div className="container-name">
+          <h2>{name}</h2>
+        </div>
       </div>
       <div>
         {toggleModal && (
