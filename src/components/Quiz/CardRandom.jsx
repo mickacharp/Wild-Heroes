@@ -5,8 +5,6 @@ import './cardQuiz.css';
 const CardRandom = ({ hero, setChooseCard }) => {
   const image = [];
   const name = [];
-  const heroRandom = [];
-  heroRandom.push(hero[Math.floor(Math.random() * 732)]);
   hero.map((el) => image.push(el.image.url));
   hero.map((el) => name.push(el.name));
   const [counter, setCounter] = useState(0);
