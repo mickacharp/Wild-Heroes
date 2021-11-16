@@ -17,24 +17,42 @@ const QuizGame = ({
   const [isLoading, setIsLoading] = useState(true);
   const [indexQuestion, setIndexQuestion] = useState(0);
 
-  useEffect(() => {
-    const shuffleArray = (array) => {
-      const array2 = array;
-      for (let i = array.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = array2[i];
-        array2[i] = array2[j];
-        array2[j] = temp;
-      }
-    };
+  const shuffleArray = (array) => {
+    const array2 = array;
+    for (let i = array.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array2[i];
+      array2[i] = array2[j];
+      array2[j] = temp;
+    }
+  };
 
+  useEffect(() => {
     const getQuestions = async () => {
-      const results = await axios.get(
-        'https://opentdb.com/api.php?amount=11&category=29'
+      const resultsComics = await axios.get(
+        'https://opentdb.com/api.php?amount=5&category=29'
       );
+      const resultsFilm = await axios.get(
+        'https://opentdb.com/api.php?amount=5&category=11'
+      );
+      const resultsGames = await axios.get(
+        'https://opentdb.com/api.php?amount=5&category=15'
+      );
+      const resultsManga = await axios.get(
+        'https://opentdb.com/api.php?amount=5&category=31'
+      );
+
+      const test = [
+        ...resultsFilm.data.results,
+        ...resultsComics.data.results,
+        ...resultsGames.data.results,
+        ...resultsManga.data.results,
+      ];
+      // resultsFilm.data.results.map((el) => test.push(el));
+      console.log(test);
       const questionsList = [];
       questionsList.push(
-        results.data.results.map((el) => {
+        test.map((el) => {
           let answers = [];
           const parser = new DOMParser();
           const question = {
@@ -69,10 +87,14 @@ const QuizGame = ({
     getQuestions();
   }, []);
 
+  useEffect(() => {
+    shuffleArray(questions);
+  }, []);
+
   const newQuestion = () => {
     setIndexQuestion(indexQuestion + 1);
   };
-
+  console.log(questions);
   return (
     <div className="quiz-game-container">
       {isLoading ? (
