@@ -16,12 +16,6 @@
   padding-bottom: 2%;
 }
 
-/* li style */
-.page-item {
-  list-style-type: none;
-  margin: 2px 2px 0 0;
-}
-
 /* input Style */
 .page-link {
   width: 30px;
@@ -41,4 +35,18 @@
   font-size: 1.5rem;
   color: rgb(0, 0, 0);
   font-weight: bold;
+}
+
+@media screen and (max-width: 1190px) {
+  .pagination {
+    width: 80%;
+  }
+
+  /* li style */
+  .page-link {
+    margin: 5px 5px 0 0;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 25px;
+  }
 }
