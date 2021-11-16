@@ -31,9 +31,8 @@ const Button = ({ setFilter, allGenders }) => {
   };
   return (
     <div className="slider-container">
-      <div className="text-button">
-        {' '}
-        <p>Male</p> <p>Female</p>
+      <div className="text-button-left">
+        <p>♂</p>
       </div>
 
       <input
@@ -47,6 +46,9 @@ const Button = ({ setFilter, allGenders }) => {
           setGenderValue(e.target.value);
         }}
       />
+      <div className="text-button-rigth">
+        <p>♀</p>
+      </div>
     </div>
   );
 };
