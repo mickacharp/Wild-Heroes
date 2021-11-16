@@ -10,11 +10,7 @@ body {
 
 @keyframes slideIn {
   0% {
-    transform: translate(0, 10vw);
-  }
-
-  50% {
-    transform: translate(35vw, 10vw);
+    transform: translate(0, 0);
   }
 
   100% {
@@ -22,15 +18,17 @@ body {
   }
 }
 
+/* style for principal div */
 .card-list {
   position: absolute;
   height: 0;
 }
 
+/* style from choose card challenger */
 .card-random {
   position: relative;
   left: 39vw;
-  top: 12vw;
+  top: 4vw;
   width: 19vw;
   height: 24vw;
   margin: 2vw;
@@ -44,11 +42,13 @@ body {
   cursor: pointer;
 }
 
+/* style from image card choose challenger */
 .card-random img {
   width: 19vw;
   height: 23vw;
 }
 
+/* style text choose tour challenger */
 .card-random h2 {
   font-family: 'Heroes', Arial, Helvetica, sans-serif;
   text-align: center;
@@ -59,12 +59,13 @@ body {
   color: goldenrod;
 }
 
+/* style from card challenger */
 .card-quiz {
   position: relative;
   animation-name: slideIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  top: 3vw;
+  top: 1vw;
   left: 40vw;
   width: 16vw;
   height: 22vw;
@@ -79,12 +80,14 @@ body {
   font-size: 0.7em;
 }
 
+/* style from image challenger */
 .card-quiz img {
   width: 16vw;
   height: 18vw;
   border-radius: 10px 10px 0 0;
 }
 
+/* style name challenger */
 .card-quiz h2 {
   text-align: center;
   text-transform: uppercase;

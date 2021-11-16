@@ -6,18 +6,28 @@ const Home = () => {
   const [paragraphInfo, setParagraphInfo] = useState(false);
   const [paragraphQuiz, setParagraphQuiz] = useState(false);
 
+  const test = (fraise) => {
+    let a = '';
+    if (fraise) {
+      a = 'brightness';
+    }
+    return a;
+  };
+
   return (
     <div className="App">
       <div className="img">
         <div className="main-title-home">
           <h1>Wild Heroes</h1>
         </div>
-        <NavLink className="img-text-left" exact to="/quiz">
-          <div
-            className="img-left"
-            onMouseEnter={() => setParagraphQuiz(true)}
-            onMouseLeave={() => setParagraphQuiz(false)}
-          />
+        <NavLink
+          className="img-text-left"
+          exact
+          to="/quiz"
+          onMouseEnter={() => setParagraphQuiz(true)}
+          onMouseLeave={() => setParagraphQuiz(false)}
+        >
+          <div className={`img-left ${test(paragraphQuiz)}`} />
           <div className="text-left">
             <h2 className="title-home">Quiz</h2>
             {paragraphQuiz && (
@@ -25,12 +35,14 @@ const Home = () => {
             )}
           </div>
         </NavLink>
-        <NavLink className="img-text-right" exact to="/informations">
-          <div
-            className="img-right"
-            onMouseEnter={() => setParagraphInfo(true)}
-            onMouseLeave={() => setParagraphInfo(false)}
-          />
+        <NavLink
+          className="img-text-right"
+          exact
+          to="/informations"
+          onMouseEnter={() => setParagraphInfo(true)}
+          onMouseLeave={() => setParagraphInfo(false)}
+        >
+          <div className={`img-right ${test(paragraphInfo)}`} />
           <div className="text-right">
             <h2 className="title-home">Information</h2>
             {paragraphInfo && (

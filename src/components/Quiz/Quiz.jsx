@@ -13,16 +13,14 @@ const Quiz = () => {
   return (
     <div>
       <Navbar />
-      {numberQuestion < 11 ? (
+      {numberQuestion < 11 && (
         <CardsQuiz
           setChooseCard={setChooseCard}
           chooseCard={chooseCard}
           index={index}
         />
-      ) : (
-        ''
       )}
-      {numberQuestion < 11 ? (
+      {!chooseCard && numberQuestion < 11 && (
         <QuizGame
           index={index}
           setIndex={setIndex}
@@ -31,17 +29,13 @@ const Quiz = () => {
           score={score}
           setScore={setScore}
         />
-      ) : (
-        ''
       )}
-      {numberQuestion > 10 ? (
+      {numberQuestion > 10 && (
         <QuizResult
           score={score}
           setNumberQuestion={setNumberQuestion}
           setScore={setScore}
         />
-      ) : (
-        ''
       )}
     </div>
   );
