@@ -70,7 +70,6 @@ const QuizGame = ({
   const handleNextQuestion = () => {
     setNextQuestion(!nextQuestion);
   };
-
   return (
     <div className="quiz-game-container">
       {isLoading ? (

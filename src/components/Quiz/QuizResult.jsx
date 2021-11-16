@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import './quizResult.css';
@@ -12,16 +10,24 @@ const QuizResult = ({ score }) => {
           <h2>Score: {score}/10</h2>
           <p>You&apos;re a loser !</p>
         </div>
-      ) : score === 5 ? (
+      ) : (
+        ''
+      )}
+      {score === 5 ? (
         <div className="result">
           <h2>Score: {score}/10</h2>
           <p>Draw...</p>
         </div>
       ) : (
+        ''
+      )}
+      {score > 5 ? (
         <div className="result">
           <h2>Score: {score}/10</h2>
           <p>Congrats you WIN !</p>
         </div>
+      ) : (
+        ''
       )}
       <button
         type="button"
