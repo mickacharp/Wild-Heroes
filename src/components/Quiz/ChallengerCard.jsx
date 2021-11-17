@@ -2,7 +2,6 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import imgReplace from '../../img/interrogation.png';
 import ModalInfo from '../Informations/ModalInfo';
-import './cardQuiz.css';
 
 const ChallengerCard = ({ hero, index, score }) => {
   const [heroRandom] = useState([]);
@@ -13,7 +12,7 @@ const ChallengerCard = ({ hero, index, score }) => {
 
   return (
     <div className="container-card-quiz">
-      <h1>Challenger:{challenger}/10</h1>
+      <h3>Challenger:{challenger}/10</h3>
       <div
         className="card-quiz"
         onClick={() => hideModal()}
