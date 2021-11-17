@@ -46,7 +46,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  cursor: pointer;
 }
 
 .quiz_answer {
@@ -60,6 +59,11 @@ body {
   align-items: center;
   font-size: 1.1rem;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.pointer-event {
+  pointer-events: none;
 }
 
 .quiz_answer:hover {
