@@ -13,7 +13,7 @@ class QuizQuestion extends React.Component {
     let colorAnswer = {};
     if (this.answerGiven) {
       if (correctAnswer) {
-        colorAnswer = { backgroundColor: '#1E7112' };
+        colorAnswer = { backgroundColor: '#1E7112', transform: 'scale(1.1)' };
       } else {
         colorAnswer = { backgroundColor: 'rgba(0, 0, 0, 0.7)' };
       }
@@ -71,6 +71,7 @@ class QuizQuestion extends React.Component {
               /* eslint-enable */
               style={{
                 backgroundColor: this.styleAnswer(el.correct).backgroundColor,
+                transform: this.styleAnswer(el.correct).transform,
               }}
             >
               {el.text}
