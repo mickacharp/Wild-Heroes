@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './cardQuiz.css';
 
 const CardRandom = ({ hero, setChooseCard }) => {
   const image = [];

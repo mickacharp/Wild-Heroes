@@ -103,7 +103,7 @@ body {
   cursor: pointer;
   font-size: 0.7em;
 }
-.container-card-quiz h1 {
+.container-card-quiz h3 {
   position: absolute;
   animation-name: slideIn;
   animation-duration: 1s;
