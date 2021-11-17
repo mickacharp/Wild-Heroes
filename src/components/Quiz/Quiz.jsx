@@ -11,17 +11,9 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
 
   return (
-    <div>
+    <div className="container-quiz">
       <Navbar />
-      {numberQuestion < 11 && (
-        <CardsQuiz
-          score={score}
-          setScore={setScore}
-          setChooseCard={setChooseCard}
-          chooseCard={chooseCard}
-          index={index}
-        />
-      )}
+
       {!chooseCard && numberQuestion < 11 && (
         <QuizGame
           index={index}
@@ -37,6 +29,15 @@ const Quiz = () => {
           score={score}
           setNumberQuestion={setNumberQuestion}
           setScore={setScore}
+        />
+      )}
+      {numberQuestion < 11 && (
+        <CardsQuiz
+          score={score}
+          setScore={setScore}
+          setChooseCard={setChooseCard}
+          chooseCard={chooseCard}
+          index={index}
         />
       )}
     </div>
