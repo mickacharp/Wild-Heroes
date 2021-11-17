@@ -15,6 +15,8 @@ const Quiz = () => {
       <Navbar />
       {numberQuestion < 11 && (
         <CardsQuiz
+          score={score}
+          setScore={setScore}
           setChooseCard={setChooseCard}
           chooseCard={chooseCard}
           index={index}

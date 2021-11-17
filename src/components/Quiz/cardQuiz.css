@@ -17,16 +17,40 @@ body {
     transform: translate(35vw, 10vw);
   }
 }
-
-/* style for principal div */
 .card-list {
-  position: absolute;
-  height: 0;
+  position: relative;
+}
+
+/* container to card random */
+.container-card-random {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* text to card random */
+.card-random-explication {
+  text-align: center;
+  margin: 40px;
+  padding: 15px;
+  background-color: rgba(14, 14, 14, 1);
+  height: 90px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: Heroes, Roboto, sans-serif;
+  color: goldenrod;
+  text-align: center;
+  line-height: 35px;
+  font-size: 1rem;
 }
 
 /* style from choose card challenger */
 .card-random {
-  position: relative;
+  text-align: center;
   left: 39vw;
   top: 4vw;
   width: 19vw;
@@ -61,7 +85,7 @@ body {
 
 /* style from card challenger */
 .card-quiz {
-  position: relative;
+  position: absolute;
   animation-name: slideIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -79,7 +103,15 @@ body {
   cursor: pointer;
   font-size: 0.7em;
 }
-
+.container-card-quiz h1 {
+  position: absolute;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  top: 1vw;
+  left: 45vw;
+  font-size: 1.6em;
+}
 /* style from image challenger */
 .card-quiz img {
   width: 16vw;
