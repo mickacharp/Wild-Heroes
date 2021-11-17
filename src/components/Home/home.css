@@ -3,17 +3,7 @@
   src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
 }
 
-.paragraph-home {
-  position: relative;
-  left: -20%;
-  width: 150%;
-  color: goldenrod;
-  font-size: 25px;
-  font-family: Heroes, Roboto, sans-serif;
-  margin-top: 30%;
-}
-
-.img {
+.home-container {
   display: grid;
   height: 100vh;
   width: 100%;
@@ -22,33 +12,28 @@
   position: relative;
 }
 
-.main-title-home {
+.main-title-container {
   position: absolute;
-  color: white;
   z-index: 1000;
   left: 50%;
   top: 10%;
   transform: translate(-50%, -50%);
 }
 
-.main-title-home h1 {
+.main-title-container h1 {
   color: goldenrod;
   font-size: 2vw;
   text-shadow: #a50c0c 5px 2px 1px;
   font-family: Heroes, Roboto, sans-serif;
 }
 
-.title-home {
-  color: white;
-  filter: brightness(100%);
-  font-size: 3rem;
-}
-
-.img-text-left {
+.img-text-left,
+.img-text-right {
   position: relative;
+  width: 100%;
 }
 
-.img-left {
+.left-container {
   grid-column: 1 / 2;
   height: 100%;
   width: 100%;
@@ -63,19 +48,7 @@
   transition: 0.5s;
 }
 
-.text-left {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.img-text-right {
-  position: relative;
-}
-
-.img-right {
+.right-container {
   grid-column: 2 / 3;
   height: 100%;
   width: 100%;
@@ -88,23 +61,36 @@
   transition: 0.5s;
 }
 
+.text-left,
 .text-right {
   position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 
-p {
+.subtitles-home {
+  color: white;
+  filter: brightness(100%);
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-family: Heroes, Roboto, sans-serif;
   font-style: italic;
 }
 
-#textRight {
-  background-color: rgba(0, 0, 0, 0.116);
+.paragraph-home {
+  position: relative;
+  margin: 10% 0 auto auto;
+  color: goldenrod;
+  text-shadow: #330404 5px 2px 1px;
+  font-size: 25px;
+  font-family: Heroes, Roboto, sans-serif;
+  border-radius: 10px;
 }
 
-.brightness {
+.brightened {
   filter: brightness(100%);
   cursor: pointer;
 }
