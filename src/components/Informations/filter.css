@@ -4,14 +4,16 @@
   align-items: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  background: linear-gradient(
-    90deg,
-    rgba(16, 25, 113, 1) 0%,
-    rgba(14, 14, 14, 1) 50%
-  );
+  background:
+    linear-gradient(
+      0deg,
+      rgba(16, 25, 113, 1) 0%,
+      rgba(14, 14, 14, 1) 50%
+    );
 }
 
 .comics-filter {
+  cursor: pointer;
   border-radius: 15px 15px 2px 2px;
   padding: 0 5px;
   width: 25vh;
