@@ -20,8 +20,8 @@ const CardRandom = ({ hero, setChooseCard }) => {
   return (
     <div className="container-card-random">
       <h1 className="card-random-explication">
-        Click on card to choose 10 random challengers, if your answer is correct
-        you eliminate one challenger, Good game !!!
+        Click on the card to choose 10 random challengers, if your answer is
+        correct you eliminate one challenger, good game !!!
       </h1>
       <div
         className="card-random"
