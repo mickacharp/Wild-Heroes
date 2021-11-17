@@ -32,6 +32,7 @@
 }
 
 .search > div > input {
+  cursor: pointer;
   color: white;
   font-size: 16px;
   background: transparent;
