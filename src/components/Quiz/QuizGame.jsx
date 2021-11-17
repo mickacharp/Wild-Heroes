@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
@@ -30,29 +28,31 @@ const QuizGame = ({
   useEffect(() => {
     const getQuestions = async () => {
       const resultsComics = await axios.get(
-        'https://opentdb.com/api.php?amount=5&category=29'
+        'https://opentdb.com/api.php?amount=4&category=29'
       );
       const resultsFilm = await axios.get(
-        'https://opentdb.com/api.php?amount=5&category=11'
+        'https://opentdb.com/api.php?amount=4&category=11'
       );
       const resultsGames = await axios.get(
-        'https://opentdb.com/api.php?amount=5&category=15'
+        'https://opentdb.com/api.php?amount=4&category=15'
       );
       const resultsManga = await axios.get(
-        'https://opentdb.com/api.php?amount=5&category=31'
+        'https://opentdb.com/api.php?amount=4&category=31'
       );
 
-      const test = [
+      const results = [
         ...resultsFilm.data.results,
         ...resultsComics.data.results,
         ...resultsGames.data.results,
         ...resultsManga.data.results,
       ];
-      // resultsFilm.data.results.map((el) => test.push(el));
-      console.log(test);
+
+      // Shuffle the questions to display a random theme
+      shuffleArray(results);
+
       const questionsList = [];
       questionsList.push(
-        test.map((el) => {
+        results.map((el) => {
           let answers = [];
           const parser = new DOMParser();
           const question = {
@@ -75,8 +75,10 @@ const QuizGame = ({
             });
           }
 
+          // Shuffle answers
           shuffleArray(answers);
           question.answers = answers;
+
           return question;
         })
       );
@@ -87,14 +89,9 @@ const QuizGame = ({
     getQuestions();
   }, []);
 
-  useEffect(() => {
-    shuffleArray(questions);
-  }, []);
-
   const newQuestion = () => {
     setIndexQuestion(indexQuestion + 1);
   };
-  console.log(questions);
   return (
     <div className="quiz-game-container">
       {isLoading ? (
