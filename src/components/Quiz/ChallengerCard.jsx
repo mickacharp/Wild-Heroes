@@ -4,14 +4,16 @@ import imgReplace from '../../img/interrogation.png';
 import ModalInfo from '../Informations/ModalInfo';
 import './cardQuiz.css';
 
-const ChallengerCard = ({ hero, index }) => {
+const ChallengerCard = ({ hero, index, score }) => {
   const [heroRandom] = useState([]);
   heroRandom.push(hero[Math.floor(Math.random() * 732)]);
   const [toggleModal, setToggleModal] = useState('');
   const hideModal = () => setToggleModal(!toggleModal);
+  const challenger = 10 - score;
 
   return (
-    <div>
+    <div className="container-card-quiz">
+      <h1>Challenger:{challenger}/10</h1>
       <div
         className="card-quiz"
         onClick={() => hideModal()}
@@ -60,5 +62,6 @@ const ChallengerCard = ({ hero, index }) => {
 ChallengerCard.propTypes = {
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
   index: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired,
 };
 export default ChallengerCard;
