@@ -123,8 +123,15 @@ body {
   }
 
   .quiz_answer {
-    width: 500px;
+    width: 450px;
     height: 80px;
     border-radius: 90px;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1980px) {
+  .quiz_answers {
+    width: 60%;
   }
 }

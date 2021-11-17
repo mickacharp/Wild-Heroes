@@ -11,7 +11,9 @@ const Navbar = () => {
           <img src={logo} className="logo" alt="Logo" />
         </a>
         <div className="title">
-          <h1>WILD HEROES</h1>
+          <a href="/wild-heroes/">
+            <h1>WILD HEROES</h1>
+          </a>
         </div>
         <div className="header-content-link">
           <NavLink
