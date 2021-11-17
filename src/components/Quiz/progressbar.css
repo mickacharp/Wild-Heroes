@@ -1,0 +1,8 @@
+.progress-div {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 95%;
+}
