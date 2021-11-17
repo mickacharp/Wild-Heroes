@@ -76,11 +76,12 @@ body {
 .card-random h2 {
   font-family: 'Heroes', Arial, Helvetica, sans-serif;
   text-align: center;
-  margin: 20px 5px;
+  margin: 10px 5px;
   font-size: 1em;
   letter-spacing: 2px;
   overflow-wrap: break-word;
   color: goldenrod;
+  line-height: 40px;
 }
 
 /* style from card challenger */
