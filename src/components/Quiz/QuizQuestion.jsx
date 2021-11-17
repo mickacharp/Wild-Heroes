@@ -56,7 +56,7 @@ class QuizQuestion extends React.Component {
             <li
               key={el.text}
               role="presentation"
-              className="quiz_answer"
+              className={`quiz_answer ${this.answerGiven && 'pointer-event'}`}
               /* eslint-disable */
               onClick={() => {
                 this.setState({
