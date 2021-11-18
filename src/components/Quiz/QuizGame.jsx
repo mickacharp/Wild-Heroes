@@ -27,29 +27,45 @@ const QuizGame = ({
 
   useEffect(() => {
     const getQuestions = async () => {
-      const resultsComics = await axios.get(
-        'https://opentdb.com/api.php?amount=4&category=29'
+      const resultsComicsEasy = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=29&difficulty=easy'
       );
-      const resultsFilm = await axios.get(
-        'https://opentdb.com/api.php?amount=4&category=11'
+      const resultsFilmEasy = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=11@difficulty=easy'
       );
-      const resultsGames = await axios.get(
-        'https://opentdb.com/api.php?amount=4&category=15'
+      const resultsGamesEasy = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=15&difficulty=easy'
       );
-      const resultsManga = await axios.get(
-        'https://opentdb.com/api.php?amount=4&category=31'
+      const resultsMangaEasy = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=31&difficulty=easy'
+      );
+      const resultsComicsMedium = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=29&difficulty=medium'
+      );
+      const resultsFilmMedium = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=11&difficulty=medium'
+      );
+      const resultsGamesMedium = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=15&difficulty=medium'
+      );
+      const resultsMangaMedium = await axios.get(
+        'https://opentdb.com/api.php?amount=4&category=31&difficulty=medium'
       );
 
       const results = [
-        ...resultsFilm.data.results,
-        ...resultsComics.data.results,
-        ...resultsGames.data.results,
-        ...resultsManga.data.results,
+        ...resultsFilmEasy.data.results,
+        ...resultsComicsEasy.data.results,
+        ...resultsGamesEasy.data.results,
+        ...resultsMangaEasy.data.results,
+        ...resultsFilmMedium.data.results,
+        ...resultsComicsMedium.data.results,
+        ...resultsGamesMedium.data.results,
+        ...resultsMangaMedium.data.results,
       ];
 
       // Shuffle the questions to display a random theme
       shuffleArray(results);
-
+      console.log(results);
       const questionsList = [];
       questionsList.push(
         results.map((el) => {
