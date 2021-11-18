@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 1899px) {
   .quiz-riddler_answers {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -148,5 +148,10 @@
 @media screen and (max-width: 1080px) {
   .container-quiz-riddler {
     height: 100vh;
+  }
+}
+@media screen and (max-height: 415px) {
+  .container-quiz-riddler {
+    height: 100%;
   }
 }
