@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-step-progress-bar/styles.css';
-import './progressBar.css';
+import './progressbar.css';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import PropTypes from 'prop-types';
 import Robin from '../../img/Robin.png';
