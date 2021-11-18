@@ -122,11 +122,6 @@
   }
 }
 
-@media screen and (max-width: 1190px) {
-  .quiz-riddler_answers {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 2426px) {
   .quiz-riddler_answers {
     width: 60%;
@@ -136,6 +131,12 @@
 @media screen and (max-width: 375px) {
   .container-quiz-riddler {
     height: 86vh;
+  }
+
+  @media screen and (max-width: 1190px) {
+    .quiz-riddler_answers {
+      width: 100%;
+    }
   }
 
   .quiz-riddler_question {
