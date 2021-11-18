@@ -12,18 +12,18 @@
 
 - `npm run prepare`
 
-#### Second step
+## Second step
 
 - Create a "wild-heroes" folder in your IDE
 
 - In your terminal, create a clone of the "wild-heroes" Github repository in the "wild heroes" folder that you just created :
   git clone git@github.com:Jarod79/wild-heroes.git
 
-##### Third step
+## Third step
 
 - You need to do an "npm install" in your terminal in order to install the different packages that we need to run the app
 
-###### Fourth step
+## Fourth step
 
 - Run the app with "npm start"
 
