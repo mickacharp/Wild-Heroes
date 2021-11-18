@@ -8,7 +8,7 @@ const RiddlerQuizResult = ({ score }) => {
       {score === 0 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Meow, I think I know why you lost against this cat...</p>
+          <p>Like ice, you are a zero...</p>
         </div>
       )}
       {score === 1 && (
