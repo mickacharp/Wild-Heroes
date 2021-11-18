@@ -50,7 +50,11 @@
   }
 }
 
-@media screen and (max-height: 400px) {
+@media screen and (max-height: 460px) {
+  .riddler-quiz-result {
+    margin-top: -20px;
+    line-height: 50px;
+  }
   .riddler-result {
     font-size: 0.4rem;
   }
