@@ -4,7 +4,8 @@
 }
 
 .riddler-quiz-result {
-  height: 80vh;
+  background-color: black;
+  height: 83.7vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +21,7 @@
 
 .riddler-result h2,
 .riddler-result p {
+  color: #34c924;
   font-size: 3em;
   font-family: Heroes, Roboto, sans-serif;
 }
@@ -29,8 +31,8 @@
   height: 50px;
   border-radius: 40px;
   font-family: Roboto, sans-serif;
-  background-color: rgb(16, 25, 113);
-  color: goldenrod;
+  background-color: #4f0373;
+  color: #34c924;
   font-size: 1.2em;
   cursor: pointer;
   transition: 0.5s;
