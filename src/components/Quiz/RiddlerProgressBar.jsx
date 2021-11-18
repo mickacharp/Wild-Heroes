@@ -15,7 +15,7 @@ import Poisonivy from '../../img/Poisonivy.png';
 import Joker from '../../img/Joker.png';
 import Riddler from '../../img/Riddler.png';
 
-const RiddleProgressBar = ({ score }) => {
+const RiddlerProgressBar = ({ score }) => {
   const transitionStyles = {
     entering: { transform: 'scale(2)' },
     entered: { transform: 'scale(1.5)' },
@@ -26,8 +26,8 @@ const RiddleProgressBar = ({ score }) => {
     <div className="riddlerprogress-div">
       <div className="riddlerprogress-bar">
         <ProgressBar
-          percent={score * 10}
-          filledBackground="linear-gradient(to right, #80FF00, #60FF00, #40FF00, #20FF00, 00FF00)"
+          percent={score * 100}
+          filledBackground="linear-gradient(to right, #298A08, #04B404, #01DF01, #00FF00)"
         >
           <Step>
             {({ accomplished, transitionState }) => (
@@ -200,8 +200,8 @@ const RiddleProgressBar = ({ score }) => {
   );
 };
 
-RiddleProgressBar.propTypes = {
+RiddlerProgressBar.propTypes = {
   score: PropTypes.number.isRequired,
 };
 
-export default RiddleProgressBar;
+export default RiddlerProgressBar;

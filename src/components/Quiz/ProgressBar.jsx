@@ -15,7 +15,7 @@ import Manhattan from '../../img/Manhattan.png';
 import Superman from '../../img/Superman.png';
 import Hulk from '../../img/Hulk.png';
 
-const StepProgressBar = ({ score }) => {
+const QuizProgressBar = ({ score }) => {
   const transitionStyles = {
     entering: { transform: 'scale(2)' },
     entered: { transform: 'scale(1.5)' },
@@ -200,8 +200,8 @@ const StepProgressBar = ({ score }) => {
   );
 };
 
-StepProgressBar.propTypes = {
+QuizProgressBar.propTypes = {
   score: PropTypes.number.isRequired,
 };
 
-export default StepProgressBar;
+export default QuizProgressBar;
