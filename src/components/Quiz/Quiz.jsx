@@ -74,7 +74,7 @@ const Quiz = () => {
           index={index}
         />
       )}
-      {btr && (
+      {btr && numberQuestion < 11 && (
         <BtrGame
           index={index}
           setIndex={setIndex}
@@ -84,7 +84,7 @@ const Quiz = () => {
           setScore={setScore}
         />
       )}
-      {numberQuestion > 10 && (
+      {normalGame && numberQuestion > 10 && (
         <QuizResult
           score={score}
           setNumberQuestion={setNumberQuestion}
