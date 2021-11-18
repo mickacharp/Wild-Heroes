@@ -5,7 +5,7 @@ import ModalInfo from '../Informations/ModalInfo';
 
 const ChallengerCard = ({ hero, index, score }) => {
   const [heroRandom] = useState([]);
-  heroRandom.push(hero[Math.floor(Math.random() * 732)]);
+  heroRandom.push(hero[Math.floor(Math.random() * 567)]);
   const [toggleModal, setToggleModal] = useState('');
   const hideModal = () => setToggleModal(!toggleModal);
   const challenger = 10 - score;
@@ -13,7 +13,7 @@ const ChallengerCard = ({ hero, index, score }) => {
   return (
     <div className="container-card-quiz">
       <div className="card-challenger-title">
-        <h3>Challenger:{challenger}/10</h3>
+        <h3>Challenger*:{challenger}/10</h3>
       </div>
 
       <div

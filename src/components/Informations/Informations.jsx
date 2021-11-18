@@ -6,7 +6,20 @@ import Pagination from './Pagination';
 import SearchbarName from './SearchBarName';
 
 const Informations = () => {
+  /* Array of data */
   const [hero, setHero] = useState([]);
+  // Data Array filter
+  const heroGoodDisplay = [];
+  hero.map(
+    (el) =>
+      el.powerstats.combat !== 'null' &&
+      el.powerstats.durability !== 'null' &&
+      el.powerstats.intelligence !== 'null' &&
+      el.powerstats.power !== 'null' &&
+      el.powerstats.speed !== 'null' &&
+      el.powerstats.strength !== 'null' &&
+      heroGoodDisplay.push(el)
+  );
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +36,7 @@ const Informations = () => {
     setSearchName(e.target.value);
   };
   // filter array table for adaptative pagination
-  const heroFilter = hero
+  const heroFilter = heroGoodDisplay
     .filter((el) => el.biography.publisher.includes(byPublisher))
     .filter((el) => el.appearance.gender.includes(gender))
     .filter((el) => el.appearance.race.includes(race))
@@ -54,48 +67,41 @@ const Informations = () => {
     { id: 16, name: 'Kryptonian' },
     { id: 17, name: 'Metahuman' },
     { id: 18, name: 'Mutant' },
-    { id: 19, name: 'Neyaphen' },
-    { id: 20, name: 'Symbiote' },
-    { id: 21, name: 'Ungaran' },
-    { id: 22, name: 'Vampire' },
-    { id: 23, name: 'Xenomorph' },
+    { id: 19, name: 'Symbiote' },
+    { id: 20, name: 'Ungaran' },
+    { id: 21, name: 'Vampire' },
+    { id: 22, name: 'Xenomorph' },
   ];
 
   const allPublishers = [
-    { id: 24, name: 'Marvel Comics' },
-    { id: 25, name: 'DC Comics' },
-    { id: 26, name: 'Image Comics' },
-    { id: 27, name: 'Dark Horse' },
-    { id: 28, name: 'NBC - Heroes' },
-    { id: 29, name: 'Sharon Carter' },
-    { id: 30, name: 'Wildstorm' },
-    { id: 31, name: 'Archangel' },
-    { id: 32, name: 'Tempest' },
-    { id: 33, name: 'Image Comics' },
-    { id: 34, name: 'Giant-Man' },
-    { id: 35, name: 'Toxin' },
-    { id: 36, name: 'Angel' },
-    { id: 37, name: 'Speedy' },
-    { id: 38, name: 'Goliath' },
-    { id: 39, name: 'Spectre' },
-    { id: 40, name: 'Oracle' },
-    { id: 41, name: 'Hawkfire' },
-    { id: 42, name: 'Huntress' },
-    { id: 43, name: 'Misfit' },
-    { id: 44, name: 'Spoiler' },
-    { id: 45, name: 'Nightwing' },
-    { id: 46, name: 'Icon Comics' },
+    { id: 23, name: 'Marvel Comics' },
+    { id: 24, name: 'DC Comics' },
+    { id: 25, name: 'Image Comics' },
+    { id: 26, name: 'Dark Horse' },
+    { id: 27, name: 'NBC - Heroes' },
+    { id: 28, name: 'Wildstorm' },
+    { id: 29, name: 'Archangel' },
+    { id: 30, name: 'Tempest' },
+    { id: 31, name: 'Image Comics' },
+    { id: 32, name: 'Giant-Man' },
+    { id: 33, name: 'Toxin' },
+    { id: 34, name: 'Angel' },
+    { id: 35, name: 'Goliath' },
+    { id: 36, name: 'Oracle' },
+    { id: 37, name: 'Spoiler' },
+    { id: 38, name: 'Nightwing' },
+    { id: 39, name: 'Icon Comics' },
   ];
 
   const allGenders = [
-    { id: 47, name: 'Male' },
-    { id: 48, name: 'Female' },
+    { id: 40, name: 'Male' },
+    { id: 41, name: 'Female' },
   ];
 
   const allAlignments = [
-    { id: 49, name: 'good' },
-    { id: 50, name: 'bad' },
-    { id: 51, name: 'neutral' },
+    { id: 42, name: 'good' },
+    { id: 43, name: 'bad' },
+    { id: 44, name: 'neutral' },
   ];
 
   // Change page

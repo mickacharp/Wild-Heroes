@@ -48,9 +48,16 @@ const CardsList = ({
             />
             <Filter setFilter={setRace} filter="Race" response={allRaces} />
           </div>
-          {heroFilter.length < 732 && (
+          <div className="information-card">
+            <h2>Click on a card to get more information about a character.</h2>
+          </div>
+          {heroFilter.length < 567 && (
             <div className="nbrCards-search">
-              <h1>{heroFilter.length} characters found</h1>
+              {heroFilter.length > 1 && (
+                <h2>{heroFilter.length} characters found</h2>
+              )}
+              {heroFilter.length === 1 && <h2>One character found</h2>}
+              {heroFilter.length === 0 && <h2>No characters found</h2>}
             </div>
           )}
           <div className="container-cards">

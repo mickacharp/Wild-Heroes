@@ -1,21 +1,21 @@
 import React from 'react';
 import 'react-step-progress-bar/styles.css';
-import './progressbar.css';
+import './riddlerProgressBar.css';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import PropTypes from 'prop-types';
-import Robin from '../../img/Robin.png';
-import Thor from '../../img/Thor.png';
-import Flash from '../../img/Flash.png';
-import Ironman from '../../img/Ironman.png';
-import CapAmerica from '../../img/CapAmerica.png';
-import Spiderman from '../../img/Spiderman-bar.png';
-import Batman from '../../img/Batman.png';
-import Wonderwoman from '../../img/Wonderwoman.png';
-import Manhattan from '../../img/Manhattan.png';
-import Superman from '../../img/Superman.png';
-import Hulk from '../../img/Hulk.png';
+import Twoface from '../../img/Twoface.png';
+import Freeze from '../../img/Freeze.png';
+import Rasalghul from '../../img/Rasalghul.png';
+import Penguin from '../../img/Penguin.png';
+import Deathstroke from '../../img/Deathstroke.png';
+import Scarecrow from '../../img/Scarecrow.png';
+import Bane from '../../img/Bane.png';
+import Harley from '../../img/Harley.png';
+import Poisonivy from '../../img/Poisonivy.png';
+import Joker from '../../img/Joker.png';
+import Riddler from '../../img/Riddler.png';
 
-const QuizProgressBar = ({ score }) => {
+const RiddlerProgressBar = ({ score }) => {
   const transitionStyles = {
     entering: { transform: 'scale(2)' },
     entered: { transform: 'scale(1.5)' },
@@ -23,11 +23,11 @@ const QuizProgressBar = ({ score }) => {
     exited: { transform: 'scale(1)' },
   };
   return (
-    <div className="progress-div">
-      <div className="progress-bar">
+    <div className="riddlerprogress-div">
+      <div className="riddlerprogress-bar">
         <ProgressBar
           percent={score * 10}
-          filledBackground="linear-gradient(to right, #FF0000, #FF4000, #FF8000, #FFBF00, #FFFF00, #BFFF00, #80FF00, #40FF00, #009000)"
+          filledBackground="linear-gradient(to right, #298A08, #04B404, #01DF01, #00FF00)"
         >
           <Step>
             {({ accomplished, transitionState }) => (
@@ -36,9 +36,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Robin}
-                  alt="Robin"
+                  className="riddlerprogressbar-img"
+                  src={Freeze}
+                  alt="Freeze"
                   width="15"
                 />
               </div>
@@ -51,9 +51,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Batman}
-                  alt="Batman"
+                  className="riddlerprogressbar-img"
+                  src={Penguin}
+                  alt="Penguin"
                   width="17"
                 />
               </div>
@@ -66,9 +66,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={CapAmerica}
-                  alt="America"
+                  className="riddlerprogressbar-img"
+                  src={Deathstroke}
+                  alt="Deathstroke"
                   width="19"
                 />
               </div>
@@ -81,9 +81,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Flash}
-                  alt="Flash"
+                  className="riddlerprogressbar-img"
+                  src={Scarecrow}
+                  alt="Scarecrow"
                   width="21"
                 />
               </div>
@@ -96,9 +96,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Spiderman}
-                  alt="Spidey"
+                  className="riddlerprogressbar-img"
+                  src={Poisonivy}
+                  alt="Ivy"
                   width="23"
                 />
               </div>
@@ -111,9 +111,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Ironman}
-                  alt="Ironman"
+                  className="riddlerprogressbar-img"
+                  src={Twoface}
+                  alt="Twoface"
                   width="25"
                 />
               </div>
@@ -126,9 +126,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Thor}
-                  alt="Thor"
+                  className="riddlerprogressbar-img"
+                  src={Harley}
+                  alt="Harley"
                   width="27"
                 />
               </div>
@@ -141,9 +141,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Wonderwoman}
-                  alt="WW"
+                  className="riddlerprogressbar-img"
+                  src={Bane}
+                  alt="Bane"
                   width="29"
                 />
               </div>
@@ -156,9 +156,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Manhattan}
-                  alt="Manhattan"
+                  className="riddlerprogressbar-img"
+                  src={Rasalghul}
+                  alt="Rasalghul"
                   width="31"
                 />
               </div>
@@ -171,9 +171,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Superman}
-                  alt="Superman"
+                  className="riddlerprogressbar-img"
+                  src={Joker}
+                  alt="Joker"
                   width="33"
                 />
               </div>
@@ -186,9 +186,9 @@ const QuizProgressBar = ({ score }) => {
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
                 <img
-                  className="progressbar-img"
-                  src={Hulk}
-                  alt="Hulk"
+                  className="riddlerprogressbar-img"
+                  src={Riddler}
+                  alt="Riddler"
                   width="40"
                 />
               </div>
@@ -200,8 +200,8 @@ const QuizProgressBar = ({ score }) => {
   );
 };
 
-QuizProgressBar.propTypes = {
+RiddlerProgressBar.propTypes = {
   score: PropTypes.number.isRequired,
 };
 
-export default QuizProgressBar;
+export default RiddlerProgressBar;

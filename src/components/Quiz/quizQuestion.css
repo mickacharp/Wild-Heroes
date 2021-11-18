@@ -21,10 +21,13 @@ body {
 .quiz-info h2 {
   text-align: center;
   font-family: Heroes, Roboto, sans-serif;
+  color: black;
   margin: 30px;
+  font-size: 1rem;
 }
 
 .quiz_question {
+  margin-top: 40px;
   margin-bottom: 40px;
   padding: 15px;
   background-color: rgba(14, 14, 14, 1);
@@ -83,14 +86,15 @@ body {
 
 @media screen and (max-width: 740px) {
   .quiz_question {
+    margin-bottom: 10px;
     font-size: 0.7rem;
-    margin-bottom: 20px;
   }
 
   .quiz_answers {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin-top: 65px;
   }
 
   .quiz_answer {
@@ -98,10 +102,7 @@ body {
   }
 
   .quiz-info h2 {
-    text-align: center;
-    font-family: Heroes, Roboto, sans-serif;
     font-size: 0.7em;
-    margin: 30px;
   }
 
   .quiz-score h2 {
@@ -114,17 +115,39 @@ body {
   .quiz_question {
     font-size: 0.5rem;
   }
-}
 
-@media screen and (max-width: 1266px) {
-  .quiz_answers {
-    width: 80%;
+  .quiz-info h2 {
+    font-size: 0.5em;
   }
 }
 
 @media screen and (max-width: 960px) {
   .quiz_answers {
     width: 100%;
+  }
+
+  .quiz-info h2 {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1266px) {
+  .quiz_answers {
+    width: 80%;
+  }
+
+  .quiz-info h2 {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .quiz_answers {
+    width: 80%;
+  }
+
+  .quiz-info h2 {
+    font-size: 0.8em;
   }
 }
 

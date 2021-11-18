@@ -24,7 +24,7 @@
   color: goldenrod;
   font-size: 2vw;
   text-shadow: #a50c0c 5px 2px 1px;
-  font-family: Heroes, Roboto, sans-serif;
+  font-family: Heroes, Arial, Helvetica, sans-serif;
 }
 
 .img-text-left,
@@ -76,7 +76,7 @@
   filter: brightness(100%);
   font-size: 2.5rem;
   letter-spacing: 5px;
-  font-family: Heroes, Roboto, sans-serif;
+  font-family: Heroes, Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
@@ -86,11 +86,97 @@
   color: goldenrod;
   text-shadow: #330404 5px 2px 1px;
   font-size: 25px;
-  font-family: Heroes, Roboto, sans-serif;
+  font-family: Heroes, Arial, Helvetica, sans-serif;
   border-radius: 10px;
 }
 
 .brightened {
   filter: brightness(100%);
   cursor: pointer;
+}
+
+/* ---------------------------------- Responsive ---------------------------------- */
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    position: relative;
+  }
+
+  .main-title-container {
+    left: 50%;
+    top: 50%;
+  }
+
+  .main-title-container h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.8rem;
+  }
+
+  .left-container {
+    grid-row: 1 / 2;
+  }
+
+  .right-container {
+    grid-row: 2 / 3;
+  }
+
+  .left-container,
+  .right-container {
+    filter: brightness(100%);
+  }
+
+  .subtitles-home {
+    font-size: 1.3rem;
+  }
+
+  .paragraph-home {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+
+/* ---------------------------------- Responsive very small screens ---------------------------------- */
+
+@media screen and (max-width: 320px) {
+  .main-title-container h1 {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    position: relative;
+  }
+
+  .main-title-container {
+    left: 50%;
+    top: 50%;
+  }
+
+  .left-container {
+    grid-row: 1 / 2;
+  }
+
+  .right-container {
+    grid-row: 2 / 3;
+  }
+
+  .left-container,
+  .right-container {
+    filter: brightness(100%);
+  }
+
+  .subtitles-home {
+    font-size: 1.3rem;
+  }
+
+  .paragraph-home {
+    font-size: 0.9rem;
+    margin: 0;
+  }
 }

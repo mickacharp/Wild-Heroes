@@ -92,7 +92,6 @@ const BtrGame = ({
   const newQuestion = () => {
     setIndexQuestion(indexQuestion + 1);
   };
-  console.log(indexQuestion);
   return (
     <div className="quiz-game-container">
       {isLoading ? (
