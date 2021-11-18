@@ -15,14 +15,13 @@ import Manhattan from '../../img/Manhattan.png';
 import Superman from '../../img/Superman.png';
 import Hulk from '../../img/Hulk.png';
 
-const transitionStyles = {
-  entering: { transform: 'scale(2)' },
-  entered: { transform: 'scale(1.5)' },
-  exiting: { transform: 'scale(2)' },
-  exited: { transform: 'scale(1)' },
-};
-
 const StepProgressBar = ({ score }) => {
+  const transitionStyles = {
+    entering: { transform: 'scale(2)' },
+    entered: { transform: 'scale(1.5)' },
+    exiting: { transform: 'scale(2)' },
+    exited: { transform: 'scale(1)' },
+  };
   return (
     <div className="progress-div">
       <div className="progress-bar">
