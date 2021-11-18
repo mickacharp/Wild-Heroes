@@ -65,7 +65,7 @@ const QuizGame = ({
 
       // Shuffle the questions to display a random theme
       shuffleArray(results);
-      console.log(results);
+
       const questionsList = [];
       questionsList.push(
         results.map((el) => {
