@@ -10,7 +10,7 @@ const CardRandom = ({ hero, setChooseCard }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCounter(Math.floor(Math.random() * 732));
+      setCounter(Math.floor(Math.random() * 567));
     }, 150);
 
     return () => {
