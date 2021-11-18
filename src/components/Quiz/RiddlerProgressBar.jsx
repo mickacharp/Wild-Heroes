@@ -28,7 +28,7 @@ const StepProgressBar = ({ score }) => {
       <div className="progress-bar">
         <ProgressBar
           percent={score * 10}
-          filledBackground="linear-gradient(to right, #FF0000, #FF4000, #FF8000, #FFBF00, #FFFF00, #BFFF00, #80FF00, #40FF00, #009000)"
+          filledBackground="linear-gradient(to right, #80FF00, #60FF00, #40FF00, #20FF00, 00FF00)"
         >
           <Step>
             {({ accomplished, transitionState }) => (
