@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  padding: 0%;
+}
+
+@font-face {
+  font-family: 'Heroes';
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50vw, 0);
+  }
+
+  100% {
+    transform: translate(78vw, -19vw);
+  }
+}
+
+@keyframes slideInMedia1 {
+  0% {
+    transform: translate(-50vw, 0);
+  }
+
+  100% {
+    transform: translate(41vw, 0);
+  }
+}
+
+@keyframes slideInMedia2 {
+  0% {
+    transform: translate(-50vw, 0);
+  }
+
+  100% {
+    transform: translate(28vw, 15vw);
+  }
+}
+
+@keyframes slideInMedia3 {
+  0% {
+    transform: translate(-50vw, 0);
+  }
+
+  100% {
+    transform: translate(35vw, 40vw);
+  }
+}
+
+.card-list {
+  width: 100%;
+}
+
+.container-card-quiz {
+  height: 0;
+}
+
+/* container to card random */
+.container-card-random {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* text to card random */
+.card-random-explication {
+  text-align: center;
+  margin: 40px;
+  padding: 15px;
+  background-color: rgba(14, 14, 14, 1);
+  height: 90px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: Heroes, Roboto, sans-serif;
+  color: goldenrod;
+  line-height: 35px;
+  font-size: 1rem;
+}
+
+/* style from choose card challenger */
+.card-random {
+  text-align: center;
+  width: 19vw;
+  height: 24vw;
+  margin: 2vw;
+  background-color: rgb(14, 14, 14);
+  padding-bottom: 15px;
+  border: 0 black solid;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* style from image card choose challenger */
+.card-random img {
+  width: 19vw;
+  height: 23vw;
+}
+
+/* style text choose your challenger */
+.card-random h2 {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 10px 5px;
+  font-size: 1em;
+  letter-spacing: 2px;
+  overflow-wrap: break-word;
+  color: goldenrod;
+  line-height: 40px;
+}
+
+/* style from card challenger */
+.card-quiz {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 16vw;
+  height: auto;
+  background-color: rgb(14, 14, 14);
+  border: 0 black solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+/* Style nunber of challenger  */
+.card-challenger-title h3 {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 0.8vw;
+}
+
+.card-challenger-title {
+  width: 16vw;
+}
+
+/* style from image challenger */
+.card-quiz img {
+  width: 16vw;
+  height: 18vw;
+  border-radius: 10px 10px 0 0;
+}
+
+/* style name challenger */
+.card-quiz h2 {
+  width: 99%;
+  padding: 1.5vw 0 1.5vw 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  color: goldenrod;
+}
+
+/* ---------------------------------------responsive min 1920px------------------------  */
+@media screen and (min-width: 1920px) {
+  .card-quiz {
+    width: 16vw;
+    font-size: 0.7em;
+  }
+
+  .card-challenger-title h3 {
+    margin-top: 3vw;
+    font-size: 0.8vw;
+  }
+
+  /* style name challenger */
+  .card-quiz h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+}
+
+/* ---------------------------------responsive 1440 px--------------------------------- */
+@media screen and (max-width: 1440px) {
+  .card-quiz {
+    animation-name: slideInMedia1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    top: 3vw;
+    width: 16vw;
+    font-size: 0.7em;
+  }
+
+  .card-challenger-title h3 {
+    margin-top: 5vw;
+    animation-name: slideInMedia1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    font-size: 0.8vw;
+  }
+
+  /* style name challenger */
+  .card-quiz h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 0.7em;
+  }
+}
+
+/* -----------------------------------media portable-------------------------------------- */
+@media screen and (max-width: 760px) {
+  /* style from card challenger */
+  .card-quiz {
+    animation-name: slideInMedia2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 44vw;
+    font-size: 0.7em;
+  }
+
+  .card-challenger-title h3 {
+    animation-name: slideInMedia2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin-left: 2.5vw;
+    font-size: 0.6em;
+  }
+
+  /* style from image challenger */
+  .card-quiz img {
+    width: 44vw;
+    height: 48vw;
+  }
+
+  /* style name challenger */
+  .card-quiz h2 {
+    margin: 2vw 0 2vw 0;
+    font-size: 1em;
+  }
+
+  /* text to card random */
+  .card-random-explication {
+    font-size: 0.5rem;
+    line-height: 22px;
+  }
+
+  /* style text choose your challenger */
+  .card-random h2 {
+    font-size: 0.6em;
+    line-height: 19px;
+  }
+
+  /* style from choose card challenger */
+  .card-random {
+    width: 46vw;
+    height: 62vw;
+    margin: 2vw;
+  }
+
+  /* style from image card choose challenger */
+  .card-random img {
+    width: 46vw;
+    height: 51vw;
+  }
+}
+
+/* -----------------------------------media landscape-------------------------------------- */
+@media screen and (max-height: 460px) {
+  /* style from card challenger */
+  .card-quiz {
+    animation-name: slideInMedia3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 29vw;
+    font-size: 0.7em;
+  }
+
+  .card-challenger-title h3 {
+    animation-name: slideInMedia3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    font-size: 0.8em;
+    margin-left: 2vw;
+  }
+
+  /* style from image challenger */
+  .card-quiz img {
+    width: 29vw;
+    height: 34vw;
+    border-radius: 10px 10px 0 0;
+  }
+
+  /* style name challenger */
+  .card-quiz h2 {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  /* text to card random */
+  .card-random-explication {
+    font-size: 0.5rem;
+  }
+
+  /* style text choose your challenger */
+  .card-random h2 {
+    font-size: 0.6em;
+    letter-spacing: 2px;
+    line-height: 19px;
+  }
+
+  /* style from choose card challenger */
+  .card-random {
+    width: 29vw;
+    height: 38vw;
+    margin: 2vw;
+  }
+
+  /* style from image card choose challenger */
+  .card-random img {
+    width: 29vw;
+    height: 34vw;
+  }
+}

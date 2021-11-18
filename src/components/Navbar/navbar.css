@@ -28,13 +28,13 @@ body {
 /* Logo navigation bar */
 
 .logo-content {
+  cursor: pointer;
   margin-top: 0.5%;
   width: 25%;
   text-align: center;
 }
 
 .logo {
-  cursor: pointer;
   width: 7vw;
   height: 7vw;
 }
@@ -42,6 +42,7 @@ body {
 /* title navigation bar */
 .title {
   width: 50%;
+  cursor: pointer;
 }
 
 .title h1 {
@@ -58,10 +59,11 @@ a {
 
 /* Form to text of link to navigation */
 .header-content-link {
+  display: flex;
   width: 25%;
 }
 
-.text-nav-active {
+.text-nav-active h3 {
   color: black;
   background-color: rgb(248, 248, 242);
   bottom: 1px;
@@ -69,7 +71,7 @@ a {
   border-radius: 10px;
 }
 
-.text-nav {
+.text-nav h3 {
   font-size: 1vw;
   font-weight: bolder;
   text-align: center;
@@ -80,34 +82,44 @@ a {
 /* ------------------------------------------------------------------Media for landscape --------------------------------------------- */
 
 @media screen and (max-height: 415px) {
-  .header-content {
+  .header {
     width: 100%;
+    height: 90px;
+  }
+
+  .header-content {
+    align-items: center;
   }
 
   .header-content-link {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     width: 20%;
+    height: 40%;
+    padding: 2vh;
   }
 
-  .title {
-    font-size: 2.5vw;
+  .title h1 {
+    font-size: 1.4rem;
+    height: 5vw;
   }
 
   /* Form to text of link to navigation */
-  .text-nav {
-    font-size: 1vw;
+  .text-nav h3 {
+    font-size: 0.7rem;
   }
 
   /* Logo navigation bar */
   .logo {
     align-items: center;
-    width: 9vw;
-    height: 9vw;
+    width: 1vw;
+    height: 1vw;
   }
 
   .logo-content {
-    width: 20%;
     margin-top: 1%;
-    text-align: center;
+    width: 20%;
   }
 }
 
@@ -130,12 +142,11 @@ a {
   /* Logo navigation bar */
   .logo {
     align-items: center;
-    width: 9vw;
-    height: 9vw;
+    width: 15vw;
+    height: 15vw;
   }
 
   .logo-content {
-    width: 20%;
     margin-top: 1%;
     text-align: center;
   }
@@ -149,11 +160,11 @@ a {
   }
 
   .title {
-    width: 40%;
+    width: 10%;
   }
 
   .title h1 {
-    font-size: 4vw;
+    display: none;
   }
 
   .active {
@@ -166,24 +177,24 @@ a {
 
   /* Form to text of link to navigation */
   .header-content-link {
-    width: 30%;
+    width: 60%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .text-nav {
-    font-size: 0.5em;
+  .text-nav h3 {
+    font-size: 4vw;
   }
 
-  .text-nav-active {
-    font-size: 1.5vw;
+  .text-nav-active h3 {
+    font-size: 4vw;
   }
 
   /* Logo navigation bar */
 
   .logo {
-    width: 15vw;
-    height: 15vw;
+    width: 30vw;
+    height: 30vw;
   }
 }

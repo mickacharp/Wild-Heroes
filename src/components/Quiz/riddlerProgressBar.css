@@ -1,0 +1,51 @@
+.riddlerprogress-div {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.riddlerprogress-bar {
+  background-color: #4f0373;
+  width: 95%;
+}
+
+@media screen and (max-width: 1200px) {
+  .riddlerprogress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .riddlerprogress-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .riddlerprogress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .riddlerprogressbar-img {
+    width: 25px;
+  }
+
+  .riddlerprogress-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .riddlerprogress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .riddlerprogressbar-img {
+    width: 17px;
+  }
+
+  .riddlerprogress-bar {
+    width: 90%;
+  }
+}

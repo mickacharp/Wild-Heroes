@@ -1,6 +1,33 @@
 body {
   margin: 0;
   padding: 0%;
+  background-size: cover;
+  background-image: url('../../img/Background.jpg');
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'Heroes';
+  src: local('Heroes'), url('../../fonts/heroesfont/Heroes.ttf');
+}
+
+/* Show nbr of characters in search */
+.nbrCards-search {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
+}
+
+.nbrCards-search h2 {
+  font-size: 0.8em;
+}
+
+.information-card {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
 }
 
 .container-cards {
@@ -13,7 +40,7 @@ body {
 .card {
   width: 250px;
   margin: 2vw;
-  background-color: white;
+  background-color: rgb(41, 40, 40);
   padding-bottom: 15px;
   border: 0 black solid;
   border-radius: 10px;
@@ -37,15 +64,15 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
-  font-size: 1.5em;
+  font-size: 1em;
   overflow-wrap: break-word;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: white;
 }
 
-.container-cards-btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 50px 0;
+.card:hover h2 {
+  color: goldenrod;
 }
 
 .cards-btn {
@@ -72,20 +99,40 @@ body {
 
 .good-card:hover {
   background-color: rgba(16, 25, 113, 1);
-  color: white;
 }
 
 .bad-card:hover {
   background-color: #c80000;
-  color: white;
 }
 
 .normal-card:hover {
   background-color: #7e7d88;
-  color: white;
 }
 
 .loader-cardsList {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  .nbrCards-search h2 {
+    font-size: 0.6em;
+  }
+
+  .information-card h2 {
+    font-size: 0.6em;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .card img {
+    min-width: 150px;
+    height: 180px;
+  }
+
+  .card h2 {
+    font-size: 0.6em;
+  }
 }

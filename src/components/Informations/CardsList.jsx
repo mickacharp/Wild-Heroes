@@ -4,8 +4,10 @@ import Card from './Card';
 import './card.css';
 import Filter from './Filter';
 import './filter.css';
+import Button from './Button';
 
 const CardsList = ({
+  heroFilter,
   hero,
   isLoading,
   searchName,
@@ -33,23 +35,31 @@ const CardsList = ({
       ) : (
         <div className="container-cards-button">
           <div className="container-filter">
-            <Filter
-              setFilter={setGender}
-              filter="by gender"
-              response={allGenders}
-            />
+            <Button setFilter={setGender} allGenders={allGenders} />
             <Filter
               setFilter={setAlignment}
-              filter="by alignment"
+              filter="Alignment"
               response={allAlignments}
             />
             <Filter
               setFilter={setByPublisher}
-              filter="by publisher"
+              filter="Publisher"
               response={allPublishers}
             />
-            <Filter setFilter={setRace} filter="by race" response={allRaces} />
+            <Filter setFilter={setRace} filter="Race" response={allRaces} />
           </div>
+          <div className="information-card">
+            <h2>Click on a card to get more information about a character.</h2>
+          </div>
+          {heroFilter.length < 567 && (
+            <div className="nbrCards-search">
+              {heroFilter.length > 1 && (
+                <h2>{heroFilter.length} characters found</h2>
+              )}
+              {heroFilter.length === 1 && <h2>One character found</h2>}
+              {heroFilter.length === 0 && <h2>No character found</h2>}
+            </div>
+          )}
           <div className="container-cards">
             {hero
               .filter((el) => el.biography.publisher.includes(byPublisher))
@@ -84,6 +94,7 @@ const CardsList = ({
   );
 };
 CardsList.propTypes = {
+  heroFilter: PropTypes.arrayOf(PropTypes.object).isRequired,
   hero: PropTypes.arrayOf(PropTypes.object).isRequired,
   allRaces: PropTypes.arrayOf(PropTypes.object).isRequired,
   allPublishers: PropTypes.arrayOf(PropTypes.object).isRequired,
