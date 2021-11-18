@@ -8,6 +8,7 @@ import BtrGame from './BtrGame';
 import './quiz.css';
 import normalQuiz from '../../img/normal-quiz-2.jpg';
 import riddlerImg from '../../img/riddler-quiz-1.jpg';
+import RiddlerProgressBar from './RiddlerProgressBar';
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
@@ -74,6 +75,7 @@ const Quiz = () => {
           index={index}
         />
       )}
+      {btr && <RiddlerProgressBar score={score} />}
       {btr && (
         <BtrGame
           index={index}

@@ -1,9 +1,11 @@
 .riddlerprogress-div {
+  background-color: black;
   display: flex;
   justify-content: center;
 }
 
 .riddlerprogress-bar {
+  background-color: #4f0373;
   width: 95%;
 }
 

@@ -26,7 +26,7 @@ const RiddlerProgressBar = ({ score }) => {
     <div className="riddlerprogress-div">
       <div className="riddlerprogress-bar">
         <ProgressBar
-          percent={score * 100}
+          percent={score * 10}
           filledBackground="linear-gradient(to right, #298A08, #04B404, #01DF01, #00FF00)"
         >
           <Step>
