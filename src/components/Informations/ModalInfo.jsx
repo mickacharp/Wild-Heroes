@@ -74,117 +74,122 @@ const ModalInfo = ({
               className="modal-img"
             />
           </div>
-          <div className="modal-stats">
-            <h1>Statistics</h1>
-            <ul className="stats-list">
-              {statsArray.map((stat, index) => (
-                <li key={[index]}>
-                  {stat.includes('null')
-                    ? stat.replace('null', 'Unknown')
-                    : stat}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="modal-bio">
-            <h1>Information</h1>
-            <ul className="bio-list">
-              {fullName !== '' ? (
-                <li>
-                  <strong>
-                    Full name
-                    <br />
-                  </strong>{' '}
-                  {fullName}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {gender !== '-' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Gender
-                    <br />
-                  </strong>{' '}
-                  {gender}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {race !== 'null' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Race
-                    <br />
-                  </strong>{' '}
-                  {race}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {weight !== '0 kg' && height !== '0 cm' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Weight and height
-                    <br />
-                  </strong>{' '}
-                  {weight}, {height}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {placeOfBirth !== '-' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Place of birth
-                    <br />
-                  </strong>{' '}
-                  {placeOfBirth}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {publisher !== 'null' && publisher !== '' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Original publisher
-                    <br />
-                  </strong>{' '}
-                  {publisher}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {firstAppearance !== '-' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    First appearance
-                    <br />
-                  </strong>{' '}
-                  {firstAppearance}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-              {groupAffiliation !== '-' ? (
-                <li>
-                  {' '}
-                  <strong>
-                    Affiliation
-                    <br />
-                  </strong>{' '}
-                  {groupAffiliation}{' '}
-                </li>
-              ) : (
-                ''
-              )}
-            </ul>
+          <div className="modal-stats-and-bio">
+            <div className="modal-stats">
+              <h1>Statistics</h1>
+              <ul className="stats-list">
+                {statsArray.map((stat, index) => (
+                  <li key={[index]}>
+                    {stat.includes('null')
+                      ? stat.replace('null', 'Unknown')
+                      : stat}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="modal-bio">
+              <h1>Information</h1>
+              <div className="bio-list-container">
+                <ul className="bio-list">
+                  {fullName !== '' ? (
+                    <li>
+                      <strong>
+                        Full name
+                        <br />
+                      </strong>{' '}
+                      {fullName}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {gender !== '-' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Gender
+                        <br />
+                      </strong>{' '}
+                      {gender}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {race !== 'null' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Race
+                        <br />
+                      </strong>{' '}
+                      {race}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {weight !== '0 kg' && height !== '0 cm' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Weight and height
+                        <br />
+                      </strong>{' '}
+                      {weight}, {height}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {placeOfBirth !== '-' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Place of birth
+                        <br />
+                      </strong>{' '}
+                      {placeOfBirth}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {publisher !== 'null' && publisher !== '' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Original publisher
+                        <br />
+                      </strong>{' '}
+                      {publisher}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {firstAppearance !== '-' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        First appearance
+                        <br />
+                      </strong>{' '}
+                      {firstAppearance}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                  {groupAffiliation !== '-' ? (
+                    <li>
+                      {' '}
+                      <strong>
+                        Affiliation
+                        <br />
+                      </strong>{' '}
+                      {groupAffiliation}{' '}
+                    </li>
+                  ) : (
+                    ''
+                  )}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -6,53 +6,55 @@ const Home = () => {
   const [paragraphInfo, setParagraphInfo] = useState(false);
   const [paragraphQuiz, setParagraphQuiz] = useState(false);
 
-  const test = (fraise) => {
-    let a = '';
-    if (fraise) {
-      a = 'brightness';
+  const brightenSelection = (selectedPart) => {
+    let futureClassName = '';
+    if (selectedPart) {
+      futureClassName = 'brightened';
     }
-    return a;
+    return futureClassName;
   };
 
   return (
-    <div className="App">
-      <div className="img">
-        <div className="main-title-home">
-          <h1>Wild Heroes</h1>
-        </div>
-        <NavLink
-          className="img-text-left"
-          exact
-          to="/quiz"
-          onMouseEnter={() => setParagraphQuiz(true)}
-          onMouseLeave={() => setParagraphQuiz(false)}
-        >
-          <div className={`img-left ${test(paragraphQuiz)}`} />
-          <div className="text-left">
-            <h2 className="title-home">Quiz</h2>
-            {paragraphQuiz && (
-              <p className="paragraph-home">Play with your favorite heroes!</p>
-            )}
-          </div>
-        </NavLink>
-        <NavLink
-          className="img-text-right"
-          exact
-          to="/informations"
-          onMouseEnter={() => setParagraphInfo(true)}
-          onMouseLeave={() => setParagraphInfo(false)}
-        >
-          <div className={`img-right ${test(paragraphInfo)}`} />
-          <div className="text-right">
-            <h2 className="title-home">Information</h2>
-            {paragraphInfo && (
-              <p className="paragraph-home" id="textRight">
-                Consult characters stats (BD, comics, ...)
-              </p>
-            )}
-          </div>
-        </NavLink>
+    <div className="home-container">
+      <div className="main-title-container">
+        <h1>Wild Heroes</h1>
       </div>
+      <NavLink
+        className="img-text-left"
+        exact
+        to="/quiz"
+        onMouseEnter={() => setParagraphQuiz(true)}
+        onMouseLeave={() => setParagraphQuiz(false)}
+      >
+        <div className={`left-container ${brightenSelection(paragraphQuiz)}`} />
+        <div className="text-left">
+          <h2 className="subtitles-home">Quiz</h2>
+          {paragraphQuiz && (
+            <p className="paragraph-home">
+              Save the world! <br /> Battle against your favorite heroes!
+            </p>
+          )}
+        </div>
+      </NavLink>
+      <NavLink
+        className="img-text-right"
+        exact
+        to="/informations"
+        onMouseEnter={() => setParagraphInfo(true)}
+        onMouseLeave={() => setParagraphInfo(false)}
+      >
+        <div
+          className={`right-container ${brightenSelection(paragraphInfo)}`}
+        />
+        <div className="text-right">
+          <h2 className="subtitles-home">Information</h2>
+          {paragraphInfo && (
+            <p className="paragraph-home">
+              Consult characters stats <br /> (comics, movies, ...)
+            </p>
+          )}
+        </div>
+      </NavLink>
     </div>
   );
 };
