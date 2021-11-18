@@ -1,13 +1,17 @@
 {
+  
   "env": {
     "browser": true,
     "es6": true
   },
   "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
-    },
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+  },
     "ecmaVersion": 12,
     "sourceType": "module"
   },

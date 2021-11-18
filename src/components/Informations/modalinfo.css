@@ -273,13 +273,13 @@ strong,
     max-width: 20%;
     margin: 2% 2%;
   }
-  
+
   .modal-img {
     display: block;
     box-sizing: border-box;
     max-width: 100%;
   }
-  
+
   .stats-list {
     display: list-item;
     columns: 3;

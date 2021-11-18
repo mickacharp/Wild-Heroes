@@ -42,6 +42,7 @@ body {
 /* title navigation bar */
 .title {
   width: 50%;
+  cursor: pointer;
 }
 
 .title h1 {

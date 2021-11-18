@@ -13,13 +13,10 @@ body {
 
 /* Show nbr of characters in search */
 .nbrCards-search {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
   text-align: center;
   margin-bottom: -2%;
   margin-top: 2%;
-}
-
-.nbrCards-search h1 {
-  font-size: 1.3rem;
 }
 
 .container-cards {
