@@ -69,7 +69,6 @@
   border: 0 black solid;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  cursor: pointer;
   font-size: 0.7em;
 }
 
@@ -108,9 +107,11 @@
   .container-riddler-flex {
     margin-top: 20px;
   }
+
   .quiz-riddler-score h2 {
     font-size: 0.8rem;
   }
+
   .container-riddler {
     align-items: center;
     width: 16vw;
@@ -170,6 +171,7 @@
     height: 100vh;
   }
 }
+
 @media screen and (max-height: 415px) {
   .container-quiz-riddler {
     height: 100%;

@@ -24,6 +24,12 @@ class BtrQuestions extends React.Component {
     return colorAnswer;
   };
 
+  riddlerQuote = () => {
+    console.log(
+      `Arrête de me cliquer dessus si tu veux pas voir tes rotules voler`
+    );
+  };
+
   /* eslint-enable */
 
   render() {
@@ -82,7 +88,13 @@ class BtrQuestions extends React.Component {
           </ul>
         </div>
         <div className="container-riddler-flex">
-          <div className="container-riddler">
+          <div
+            className="container-riddler"
+            onClick={() => this.riddlerQuote()}
+            onKeyPress={() => this.riddlerQuote()}
+            role="button"
+            tabIndex={0}
+          >
             <img src={riddlerImg} alt="Riddler" />
             <h2>Riddler</h2>
           </div>
