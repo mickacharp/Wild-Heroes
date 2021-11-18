@@ -26,14 +26,18 @@ const Home = () => {
         onMouseEnter={() => setParagraphQuiz(true)}
         onMouseLeave={() => setParagraphQuiz(false)}
       >
-        <div className={`left-container ${brightenSelection(paragraphQuiz)}`} />
-        <div className="text-left">
-          <h2 className="subtitles-home">Quiz</h2>
-          {paragraphQuiz && (
-            <p className="paragraph-home">
-              Save the world! <br /> Battle against your favorite heroes!
-            </p>
-          )}
+        <div className={`left-container ${brightenSelection(paragraphQuiz)}`}>
+          <div className="text-left">
+            <h2 className="subtitles-home">Quiz</h2>
+            {/* next p will show if mouse enter the container OR if display width < 1024 px */}
+            {paragraphQuiz || window.innerWidth < 1024 ? (
+              <p className="paragraph-home">
+                Save the world! <br /> Battle against your favorite heroes!
+              </p>
+            ) : (
+              ''
+            )}
+          </div>
         </div>
       </NavLink>
       <NavLink
@@ -43,16 +47,18 @@ const Home = () => {
         onMouseEnter={() => setParagraphInfo(true)}
         onMouseLeave={() => setParagraphInfo(false)}
       >
-        <div
-          className={`right-container ${brightenSelection(paragraphInfo)}`}
-        />
-        <div className="text-right">
-          <h2 className="subtitles-home">Information</h2>
-          {paragraphInfo && (
-            <p className="paragraph-home">
-              Consult characters stats <br /> (comics, movies, ...)
-            </p>
-          )}
+        <div className={`right-container ${brightenSelection(paragraphInfo)}`}>
+          <div className="text-right">
+            <h2 className="subtitles-home">Information</h2>
+            {/* next p will show if mouse enter the container OR if display width < 1024 px */}
+            {paragraphInfo || window.innerWidth < 1024 ? (
+              <p className="paragraph-home">
+                Consult characters stats <br /> (comics, movies, ...)
+              </p>
+            ) : (
+              ''
+            )}
+          </div>
         </div>
       </NavLink>
     </div>
