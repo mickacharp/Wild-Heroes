@@ -13,7 +13,7 @@ const ChallengerCard = ({ hero, index, score }) => {
   return (
     <div className="container-card-quiz">
       <div className="card-challenger-title">
-        <h3>Challenger:{challenger}/10</h3>
+        <h3>Challenger*:{challenger}/10</h3>
       </div>
 
       <div
