@@ -82,6 +82,11 @@ class QuizQuestion extends React.Component {
               {el.text}
             </li>
           ))}
+          <div className="quiz-info">
+            <h2>
+              *Click on the card to get more information about your challenger.
+            </h2>
+          </div>
         </ul>
       </div>
     );

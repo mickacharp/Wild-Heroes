@@ -19,6 +19,17 @@ body {
   margin-top: 2%;
 }
 
+.nbrCards-search h2 {
+  font-size: 0.8em;
+}
+
+.information-card {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
+}
+
 .container-cards {
   display: flex;
   flex-wrap: wrap;
@@ -104,6 +115,14 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+  .nbrCards-search h2 {
+    font-size: 0.6em;
+  }
+
+  .information-card h2 {
+    font-size: 0.6em;
+  }
+
   .card {
     width: 150px;
   }
