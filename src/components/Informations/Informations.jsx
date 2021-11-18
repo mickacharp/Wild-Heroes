@@ -6,7 +6,20 @@ import Pagination from './Pagination';
 import SearchbarName from './SearchBarName';
 
 const Informations = () => {
+  /* Array of data */
   const [hero, setHero] = useState([]);
+  // Data Array filter
+  const heroGoodDisplay = [];
+  hero.map(
+    (el) =>
+      el.powerstats.combat !== 'null' &&
+      el.powerstats.durability !== 'null' &&
+      el.powerstats.intelligence !== 'null' &&
+      el.powerstats.power !== 'null' &&
+      el.powerstats.speed !== 'null' &&
+      el.powerstats.strength !== 'null' &&
+      heroGoodDisplay.push(el)
+  );
   const [isLoading, setIsLoading] = useState(true);
   // UseState for range page
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,7 +36,7 @@ const Informations = () => {
     setSearchName(e.target.value);
   };
   // filter array table for adaptative pagination
-  const heroFilter = hero
+  const heroFilter = heroGoodDisplay
     .filter((el) => el.biography.publisher.includes(byPublisher))
     .filter((el) => el.appearance.gender.includes(gender))
     .filter((el) => el.appearance.race.includes(race))
