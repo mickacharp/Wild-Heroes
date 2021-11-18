@@ -122,7 +122,6 @@ body {
   animation-name: slideIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  align-items: center;
   width: 16vw;
   height: auto;
   background-color: rgb(14, 14, 14);
@@ -156,6 +155,7 @@ body {
 
 /* style name challenger */
 .card-quiz h2 {
+  width: 99%;
   padding: 1.5vw 0 1.5vw 0;
   text-align: center;
   text-transform: uppercase;
@@ -241,6 +241,7 @@ body {
 
   /* style name challenger */
   .card-quiz h2 {
+    margin: 2vw 0 2vw 0;
     font-size: 1em;
   }
 

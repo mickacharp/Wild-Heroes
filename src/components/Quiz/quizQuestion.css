@@ -23,6 +23,7 @@ body {
   font-family: Heroes, Roboto, sans-serif;
   color: black;
   margin: 30px;
+  font-size: 1rem;
 }
 
 .quiz_question {
@@ -85,14 +86,15 @@ body {
 
 @media screen and (max-width: 740px) {
   .quiz_question {
+    margin-bottom: 10px;
     font-size: 0.7rem;
-    margin-bottom: 20px;
   }
 
   .quiz_answers {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin-top: 65px;
   }
 
   .quiz_answer {
