@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Gosmick';
+  src: local('Gosmick'), url('../../fonts/GosmickSans.ttf');
+}
+
 .container-filter {
   display: flex;
   justify-content: space-around;
@@ -16,11 +21,13 @@
   cursor: pointer;
   border-radius: 15px 15px 2px 2px;
   padding: 0 5px;
-  width: 25vh;
+  width: 15vw;
   background-color: rgba(14, 14, 14, 0.1);
   border: solid 3px white;
   color: goldenrod;
+  font-family: 'Gosmick', Arial, Helvetica, sans-serif;
   font-style: italic;
+  font-size: 1.2rem;
   height: 40px;
 }
 
@@ -56,23 +63,25 @@ select {
   }
 
   .comics-filter {
-    width: 35vh;
+    width: 20vw;
   }
 }
 
 /* ---------------------------------------------------------------------- Media for phone------------------------------------------------ */
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .container-filter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-size: 1rem;
   }
 
   .comics-filter {
     border-radius: 15px;
     margin-bottom: 1%;
+    width: 50vw;
   }
 }
