@@ -19,6 +19,17 @@ body {
   margin-top: 2%;
 }
 
+.nbrCards-search h2 {
+  font-size: 0.8em;
+}
+
+.information-card {
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: -2%;
+  margin-top: 2%;
+}
+
 .container-cards {
   display: flex;
   flex-wrap: wrap;
@@ -71,12 +82,13 @@ body {
   cursor: pointer;
   font-size: 1rem;
   background: rgb(16, 25, 113);
-  background: linear-gradient(
-    90deg,
-    rgba(16, 25, 113, 1) 0%,
-    rgba(15, 21, 79, 1) 83%,
-    rgba(14, 14, 14, 1) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 25, 113, 1) 0%,
+      rgba(15, 21, 79, 1) 83%,
+      rgba(14, 14, 14, 1) 100%
+    );
   color: goldenrod;
   transition: 0.3s;
 }
@@ -103,6 +115,14 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+  .nbrCards-search h2 {
+    font-size: 0.6em;
+  }
+
+  .information-card h2 {
+    font-size: 0.6em;
+  }
+
   .card {
     width: 150px;
   }

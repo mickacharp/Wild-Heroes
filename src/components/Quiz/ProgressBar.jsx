@@ -16,9 +16,9 @@ import Superman from '../../img/Superman.png';
 import Hulk from '../../img/Hulk.png';
 
 const transitionStyles = {
-  entering: { transform: 'scale(2.5)' },
+  entering: { transform: 'scale(2)' },
   entered: { transform: 'scale(1.5)' },
-  exiting: { transform: 'scale(2.5)' },
+  exiting: { transform: 'scale(2)' },
   exited: { transform: 'scale(1)' },
 };
 
@@ -26,14 +26,22 @@ const StepProgressBar = ({ score }) => {
   return (
     <div className="progress-div">
       <div className="progress-bar">
-        <ProgressBar percent={score * 10}>
+        <ProgressBar
+          percent={score * 10}
+          filledBackground="linear-gradient(to right, #FF0000, #FF4000, #FF8000, #FFBF00, #FFFF00, #BFFF00, #80FF00, #40FF00, #009000)"
+        >
           <Step>
             {({ accomplished, transitionState }) => (
               <div
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Robin} alt="Robin" width="16" />
+                <img
+                  className="progressbar-img"
+                  src={Robin}
+                  alt="Robin"
+                  width="15"
+                />
               </div>
             )}
           </Step>
@@ -43,7 +51,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Batman} alt="Batman" width="18" />
+                <img
+                  className="progressbar-img"
+                  src={Batman}
+                  alt="Batman"
+                  width="17"
+                />
               </div>
             )}
           </Step>
@@ -53,7 +66,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={CapAmerica} alt="America" width="20" />
+                <img
+                  className="progressbar-img"
+                  src={CapAmerica}
+                  alt="America"
+                  width="19"
+                />
               </div>
             )}
           </Step>
@@ -63,7 +81,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Flash} alt="Flash" width="22" />
+                <img
+                  className="progressbar-img"
+                  src={Flash}
+                  alt="Flash"
+                  width="21"
+                />
               </div>
             )}
           </Step>
@@ -73,7 +96,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Spiderman} alt="Spidey" width="24" />
+                <img
+                  className="progressbar-img"
+                  src={Spiderman}
+                  alt="Spidey"
+                  width="23"
+                />
               </div>
             )}
           </Step>
@@ -83,7 +111,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Ironman} alt="Ironman" width="26" />
+                <img
+                  className="progressbar-img"
+                  src={Ironman}
+                  alt="Ironman"
+                  width="25"
+                />
               </div>
             )}
           </Step>
@@ -93,7 +126,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Thor} alt="Thor" width="28" />
+                <img
+                  className="progressbar-img"
+                  src={Thor}
+                  alt="Thor"
+                  width="27"
+                />
               </div>
             )}
           </Step>
@@ -103,7 +141,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Wonderwoman} alt="WW" width="30" />
+                <img
+                  className="progressbar-img"
+                  src={Wonderwoman}
+                  alt="WW"
+                  width="29"
+                />
               </div>
             )}
           </Step>
@@ -113,7 +156,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Manhattan} alt="Manhattan" width="32" />
+                <img
+                  className="progressbar-img"
+                  src={Manhattan}
+                  alt="Manhattan"
+                  width="31"
+                />
               </div>
             )}
           </Step>
@@ -123,7 +171,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Superman} alt="Superman" width="34" />
+                <img
+                  className="progressbar-img"
+                  src={Superman}
+                  alt="Superman"
+                  width="33"
+                />
               </div>
             )}
           </Step>
@@ -133,7 +186,12 @@ const StepProgressBar = ({ score }) => {
                 style={transitionStyles[transitionState]}
                 className={`customStep ${accomplished ? 'accomplished' : ''}`}
               >
-                <img src={Hulk} alt="Hulk" width="36" />
+                <img
+                  className="progressbar-img"
+                  src={Hulk}
+                  alt="Hulk"
+                  width="40"
+                />
               </div>
             )}
           </Step>

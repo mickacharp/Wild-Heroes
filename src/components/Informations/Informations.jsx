@@ -4,7 +4,6 @@ import Navbar from '../Navbar/NavBar';
 import CardsList from './CardsList';
 import Pagination from './Pagination';
 import SearchbarName from './SearchBarName';
-import './card.css';
 
 const Informations = () => {
   const [hero, setHero] = useState([]);

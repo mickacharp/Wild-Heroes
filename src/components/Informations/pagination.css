@@ -49,4 +49,8 @@
     border-radius: 50%;
     width: 25px;
   }
+
+  .page-link:hover {
+    display: none;
+  }
 }
