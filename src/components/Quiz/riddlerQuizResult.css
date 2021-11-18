@@ -4,7 +4,9 @@
 }
 
 .riddler-quiz-result {
-  background-color: black;
+  background-image: url('../../img/riddler-result.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   height: 83.7vh;
   display: flex;
   flex-direction: column;
