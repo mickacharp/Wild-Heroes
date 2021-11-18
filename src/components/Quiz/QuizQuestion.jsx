@@ -47,11 +47,6 @@ class QuizQuestion extends React.Component {
 
     return (
       <div className="quiz">
-        <div className="quiz-info">
-          <h2>
-            Click on the card to get more information about your challenger.
-          </h2>
-        </div>
         <div className="quiz_question">{question}</div>
         <div className="quiz-score">
           <h2>Question: {numberQuestion}/10</h2>
