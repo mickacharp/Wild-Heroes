@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './quizResult.css';
+import './riddlerQuizResult.css';
 
 const RiddlerQuizResult = ({ score }) => {
   return (
@@ -8,67 +8,81 @@ const RiddlerQuizResult = ({ score }) => {
       {score === 0 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Like Robin, you&apos;re a LOSER !</p>
+          <p>Meow, I think I know why you lost against this cat...</p>
         </div>
       )}
       {score === 1 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Well, Gotham City will have to save itself...</p>
+          <p>Beaten by this crappy bird ? Really ? You are so stupid...</p>
         </div>
       )}
       {score === 2 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>America would be ashamed of you...</p>
+          <p>I guess Deathstroke is as smart as he is strong.</p>
         </div>
       )}
       {score === 3 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Meh... You&apos;re fast but a bit useless...</p>
+          <p>
+            Don&apos;t be too scared. This scarecrow is not a real one, you
+            know.
+          </p>
         </div>
       )}
       {score === 4 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Did Uncle Ben die for nothing ?</p>
+          <p>
+            Not surprising, plants don&apos;t have brain... I let you imagine
+            how stupid you are...
+          </p>
         </div>
       )}
       {score === 5 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Draw... But at least, you are Iron-man!</p>
+          <p>
+            Draw... Well, you can use the two personnalities of Harvey as an
+            excuse for your loss...
+          </p>
         </div>
       )}
       {score === 6 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>You&apos;re as good as the God of Thunder!</p>
+          <p>
+            Who would believe this crazy chick was that smart? Not me, for sure.
+          </p>
         </div>
       )}
       {score === 7 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>You are as sexy as Wonder Woman, congrats!</p>
+          <p>Bane is as smart as he is strong. So, congrats, I guess.</p>
         </div>
       )}
       {score === 8 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>I am tired of good players like you. Congrats.</p>
+          <p>Sorry, the league of shadows is smarter than you.</p>
         </div>
       )}
       {score === 9 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>Nice! You can go one on one versus Superman!</p>
+          <p>Ha! Ha! Ha! Ha! Ha!</p>
         </div>
       )}
       {score === 10 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>You smash! The true hero, it&apos;s you!</p>
+          <p>
+            No, no, no! It can&apos;t be true! Cheater! You cheated! I know you
+            cheated!
+          </p>
         </div>
       )}
       <button
