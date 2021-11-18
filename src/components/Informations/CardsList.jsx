@@ -53,7 +53,11 @@ const CardsList = ({
           </div>
           {heroFilter.length < 567 && (
             <div className="nbrCards-search">
-              <h2>{heroFilter.length} characters found</h2>
+              {heroFilter.length > 1 && (
+                <h2>{heroFilter.length} characters found</h2>
+              )}
+              {heroFilter.length === 1 && <h2>One character found</h2>}
+              {heroFilter.length === 0 && <h2>No characters found</h2>}
             </div>
           )}
           <div className="container-cards">
