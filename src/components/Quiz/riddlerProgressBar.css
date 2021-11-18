@@ -1,0 +1,49 @@
+.progress-div {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 95%;
+}
+
+@media screen and (max-width: 1200px) {
+  .progress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .progress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .progressbar-img {
+    width: 25px;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .progress-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .progressbar-img {
+    width: 17px;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+}

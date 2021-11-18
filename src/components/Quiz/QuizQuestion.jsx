@@ -48,7 +48,9 @@ class QuizQuestion extends React.Component {
     return (
       <div className="quiz">
         <div className="quiz-info">
-          <h2>Click on card to more information of challenger.</h2>
+          <h2>
+            Click on the card to get more information about your challenger.
+          </h2>
         </div>
         <div className="quiz_question">{question}</div>
         <div className="quiz-score">
