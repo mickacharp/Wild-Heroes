@@ -26,7 +26,7 @@ const Quiz = () => {
       {chooseGame && (
         <div className="container_choose-quiz">
           <div className="choose-quiz">
-            <h2>Choose le jeu que tu veux</h2>
+            <h2>Choose your game</h2>
           </div>
         </div>
       )}
