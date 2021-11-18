@@ -20,7 +20,7 @@ const RiddlerQuizResult = ({ score }) => {
       {score === 2 && (
         <div className="riddler-result">
           <h2>Score: {score}/10</h2>
-          <p>I guess Deathstroke is as smart as he is strong.</p>
+          <p>I guess Deathstroke is as smart as he knows to use a sword.</p>
         </div>
       )}
       {score === 3 && (

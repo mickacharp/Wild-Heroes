@@ -23,7 +23,7 @@
 
 .riddler-result h2,
 .riddler-result p {
-  color: #34c924;
+  color: #0f6406;
   font-size: 3em;
   font-family: Heroes, Roboto, sans-serif;
 }
@@ -34,7 +34,7 @@
   border-radius: 40px;
   font-family: Roboto, sans-serif;
   background-color: #4f0373;
-  color: #34c924;
+  color: #0f6406;
   font-size: 1.2em;
   cursor: pointer;
   transition: 0.5s;

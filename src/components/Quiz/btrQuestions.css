@@ -22,7 +22,7 @@
   justify-content: center;
   border-radius: 30px;
   font-family: Heroes, Roboto, sans-serif;
-  color: #34c924;
+  color: #119003;
   text-align: center;
   line-height: 35px;
   font-size: 1rem;
@@ -85,7 +85,7 @@
   font-size: 1em;
   font-family: 'Heroes', Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  color: #34c924;
+  color: #1c7412;
 }
 
 .quiz-riddler-score {
@@ -95,7 +95,7 @@
 .quiz-riddler-score h2 {
   font-family: Heroes, Roboto, sans-serif;
   margin: 30px;
-  color: #176f03;
+  color: #119003;
 }
 
 @media screen and (max-width: 760px) {
