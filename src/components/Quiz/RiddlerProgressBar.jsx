@@ -37,39 +37,9 @@ const RiddlerProgressBar = ({ score }) => {
               >
                 <img
                   className="riddlerprogressbar-img"
-                  src={Twoface}
-                  alt="Twoface"
-                  width="15"
-                />
-              </div>
-            )}
-          </Step>
-          <Step>
-            {({ accomplished, transitionState }) => (
-              <div
-                style={transitionStyles[transitionState]}
-                className={`customStep ${accomplished ? 'accomplished' : ''}`}
-              >
-                <img
-                  className="riddlerprogressbar-img"
                   src={Catwoman}
                   alt="Catwoman"
-                  width="17"
-                />
-              </div>
-            )}
-          </Step>
-          <Step>
-            {({ accomplished, transitionState }) => (
-              <div
-                style={transitionStyles[transitionState]}
-                className={`customStep ${accomplished ? 'accomplished' : ''}`}
-              >
-                <img
-                  className="riddlerprogressbar-img"
-                  src={Rasalghul}
-                  alt="Rasalghul"
-                  width="19"
+                  width="15"
                 />
               </div>
             )}
@@ -84,7 +54,7 @@ const RiddlerProgressBar = ({ score }) => {
                   className="riddlerprogressbar-img"
                   src={Penguin}
                   alt="Penguin"
-                  width="21"
+                  width="17"
                 />
               </div>
             )}
@@ -99,7 +69,7 @@ const RiddlerProgressBar = ({ score }) => {
                   className="riddlerprogressbar-img"
                   src={Deathstroke}
                   alt="Deathstroke"
-                  width="23"
+                  width="19"
                 />
               </div>
             )}
@@ -114,7 +84,7 @@ const RiddlerProgressBar = ({ score }) => {
                   className="riddlerprogressbar-img"
                   src={Scarecrow}
                   alt="Scarecrow"
-                  width="25"
+                  width="21"
                 />
               </div>
             )}
@@ -127,9 +97,24 @@ const RiddlerProgressBar = ({ score }) => {
               >
                 <img
                   className="riddlerprogressbar-img"
-                  src={Bane}
-                  alt="Bane"
-                  width="27"
+                  src={Poisonivy}
+                  alt="Ivy"
+                  width="23"
+                />
+              </div>
+            )}
+          </Step>
+          <Step>
+            {({ accomplished, transitionState }) => (
+              <div
+                style={transitionStyles[transitionState]}
+                className={`customStep ${accomplished ? 'accomplished' : ''}`}
+              >
+                <img
+                  className="riddlerprogressbar-img"
+                  src={Twoface}
+                  alt="Twoface"
+                  width="25"
                 />
               </div>
             )}
@@ -144,6 +129,21 @@ const RiddlerProgressBar = ({ score }) => {
                   className="riddlerprogressbar-img"
                   src={Harley}
                   alt="Harley"
+                  width="27"
+                />
+              </div>
+            )}
+          </Step>
+          <Step>
+            {({ accomplished, transitionState }) => (
+              <div
+                style={transitionStyles[transitionState]}
+                className={`customStep ${accomplished ? 'accomplished' : ''}`}
+              >
+                <img
+                  className="riddlerprogressbar-img"
+                  src={Bane}
+                  alt="Bane"
                   width="29"
                 />
               </div>
@@ -157,8 +157,8 @@ const RiddlerProgressBar = ({ score }) => {
               >
                 <img
                   className="riddlerprogressbar-img"
-                  src={Poisonivy}
-                  alt="Poisonivy"
+                  src={Rasalghul}
+                  alt="Rasalghul"
                   width="31"
                 />
               </div>
