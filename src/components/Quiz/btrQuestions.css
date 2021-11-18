@@ -1,0 +1,152 @@
+.container-quiz-riddler {
+  display: flex;
+  background-color: black;
+  height: 85vh;
+}
+
+.quiz-riddler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.quiz-riddler_question {
+  margin-bottom: 40px;
+  padding: 15px;
+  background-color: #051800;
+  height: 90px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-family: Heroes, Roboto, sans-serif;
+  color: #34c924;
+  text-align: center;
+  line-height: 35px;
+  font-size: 1rem;
+}
+
+.quiz-riddler_answers {
+  list-style: none;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.quiz-riddler_answer {
+  padding: 10px;
+  margin: 30px;
+  width: 300px;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.container-riddler-flex {
+  display: flex;
+  margin-top: 100px;
+  margin-right: 50px;
+}
+
+.container-riddler {
+  align-items: center;
+  width: 16vw;
+  height: 23vw;
+  background-color: rgb(14, 14, 14);
+  border: 0 black solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.container-riddler img {
+  width: 16vw;
+  height: 18vw;
+  border-radius: 10px 10px 0 0;
+}
+
+.container-riddler h2 {
+  padding: 1.5vw 0 1.5vw 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-family: 'Heroes', Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  color: #34c924;
+}
+
+.quiz-riddler-score {
+  padding-top: 20px;
+}
+
+.quiz-riddler-score h2 {
+  font-family: Heroes, Roboto, sans-serif;
+  margin: 30px;
+  color: #176f03;
+}
+
+@media screen and (max-width: 615px) {
+  .container-quiz-riddler {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-riddler-flex {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1899px) {
+  .quiz-riddler_answers {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1567px) {
+  .quiz-riddler_answers {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 2426px) {
+  .quiz-riddler_answers {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container-quiz-riddler {
+    height: 86vh;
+  }
+
+  @media screen and (max-width: 1190px) {
+    .quiz-riddler_answers {
+      width: 100%;
+    }
+  }
+
+  .quiz-riddler_question {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container-quiz-riddler {
+    height: 100vh;
+  }
+}
