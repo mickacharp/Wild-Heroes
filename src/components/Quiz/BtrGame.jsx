@@ -28,16 +28,16 @@ const BtrGame = ({
   useEffect(() => {
     const getQuestions = async () => {
       const resultsComicsHard = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=29&difficulty=hard'
+        'https://opentdb.com/api.php?amount=4&category=29&difficulty=hard'
       );
       const resultsFilmHard = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=11@difficulty=hard'
+        'https://opentdb.com/api.php?amount=4&category=11@difficulty=hard'
       );
       const resultsGamesHard = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=15&difficulty=hard'
+        'https://opentdb.com/api.php?amount=4&category=15&difficulty=hard'
       );
       const resultsMangaHard = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=31&difficulty=hard'
+        'https://opentdb.com/api.php?amount=4&category=31&difficulty=hard'
       );
 
       const results = [

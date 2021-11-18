@@ -4,7 +4,7 @@ import './riddlerProgressBar.css';
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import PropTypes from 'prop-types';
 import Twoface from '../../img/Twoface.png';
-import Catwoman from '../../img/Catwoman.png';
+import Freeze from '../../img/Freeze.png';
 import Rasalghul from '../../img/Rasalghul.png';
 import Penguin from '../../img/Penguin.png';
 import Deathstroke from '../../img/Deathstroke.png';
@@ -37,8 +37,8 @@ const RiddlerProgressBar = ({ score }) => {
               >
                 <img
                   className="riddlerprogressbar-img"
-                  src={Catwoman}
-                  alt="Catwoman"
+                  src={Freeze}
+                  alt="Freeze"
                   width="15"
                 />
               </div>
