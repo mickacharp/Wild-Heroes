@@ -7,7 +7,7 @@
   background-image: url('../../img/riddler-result.jpg');
   background-size: cover;
   background-attachment: fixed;
-  height: 83.7vh;
+  height: 84vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,6 +55,7 @@
     margin-top: -20px;
     line-height: 50px;
   }
+
   .riddler-result {
     font-size: 0.4rem;
   }

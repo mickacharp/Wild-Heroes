@@ -177,3 +177,14 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 760px) {
+  .container-quiz-riddler {
+    height: 100vh;
+  }
+
+  .quiz-riddler_question {
+    height: 80%;
+    font-size: 0.4rem;
+  }
+}

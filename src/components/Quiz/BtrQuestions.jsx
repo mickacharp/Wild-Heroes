@@ -58,7 +58,9 @@ class BtrQuestions extends React.Component {
           <div className="quiz-riddler-score">
             <h2>Question: {numberQuestion}/10</h2>
           </div>
-          <div className="quiz-riddler_question">{question}</div>
+          <div className="quiz-riddler_question">
+            <h2>{question}</h2>
+          </div>
           <ul className="quiz-riddler_answers">
             {answers.map((el) => (
               <li
