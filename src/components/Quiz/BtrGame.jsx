@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import QuizQuestion from './QuizQuestion';
+import BtrQuestions from './BtrQuestions';
 
-const QuizGame = ({
+const BtrGame = ({
   index,
   setIndex,
   numberQuestion,
@@ -27,44 +27,29 @@ const QuizGame = ({
 
   useEffect(() => {
     const getQuestions = async () => {
-      const resultsComicsEasy = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=29&difficulty=easy'
+      const resultsComicsHard = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=29&difficulty=hard'
       );
-      const resultsFilmEasy = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=11@difficulty=easy'
+      const resultsFilmHard = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=11@difficulty=hard'
       );
-      const resultsGamesEasy = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=15&difficulty=easy'
+      const resultsGamesHard = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=15&difficulty=hard'
       );
-      const resultsMangaEasy = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=31&difficulty=easy'
-      );
-      const resultsComicsMedium = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=29&difficulty=medium'
-      );
-      const resultsFilmMedium = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=11&difficulty=medium'
-      );
-      const resultsGamesMedium = await axios.get(
-        'https://opentdb.com/api.php?amount=2&category=15&difficulty=medium'
-      );
-      const resultsMangaMedium = await axios.get(
-        'https://opentdb.com/api.php?amount=4&category=31&difficulty=medium'
+      const resultsMangaHard = await axios.get(
+        'https://opentdb.com/api.php?amount=2&category=31&difficulty=hard'
       );
 
       const results = [
-        ...resultsFilmEasy.data.results,
-        ...resultsComicsEasy.data.results,
-        ...resultsGamesEasy.data.results,
-        ...resultsMangaEasy.data.results,
-        ...resultsFilmMedium.data.results,
-        ...resultsComicsMedium.data.results,
-        ...resultsGamesMedium.data.results,
-        ...resultsMangaMedium.data.results,
+        ...resultsFilmHard.data.results,
+        ...resultsComicsHard.data.results,
+        ...resultsGamesHard.data.results,
+        ...resultsMangaHard.data.results,
       ];
 
       // Shuffle the questions to display a random theme
       shuffleArray(results);
+
       const questionsList = [];
       questionsList.push(
         results.map((el) => {
@@ -117,7 +102,7 @@ const QuizGame = ({
         />
       ) : (
         <div className="App">
-          <QuizQuestion
+          <BtrQuestions
             question={questions[indexQuestion].question}
             answers={questions[indexQuestion].answers}
             key={questions[indexQuestion].question}
@@ -135,7 +120,7 @@ const QuizGame = ({
   );
 };
 
-QuizGame.propTypes = {
+BtrGame.propTypes = {
   index: PropTypes.number.isRequired,
   setIndex: PropTypes.func.isRequired,
   numberQuestion: PropTypes.number.isRequired,
@@ -144,4 +129,4 @@ QuizGame.propTypes = {
   setScore: PropTypes.func.isRequired,
 };
 
-export default QuizGame;
+export default BtrGame;

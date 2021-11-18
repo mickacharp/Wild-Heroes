@@ -12,7 +12,10 @@ const ChallengerCard = ({ hero, index, score }) => {
 
   return (
     <div className="container-card-quiz">
-      <h3>Challenger:{challenger}/10</h3>
+      <div className="card-challenger-title">
+        <h3>Challenger:{challenger}/10</h3>
+      </div>
+
       <div
         className="card-quiz"
         onClick={() => hideModal()}

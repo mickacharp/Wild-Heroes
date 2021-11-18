@@ -9,9 +9,11 @@
   padding-bottom: 5%;
   font-size: 2vw;
 }
+
 .text-button-left p {
   font-size: 2vw;
 }
+
 .text-button-rigth {
   display: flex;
   margin-left: 1%;
@@ -91,15 +93,18 @@
   .text-button-left p {
     font-size: 3vw;
   }
+
   .text-button-rigth p {
     font-size: 3vw;
   }
+
   .slider-container {
     display: flex;
     align-items: center;
     width: 35vh;
     height: 100%;
   }
+
   .slider::-webkit-slider-thumb {
     width: 30px;
     height: 30px;
@@ -110,9 +115,11 @@
   .text-button-left p {
     font-size: 3vh;
   }
+
   .text-button-rigth p {
     font-size: 3vh;
   }
+
   .slider-container {
     width: 28vh;
     align-items: center;
