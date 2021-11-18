@@ -150,6 +150,7 @@
     height: 100vh;
   }
 }
+
 @media screen and (max-height: 415px) {
   .container-quiz-riddler {
     height: 100%;

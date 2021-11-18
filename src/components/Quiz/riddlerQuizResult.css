@@ -46,6 +46,12 @@
 
 @media screen and (max-width: 880px) {
   .riddler-result {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .riddler-result {
+    font-size: 0.4rem;
   }
 }
