@@ -225,6 +225,10 @@ body {
     font-size: 0.7em;
   }
 
+  .container-card-quiz {
+    height: 40vh;
+  }
+
   .card-challenger-title h3 {
     animation-name: slideInMedia2;
     animation-duration: 1s;
@@ -280,6 +284,10 @@ body {
     animation-fill-mode: forwards;
     width: 29vw;
     font-size: 0.7em;
+  }
+
+  .container-card-quiz {
+    height: 90vw;
   }
 
   .card-challenger-title h3 {
