@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wild-heroes/static/css/main.cfc5e12b.chunk.css",
+    "main.css": "/wild-heroes/static/css/main.9bbc0076.chunk.css",
     "main.js": "/wild-heroes/static/js/main.527813b4.chunk.js",
     "main.js.map": "/wild-heroes/static/js/main.527813b4.chunk.js.map",
     "runtime-main.js": "/wild-heroes/static/js/runtime-main.afb67914.js",
@@ -10,7 +10,7 @@
     "static/js/2.4c755135.chunk.js.map": "/wild-heroes/static/js/2.4c755135.chunk.js.map",
     "index.html": "/wild-heroes/index.html",
     "static/css/2.7691baea.chunk.css.map": "/wild-heroes/static/css/2.7691baea.chunk.css.map",
-    "static/css/main.cfc5e12b.chunk.css.map": "/wild-heroes/static/css/main.cfc5e12b.chunk.css.map",
+    "static/css/main.9bbc0076.chunk.css.map": "/wild-heroes/static/css/main.9bbc0076.chunk.css.map",
     "static/js/2.4c755135.chunk.js.LICENSE.txt": "/wild-heroes/static/js/2.4c755135.chunk.js.LICENSE.txt",
     "static/media/card.css": "/wild-heroes/static/media/Heroes.71e501cb.ttf",
     "static/media/Bane.54fc2e3f.png": "/wild-heroes/static/media/Bane.54fc2e3f.png",
@@ -38,7 +38,7 @@
     "static/js/runtime-main.afb67914.js",
     "static/css/2.7691baea.chunk.css",
     "static/js/2.4c755135.chunk.js",
-    "static/css/main.cfc5e12b.chunk.css",
+    "static/css/main.9bbc0076.chunk.css",
     "static/js/main.527813b4.chunk.js"
   ]
 }
