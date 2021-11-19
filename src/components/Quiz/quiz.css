@@ -6,6 +6,10 @@
   margin: 0 200px;
 }
 
+.container-btn-game {
+  font-size: 0.8em;
+}
+
 .choose-game {
   align-items: center;
   width: 16vw;
