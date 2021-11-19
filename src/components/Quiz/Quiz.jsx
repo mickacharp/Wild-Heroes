@@ -5,11 +5,11 @@ import CardsQuiz from './CardsQuiz';
 import QuizResult from './QuizResult';
 import QuizProgressBar from './ProgressBar';
 import BtrGame from './BtrGame';
-import './quiz.css';
 import normalQuiz from '../../img/normal-quiz.jpg';
 import riddlerImg from '../../img/riddler-quiz.jpg';
 import RiddlerProgressBar from './RiddlerProgressBar';
 import RiddlerQuizResult from './RiddlerQuizResult';
+import './quiz.css';
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
